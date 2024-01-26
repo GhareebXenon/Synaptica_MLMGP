@@ -1,6 +1,4 @@
-/// <summary>
-/// This script belongs to cowsins™ as a part of the cowsins´ FPS Engine. All rights reserved. 
-/// </summary>
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -12,7 +10,7 @@ using UnityEngine.Events;
 namespace cowsins {
 /// <summary>
 /// Super simple enemy script that allows any object with this component attached to receive damage,aim towards the player and shoot at it.
-/// This is not definitive and it will 100% be modified and re structured in future updates
+/// This is not definitive and it will 100% be modified 
 /// </summary>
 public class EnemyHealth : MonoBehaviour, IDamageable
 {

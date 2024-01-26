@@ -1,13 +1,10 @@
-/// <summary>
-/// This script belongs to cowsins™ as a part of the cowsins´ FPS Engine. All rights reserved. 
-/// </summary>
 using UnityEngine;
 namespace cowsins {
 /// <summary>
 /// Inheriting from Interactable, this means you can interact with the door
 /// Keep in mind that this is highly subject to change on future updates
 /// </summary>
-[RequireComponent(typeof(BoxCollider))] // Require a trigger collider to detect side
+[RequireComponent(typeof(CapsuleCollider))] // Require a trigger collider to detect side
 public class DoorInteractable : Interactable
 {
     [SerializeField] private string openInteractionText;
