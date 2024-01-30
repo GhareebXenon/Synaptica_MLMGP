@@ -173,7 +173,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Standalone: com.DefaultCompany.FPSAsset
+    Standalone: com.DefaultCompany.Synaptica-MLMGP
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -758,7 +758,7 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 1
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 7d706942-7d18-4fba-b97e-306a42304037
   framebufferDepthMemorylessMode: 0
