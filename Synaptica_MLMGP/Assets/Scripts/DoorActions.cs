@@ -32,6 +32,8 @@ public class DoorActions : MonoBehaviour
     private void Interacting_performed(InputAction.CallbackContext obj)
     {
         PerformInteraction();
+        
+        
     }
 
     private void OnDisable()
@@ -48,10 +50,12 @@ public class DoorActions : MonoBehaviour
                 if(door.isOpen)
                 {
                     door.Close();
+                   
                 }
                 else
                 {
                     door.Open();
+                 
                 }
             
             }
