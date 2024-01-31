@@ -1,75 +1,57 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-    public class SciFiDoor : MonoBehaviour
-    {
-   
-    public bool isOpen;
-    [SerializeField]
-    private Vector3 slideDirection = Vector3.back;
-    [SerializeField]
-    private float slideAmount = 1.9f;
-    private Vector3 startPos;
+public class SciFiDoor : MonoBehaviour
+{
+    public bool isOpen = false;
+    [SerializeField] private Vector3 slideDirection = Vector3.back;
+    [SerializeField] private float slideAmount = 3f;
+    [SerializeField] private float speed = 1.0f;
 
-    [SerializeField]
-    private float speed = 1.0f;
-    private Coroutine AnimationCouratine;
-    
+    private Vector3 startPos;
+    private Vector3 targetPos;
+    private bool isMoving = false;
+
     private void Awake()
     {
-     startPos = transform.position;
+        startPos = transform.position;
+        targetPos = startPos;
     }
+
+    private void Update()
+    {
+        if (isMoving)
+        {
+            MoveDoor();
+        }
+    }
+
+    private void MoveDoor()
+    {
+        transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * speed);
+
+        if (Vector3.Distance(transform.position, targetPos) < 0.01f)
+        {
+            transform.position = targetPos;
+            isMoving = false;
+            isOpen = !isOpen;
+        }
+    }
+
     public void Open()
     {
-        if (!isOpen)
+        if (!isOpen && !isMoving)
         {
-            if(AnimationCouratine != null)
-            {
-                StopCoroutine(AnimationCouratine);
-            }
-            AnimationCouratine = StartCoroutine(DoSlidingOpen());
-        }
-        
-    }
-    private IEnumerator DoSlidingOpen()
-    {
-        Vector3 endpos = startPos+slideAmount*slideDirection;
-        Vector3 startPosition = transform.position;
-        float time = 0;
-        isOpen = true;
-        while(time<1)
-        {
-            transform.position = Vector3.Lerp(startPosition, endpos,time);
-            yield return null;
-            time += Time.deltaTime*speed;
+            targetPos = startPos + slideAmount * slideDirection;
+            isMoving = true;
         }
     }
+
     public void Close()
     {
-        if (isOpen)
+        if (isOpen && !isMoving)
         {
-            if(AnimationCouratine != null)
-            {
-                StopCoroutine(AnimationCouratine);
-            }
-            
-            AnimationCouratine = StartCoroutine(DoSlidingClose());
-
-        }
-    }
-    private IEnumerator DoSlidingClose()
-    {
-        Vector3 endPos = startPos;
-        Vector3 startPosition = transform.position;
-        float time = 0;
-        isOpen = false;
-        
-        while(time<1)
-        {
-            transform.position = Vector3.Lerp(startPosition, endPos,time);
-            yield return null;
-            time += Time.deltaTime*speed;
+            targetPos = startPos;
+            isMoving = true;
         }
     }
 }
