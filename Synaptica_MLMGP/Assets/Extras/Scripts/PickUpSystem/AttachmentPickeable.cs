@@ -17,6 +17,7 @@ public class AttachmentPickeable : Pickeable
         GetVisuals();
     }
     public override void Interact()
+
     {
         // Reference to WeaponController
         WeaponController wCon = player.GetComponent<WeaponController>(); 
