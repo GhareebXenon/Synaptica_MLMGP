@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   type:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 7
   intensity:
     m_OverrideState: 1
-    m_Value: 0.077
+    m_Value: 0.345
   response:
-    m_OverrideState: 0
-    m_Value: 0.8
+    m_OverrideState: 1
+    m_Value: 0.436
   texture:
     m_OverrideState: 0
     m_Value: {fileID: 0}
@@ -428,14 +428,14 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   blueOutRedIn:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 4
   blueOutGreenIn:
     m_OverrideState: 0
     m_Value: 0
   blueOutBlueIn:
-    m_OverrideState: 0
-    m_Value: 100
+    m_OverrideState: 1
+    m_Value: 116
 --- !u!114 &7292547180473282634
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -451,7 +451,7 @@ MonoBehaviour:
   active: 1
   temperature:
     m_OverrideState: 1
-    m_Value: -29
+    m_Value: -19
   tint:
     m_OverrideState: 0
     m_Value: 0
