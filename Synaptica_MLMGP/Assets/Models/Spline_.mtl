@@ -1,0 +1,8 @@
+newmtl Alien_1
+map_Pm Alien_Metal_002_ROUGH.jpg
+bump Alien_Metal_002_NORM.jpg
+disp Alien_Metal_002_DISP.png
+map_Kd Alien_Metal_002_COLOR.jpg
+Kd 1 1 1
+d 1
+
