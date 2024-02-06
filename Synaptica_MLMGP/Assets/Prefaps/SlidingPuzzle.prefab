@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 421968202446615836}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.94, z: -0.77}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52,8 +52,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 1, z: 2}
-  m_Center: {x: 0, y: -0.5, z: -0.15}
+  m_Size: {x: 2, y: 0.735, z: 2}
+  m_Center: {x: 0, y: -1.381, z: -1.01}
 --- !u!114 &952580538195524332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,14 +123,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
-  slidingPuzzleCamera: {fileID: 6346061404288556693}
   playerUI: {fileID: 0}
   piecePrefap: {fileID: 3736366981051550109, guid: cf1b3e217c3364e46bee5d90cd3b5724, type: 3}
   backPiecePrefap: {fileID: 3736366981051550109, guid: 73015be8efc0f59438ab7f5df195ceaf, type: 3}
   passwordTextPrefap: {fileID: 3736366981051550109, guid: 4b7a8c300a00a3f48b6038e24465ac23, type: 3}
   keypad: {fileID: 0}
-  size: 3
-  pieceGap: 0
+  size: 6
+  gapBetweenPieces: 0
   difficulty: 1
 --- !u!1 &7581199418331831133
 GameObject:
@@ -1131,7 +1130,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 29
+  m_VersionIndex: 38
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

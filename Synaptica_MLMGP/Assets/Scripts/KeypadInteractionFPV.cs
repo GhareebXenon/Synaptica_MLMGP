@@ -5,8 +5,14 @@ using UnityEngine;
 namespace NavKeypad { 
 public class KeypadInteractionFPV : MonoBehaviour
 {
-    public Camera cam;
-    private void Update()
+    private Camera cam;
+
+    private void Start()
+    {
+        cam = GetComponent<Camera>();
+    }
+
+        private void Update()
     {
         var ray = cam.ScreenPointToRay(Input.mousePosition);
 

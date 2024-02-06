@@ -37,17 +37,17 @@ public class Keypad : MonoBehaviour
     [SerializeField] private Renderer panelMesh;
     [SerializeField] private TMP_Text keypadDisplayText;
     [SerializeField] private AudioSource audioSource;
-    public GameObject playerUI;
-    public GameObject mainCamera;
-    public GameObject keypadCamera;
-
-
-        private string currentInput;
+    [SerializeField] private GameObject mainCamera;
+    [SerializeField] private GameObject playerUI;
+    
+    private GameObject keypadCamera;
+    private string currentInput;
     private bool displayingResult = false;
     private bool accessWasGranted = false;
 
     private void Awake()
     {
+        keypadCamera = transform.Find("KeypadCamera").gameObject;
         ClearInput();
         panelMesh.material.SetVector("_EmissionColor", screenNormalColor * screenIntensity);
     }

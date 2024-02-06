@@ -273,7 +273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2974149c6fb01b409a280581634da96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 3071622774211899346}
 --- !u!1 &1384933730976451990
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,7 +861,7 @@ MonoBehaviour:
   onAccessDenied:
     m_PersistentCalls:
       m_Calls: []
-  keypadCombo: 5567
+  keypadCombo: 5927
   accessGrantedText: Granted
   accessDeniedText: Denied
   displayResultTime: 1
@@ -876,9 +875,8 @@ MonoBehaviour:
   panelMesh: {fileID: 6711368086355063801}
   keypadDisplayText: {fileID: 2303921292967740188}
   audioSource: {fileID: 2303921294396319332}
-  playerUI: {fileID: 0}
   mainCamera: {fileID: 0}
-  keypadCamera: {fileID: 929143960342717119}
+  playerUI: {fileID: 0}
 --- !u!82 &2303921294396319332
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1494,7 +1492,7 @@ Transform:
   m_GameObject: {fileID: 4950685124753655557}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1519,8 +1517,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7, y: 2, z: 0.3}
-  m_Center: {x: 0, y: -0.5, z: -0.12}
+  m_Size: {x: 0.7, y: 2, z: 0.35}
+  m_Center: {x: 0, y: -0.5, z: -0.145}
 --- !u!114 &8206031423102073335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1535,7 +1533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerUI: {fileID: 0}
   mainCamera: {fileID: 0}
-  keypadCamera: {fileID: 0}
+  keypadCamera: {fileID: 929143960342717119}
   weaponController: {fileID: 0}
   enteredTrigger: 0
 --- !u!1 &5212895675490974449
