@@ -35,7 +35,7 @@ public class WeaponController : MonoBehaviour
 
     [Tooltip("An array that includes all your initial weapons.")]public Weapon_SO[] initialWeapons;
 
-    public WeaponIdentification[] inventory;
+        public WeaponIdentification[] inventory;
 
     public UISlot[] slots;
 
@@ -677,7 +677,8 @@ public class WeaponController : MonoBehaviour
     /// </summary>
     public void UnHolster(GameObject weaponObj, bool playAnim)
     {
-        canShoot = true;
+    
+            canShoot = true;
 
         weaponObj.SetActive(true);
         id = weaponObj.GetComponent<WeaponIdentification>();

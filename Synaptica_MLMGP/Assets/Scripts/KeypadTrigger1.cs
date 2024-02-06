@@ -6,10 +6,13 @@ using UnityEngine;
 
 public class KeypadTrigger : MonoBehaviour
 {
-    public GameObject playerUI;
-    //public PlayerStats stats;
-    public GameObject mainCamera;
-    public GameObject keypadCamera;
+    [SerializeField] private GameObject playerUI;
+    [SerializeField] private GameObject mainCamera;
+    [SerializeField] private GameObject keypadCamera;
+    [SerializeField] private WeaponController weaponController;
+    public bool enteredTrigger = false;
+    
+
 
     private void Start()
     {
@@ -26,6 +29,8 @@ public class KeypadTrigger : MonoBehaviour
             Cursor.visible = true;
             //stats.LoseControl();
             playerUI.SetActive(false);
+            enteredTrigger = true;
+            weaponController.canShoot = false;
         }
     }
 
@@ -39,7 +44,8 @@ public class KeypadTrigger : MonoBehaviour
             Cursor.visible = false;
             //stats.CheckIfCanGrantControl();
             playerUI.SetActive(true);
-
+            enteredTrigger = false;
+            weaponController.canShoot = true;
         }
     }
 
