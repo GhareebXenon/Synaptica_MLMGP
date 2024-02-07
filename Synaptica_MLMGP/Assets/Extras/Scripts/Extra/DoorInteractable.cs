@@ -4,7 +4,7 @@ namespace cowsins {
 /// Inheriting from Interactable, this means you can interact with the door
 /// Keep in mind that this is highly subject to change on future updates
 /// </summary>
-[RequireComponent(typeof(CapsuleCollider))] // Require a trigger collider to detect side
+[RequireComponent(typeof(BoxCollider))] // Require a trigger collider to detect side
 public class DoorInteractable : Interactable
 {
     [SerializeField] private string openInteractionText;
