@@ -13,7 +13,7 @@ public class LaserReflector : MonoBehaviour
     Vector3 direction;
     LineRenderer lr;
     public bool isOpen;
-   [SerializeField] private UnityEvent OnCompleted;
+    [SerializeField] private UnityEvent OnCompleted;
 
     GameObject tempReflector;
     void Start()
@@ -41,12 +41,10 @@ public class LaserReflector : MonoBehaviour
                if (hit.collider.CompareTag("CenterReflector"))
                 { // if hit reflector
                   // interact
-                    OnCompleted?.Invoke();
                     tempReflector = hit.collider.gameObject;
                     Vector3 temp = Vector3.Reflect(direction, hit.normal);
                     hit.collider.gameObject.GetComponent<LaserReflector>().OpenRay(hit.point, temp);
-                    
-                    
+                    OnCompleted?.Invoke();
                 }
                 lr.SetPosition(1, hit.point);// set laser to the collosion point 
             }

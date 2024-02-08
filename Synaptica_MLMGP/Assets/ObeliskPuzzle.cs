@@ -1,24 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class ObeliskPuzzle : MonoBehaviour
 {
-    
     [SerializeField] private Transform[] cubes;
+    [SerializeField] private ObeliskRunes[] runes;
+    [SerializeField] private ObeliskRunes operationRune;
+    [SerializeField] private ObeliskRunes solutionRune;
     [SerializeField] private UnityEvent OnCompleted;
     [SerializeField] private bool completed = false;
     public List<int> runesNumbers;
     [SerializeField] private int[] runesSelected;
     [SerializeField] private int solution;
-    public int operation = 0;
-    
+    [SerializeField] private string operation;
 
     private void Start()
     {
         runesSelected = new int[3];
+
+        foreach (ObeliskRunes rune in runes)
+        {
+            rune.gameObject.GetComponent<MeshRenderer>().material.mainTexture = rune.runeSprite;
+            rune.gameObject.name += $" {rune.runeSprite.name}";
+            if (int.TryParse(rune.runeSprite.name.Trim(), out int runeNumber))
+            {
+                runesNumbers.Add(runeNumber);
+            }
+        }
+
+        operationRune.gameObject.GetComponent<MeshRenderer>().material.mainTexture = operationRune.runeSprite;
+        operation = operationRune.runeSprite.name;
+
+        solutionRune.gameObject.GetComponent<MeshRenderer>().material.mainTexture = solutionRune.runeSprite;
+        int.TryParse(solutionRune.runeSprite.name.Trim(), out solution);
+
+        UpdateSelected();
     }
 
     private void Update()
@@ -37,14 +57,13 @@ public class ObeliskPuzzle : MonoBehaviour
             int rotation = (int)cubes[i].eulerAngles.y;
             if (rotation == -90)
             {
-                runesSelected[i] = runesNumbers[(i * 4) + 4];
+                runesSelected[i] = runesNumbers[(i * 4) + 3];
             }
             else
             {
-                runesSelected[i] = runesNumbers[(Mathf.Abs(rotation) / 90) + (i * 4) + 1];
+                runesSelected[i] = runesNumbers[(Mathf.Abs(rotation) / 90) + (i * 4)];
             }
         }
-        solution = runesNumbers[0];
         CheckComplete();
     }
 
@@ -52,7 +71,7 @@ public class ObeliskPuzzle : MonoBehaviour
     {
         int result = 0;
 
-        if (operation == 0)
+        if (operation == "+")
         {
             result = runesSelected[0] + runesSelected[1] + runesSelected[2];
             if (result == solution)
@@ -65,7 +84,7 @@ public class ObeliskPuzzle : MonoBehaviour
             }
             Debug.Log($"{runesSelected[0]} + {runesSelected[1]} + {runesSelected[2]} = {result}, Completed? {completed}");
         }
-        else if (operation == 1)
+        else if (operation == "-")
         {
             result = runesSelected[0] - runesSelected[1] - runesSelected[2];
             if (result == solution)
@@ -78,7 +97,7 @@ public class ObeliskPuzzle : MonoBehaviour
             }
             Debug.Log($"{runesSelected[0]} - {runesSelected[1]} - {runesSelected[2]} = {result}, Completed? {completed}");
         }
-        else if (operation == 2)
+        else if (operation == "×")
         {
             result = runesSelected[0] * runesSelected[1] * runesSelected[2];
             if (result == solution)
@@ -91,7 +110,7 @@ public class ObeliskPuzzle : MonoBehaviour
             }
             Debug.Log($"{runesSelected[0]} * {runesSelected[1]} * {runesSelected[2]} = {result}, Completed? {completed}");
         }
-        else if (operation == 3)
+        else if (operation == "÷")
         {
             result = runesSelected[0] / runesSelected[1] / runesSelected[2];
             if (result == solution)

@@ -322,7 +322,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 661
+  m_VersionIndex: 667
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -530,7 +530,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 2
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -774,7 +774,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 970
+  m_VersionIndex: 994
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -832,8 +832,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeSprite: {fileID: 2800000, guid: 8c333f0b54c9f9c4989bd76de6ba33ed, type: 3}
-  obeliskPuzzle: {fileID: 7879052245798290989}
-  runeNumber: 0
 --- !u!33 &8339532827646709051
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -963,9 +961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d4d21d963e13b45aa12fa3e32302ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runeSprite: {fileID: 2800000, guid: 5ebb2bef9bd43af48b51d0548a8b7bd5, type: 3}
-  obeliskPuzzle: {fileID: 7879052245798290989}
-  runeNumber: 0
+  runeSprite: {fileID: 2800000, guid: e3ef7a7b424a80b429be489c9e3e276f, type: 3}
 --- !u!114 &3313081067786080224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1051,7 +1047,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5854
+  m_VersionIndex: 5860
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1478,7 +1474,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 621
+  m_VersionIndex: 627
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1537,8 +1533,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeSprite: {fileID: 2800000, guid: 21bb98a468f79354ca672e616eaa32dd, type: 3}
-  obeliskPuzzle: {fileID: 7879052245798290989}
-  runeNumber: 0
 --- !u!33 &4039887721724973306
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1682,7 +1676,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 76
+  m_VersionIndex: 82
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1740,8 +1734,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeSprite: {fileID: 2800000, guid: 852b5fc27a37bbb4c8f073fc3253e631, type: 3}
-  obeliskPuzzle: {fileID: 7879052245798290989}
-  runeNumber: 0
 --- !u!33 &6205026207752618409
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1875,8 +1867,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeSprite: {fileID: 2800000, guid: 24de3b30f482c9b45968095c2dff3c24, type: 3}
-  obeliskPuzzle: {fileID: 7879052245798290989}
-  runeNumber: 0
 --- !u!33 &115204059950495272
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2279,7 +2269,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 621
+  m_VersionIndex: 627
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2337,8 +2327,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeSprite: {fileID: 2800000, guid: 971f073ca83031c48b99323c9ee3e616, type: 3}
-  obeliskPuzzle: {fileID: 7879052245798290989}
-  runeNumber: 0
 --- !u!33 &8045249070132679676
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2472,8 +2460,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeSprite: {fileID: 2800000, guid: 0355571b65ec1194ab49185dd461b772, type: 3}
-  obeliskPuzzle: {fileID: 7879052245798290989}
-  runeNumber: 0
 --- !u!33 &2253751577130119368
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2607,8 +2593,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeSprite: {fileID: 2800000, guid: a0c6dad38083d454b9a28798394aa9fe, type: 3}
-  obeliskPuzzle: {fileID: 7879052245798290989}
-  runeNumber: 0
 --- !u!33 &7439496428167965981
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3053,7 +3037,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3431
+  m_VersionIndex: 3437
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3356,8 +3340,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeSprite: {fileID: 2800000, guid: 8c333f0b54c9f9c4989bd76de6ba33ed, type: 3}
-  obeliskPuzzle: {fileID: 7879052245798290989}
-  runeNumber: 0
 --- !u!33 &7438030067703594483
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3491,8 +3473,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeSprite: {fileID: 2800000, guid: d5415349784216148b293e5096794792, type: 3}
-  obeliskPuzzle: {fileID: 7879052245798290989}
-  runeNumber: 0
 --- !u!33 &345948804592484926
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3648,9 +3628,36 @@ MonoBehaviour:
   - {fileID: 6235798370860347346}
   - {fileID: 1984842074031320372}
   - {fileID: 7188619598351266569}
+  runes:
+  - {fileID: 3668401723391070399}
+  - {fileID: 4479082012344809571}
+  - {fileID: 2126830483112758313}
+  - {fileID: 3067999328865200243}
+  - {fileID: 5022778075816573783}
+  - {fileID: 7333903675195398258}
+  - {fileID: 6221235246724099552}
+  - {fileID: 1057763476716011624}
+  - {fileID: 8798769661438979821}
+  - {fileID: 4878510196239299123}
+  - {fileID: 2979238031156775028}
+  - {fileID: 4078490288472370949}
+  operationRune: {fileID: 5156949340522883759}
+  solutionRune: {fileID: 7673359676478436971}
   OnCompleted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SciFiDoor, Assembly-CSharp
+        m_MethodName: Open
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   completed: 0
   runesNumbers: 
   runesSelected: 
@@ -3832,8 +3839,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeSprite: {fileID: 2800000, guid: 15f3c87217698004ea1e4eaa74bc60a6, type: 3}
-  obeliskPuzzle: {fileID: 7879052245798290989}
-  runeNumber: 0
 --- !u!33 &6624142378009676044
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3967,8 +3972,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeSprite: {fileID: 2800000, guid: db674e361e948304483446489a7fca11, type: 3}
-  obeliskPuzzle: {fileID: 7879052245798290989}
-  runeNumber: 0
 --- !u!33 &5701159797820868041
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4102,8 +4105,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeSprite: {fileID: 2800000, guid: 15f3c87217698004ea1e4eaa74bc60a6, type: 3}
-  obeliskPuzzle: {fileID: 7879052245798290989}
-  runeNumber: 0
 --- !u!33 &5465658138591285235
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4199,7 +4200,7 @@ GameObject:
   - component: {fileID: 5333438015854807429}
   - component: {fileID: 3534654108481763184}
   m_Layer: 0
-  m_Name: RuneSum
+  m_Name: RuneSolution
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4237,8 +4238,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeSprite: {fileID: 2800000, guid: 5847dcd2e4be51b4eb3bad33a9e6bb22, type: 3}
-  obeliskPuzzle: {fileID: 7879052245798290989}
-  runeNumber: 0
 --- !u!33 &4240516320838709793
 MeshFilter:
   m_ObjectHideFlags: 0

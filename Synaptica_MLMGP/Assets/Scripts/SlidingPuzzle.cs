@@ -14,8 +14,7 @@ public class SlidingPuzzle : MonoBehaviour
     [SerializeField] private Keypad keypad;
     [SerializeField] private int size = 3;
     [SerializeField] private float gapBetweenPieces = 0.0f;
-    [Tooltip("0 for a solved puzzle.")]
-    [SerializeField] [Range(0, 6)] private int difficulty = 4;
+    [Tooltip("0 for a solved puzzle."), SerializeField, Range(0, 6)] private int difficulty = 4;
 
     private GameObject slidingPuzzleCamera;
     private List<Transform> pieces;
