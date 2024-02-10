@@ -38,13 +38,9 @@ public class LaserReflector : MonoBehaviour
                     Vector3 temp = Vector3.Reflect(direction, hit.normal);
                     hit.collider.gameObject.GetComponent<LaserReflector>().OpenRay(hit.point, temp);
                 }
-               if (hit.collider.CompareTag("CenterReflector"))
-                { // if hit reflector
-                  // interact
-                    tempReflector = hit.collider.gameObject;
-                    Vector3 temp = Vector3.Reflect(direction, hit.normal);
-                    hit.collider.gameObject.GetComponent<LaserReflector>().OpenRay(hit.point, temp);
-                    OnCompleted?.Invoke();
+                else if (hit.collider.CompareTag("CenterReflector"))
+                {
+                    OnCompleted.Invoke();
                 }
                 lr.SetPosition(1, hit.point);// set laser to the collosion point 
             }
@@ -52,7 +48,7 @@ public class LaserReflector : MonoBehaviour
             else
             {
                 if (tempReflector)
-                { // if no collosion
+                { // if no collision
                     // deactive
                     tempReflector.GetComponent<LaserReflector>().CloseRay();
                     tempReflector=null;
