@@ -27,6 +27,14 @@ public class LaserSource : MonoBehaviour
                 Vector3 temp = Vector3.Reflect(direction, hit.normal);// calc the new direction
                 hit.collider.gameObject.GetComponent<LaserReflector>().OpenRay(hit.point, temp);// activate the reflector
             }
+            else
+            {
+                if (tempReflector)
+                {
+                    tempReflector.GetComponent<LaserReflector>().CloseRay();
+                    tempReflector = null;
+                }
+            }
             lr.SetPosition(1, hit.point);// set the end point of the laser to colloision point
         }
         else

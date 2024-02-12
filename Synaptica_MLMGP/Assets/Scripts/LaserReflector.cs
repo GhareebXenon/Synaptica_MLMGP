@@ -42,6 +42,14 @@ public class LaserReflector : MonoBehaviour
                 {
                     OnCompleted.Invoke();
                 }
+                else
+                {
+                    if (tempReflector)
+                    {
+                        tempReflector.GetComponent<LaserReflector>().CloseRay();
+                        tempReflector = null;
+                    }
+                }
                 lr.SetPosition(1, hit.point);// set laser to the collosion point 
             }
             
@@ -56,15 +64,16 @@ public class LaserReflector : MonoBehaviour
                 lr.SetPosition(1,direction*100);
             }
         }
+
         else
         {
             if (tempReflector)
             {
                 tempReflector.GetComponent<LaserReflector>().CloseRay();
-                tempReflector=null;
+                tempReflector = null;
             }
         }
-        
+
     }
     // open and close laser
     public void OpenRay(Vector3 pos,Vector3 dir)
