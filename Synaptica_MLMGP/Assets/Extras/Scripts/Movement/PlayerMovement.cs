@@ -1,7 +1,3 @@
-/// <summary>
-/// This script belongs to cowsins™ 2022 as a part of the cowsins´ FPS Engine. All rights reserved. 
-/// PlayerMovement is based on Dani´s rigidbody player controller.
-/// </summary>
 
 using System;
 using UnityEngine;
