@@ -7,7 +7,7 @@ public class LaserReflector : MonoBehaviour
 {
     private Vector3 screenPoint;
     private Vector3 offset;
-    float rotationSpeed = 0.2f;
+    float rotationSpeed = 0.4f;
 
     Vector3 position;
     Vector3 direction;
@@ -73,7 +73,6 @@ public class LaserReflector : MonoBehaviour
                 tempReflector = null;
             }
         }
-
     }
     // open and close laser
     public void OpenRay(Vector3 pos,Vector3 dir)
@@ -91,7 +90,7 @@ public class LaserReflector : MonoBehaviour
     void OnMouseDown()
     { // calc intailzation mouse for dragging
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);    
-        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, screenPoint.z));
     
     }
  // update position based on mouse movement
@@ -99,13 +98,23 @@ public class LaserReflector : MonoBehaviour
     {
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);  
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
-        transform.position = curPosition;
+        Vector3 newPosition = new Vector3(curPosition.x, transform.position.y, curPosition.z);
+        transform.position = newPosition;
 
         //rotate cube
-        float XaxisRotation = Input.GetAxis("Mouse X")*rotationSpeed;
-		float YaxisRotation = Input.GetAxis("Mouse Y")*rotationSpeed;
-		transform.RotateAround(Vector3.down, XaxisRotation);
-		transform.RotateAround(Vector3.right, YaxisRotation);
-    
+        float XaxisRotation = Input.GetAxis("Mouse X") * rotationSpeed;
+        /*float YaxisRotation = Input.GetAxis("Mouse Y") * rotationSpeed;*/
+        if (Input.GetKey(KeyCode.E))
+        {
+            transform.Rotate(Vector3.up, rotationSpeed);
+        }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            transform.Rotate(Vector3.down, rotationSpeed);
+        }
+        /*transform.RotateAround(Vector3.right, YaxisRotation);*/
+
     }
+
+    
 }

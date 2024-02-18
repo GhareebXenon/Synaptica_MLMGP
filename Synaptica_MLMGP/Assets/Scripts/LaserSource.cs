@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public class LaserSource : MonoBehaviour
 {
@@ -14,10 +15,10 @@ public class LaserSource : MonoBehaviour
         lr = gameObject.GetComponent<LineRenderer>();
         direction = laserStartPoint.forward;// starting direction
         lr.positionCount = 2;// set the lr with two points 
-        lr.SetPosition(0, laserStartPoint.position);//position the start point
     }
     void Update()
     {
+        lr.SetPosition(0, transform.position);//start point
         RaycastHit hit;//shoots ray from statring direction to check for collision
         if(Physics.Raycast(laserStartPoint.position,direction,out hit, Mathf.Infinity))
         {
