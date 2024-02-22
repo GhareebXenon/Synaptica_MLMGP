@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -11,7 +12,8 @@ public class ObeliskPuzzle : MonoBehaviour
     [SerializeField] private ObeliskRunes[] runes;
     [SerializeField] private ObeliskRunes operationRune;
     [SerializeField] private ObeliskRunes solutionRune;
-    [SerializeField] private UnityEvent OnCompleted;
+    [SerializeField] private string mission;
+    [SerializeField] private UnityEvent<string, float> OnCompleted;
     [SerializeField] private bool completed = false;
     public List<int> runesNumbers;
     [SerializeField] private int[] runesSelected;
@@ -45,7 +47,7 @@ public class ObeliskPuzzle : MonoBehaviour
     {
         if (completed)
         {
-            OnCompleted?.Invoke();
+            OnCompleted?.Invoke(mission, 1);
             completed = false;
         }
     }

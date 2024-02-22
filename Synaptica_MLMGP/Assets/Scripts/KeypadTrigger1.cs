@@ -10,6 +10,7 @@ public class KeypadTrigger : MonoBehaviour
     [SerializeField] private GameObject mainCamera;
     [SerializeField] private GameObject keypadCamera;
     [SerializeField] private WeaponController weaponController;
+    [SerializeField] private MissionManager missionManager;
     public bool enteredTrigger = false;
     
 

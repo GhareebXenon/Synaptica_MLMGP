@@ -12,6 +12,8 @@ public class SlidingPuzzle : MonoBehaviour
     [SerializeField] private Transform backPiecePrefap;
     [SerializeField] private Transform passwordTextPrefap;
     [SerializeField] private Keypad keypad;
+    [SerializeField] private MissionManager missionManager;
+    [SerializeField] private string mission;
     [SerializeField] private int size = 3;
     [SerializeField] private float gapBetweenPieces = 0.0f;
     [Tooltip("0 for a solved puzzle."), SerializeField, Range(0, 6)] private int difficulty = 4;
@@ -23,6 +25,7 @@ public class SlidingPuzzle : MonoBehaviour
     private int lastBackIndex;
     private bool shuffling = false;
     private bool completed = false;
+    private bool revealed = false;
 
     private void Start()
     {
@@ -60,11 +63,15 @@ public class SlidingPuzzle : MonoBehaviour
         }
 
 
-        if (!shuffling && completed)
+        if (!revealed && !shuffling && completed)
         {
             Transform upperBack = transform.Find($"Back{upperBackIndex}");
             Transform lastBack = transform.Find($"Back{lastBackIndex}");
             lastBack.position = Vector3.Lerp(lastBack.position, upperBack.position, 1.5f * Time.deltaTime);
+            if (lastBack.position == upperBack.position)
+            {
+                revealed = true;
+            }
         }
     }
 
@@ -180,5 +187,6 @@ public class SlidingPuzzle : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         playerUI.SetActive(true);
+        missionManager.UpdateMission(mission, 1);
     }
 }

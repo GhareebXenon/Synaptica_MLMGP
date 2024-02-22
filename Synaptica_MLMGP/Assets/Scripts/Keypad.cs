@@ -9,12 +9,13 @@ namespace NavKeypad {
 public class Keypad : MonoBehaviour
 {
     [Header("Events")]
-    [SerializeField] private UnityEvent onAccessGranted;
+    [SerializeField] private UnityEvent<string, float> onAccessGranted;
     [SerializeField] private UnityEvent onAccessDenied;
+    [SerializeField] private string mission;
     [Header("Combination Code (9 Numbers Max)")]
     public int keypadCombo = 12345;
 
-    public UnityEvent OnAccessGranted => onAccessGranted;
+    public UnityEvent<string, float> OnAccessGranted => onAccessGranted;
     public UnityEvent OnAccessDenied => onAccessDenied;
 
     [Header("Settings")]
@@ -125,7 +126,7 @@ public class Keypad : MonoBehaviour
     {
         accessWasGranted = true;
         keypadDisplayText.text = accessGrantedText;
-        onAccessGranted?.Invoke();
+        onAccessGranted?.Invoke(mission, 1);
         panelMesh.material.SetVector("_EmissionColor", screenGrantedColor * screenIntensity);
         audioSource.PlayOneShot(accessGrantedSfx);
         StartCoroutine(Countdown());
