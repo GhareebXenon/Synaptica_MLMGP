@@ -37,7 +37,10 @@ namespace cowsins {
             view.SetActive(false);
         }
         public void Activate(GameObject view) =>view.SetActive(true);
-
+        public void QuitGame() {
+            Debug.Log("Exited");
+            Application.Quit();
+        } 
 
     }
 }
