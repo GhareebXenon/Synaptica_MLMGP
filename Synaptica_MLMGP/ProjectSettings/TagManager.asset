@@ -12,6 +12,7 @@ TagManager:
   - BodyShot
   - Reflector
   - CenterReflector
+  - Wall
   layers:
   - Default
   - TransparentFX
