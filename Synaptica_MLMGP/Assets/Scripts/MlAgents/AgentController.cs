@@ -9,40 +9,46 @@ using UnityEditor.ShaderGraph.Internal;
 
 public class AgentController : Agent
 {
-   //private Rigidbody rb;
-   //private float previousDistance;
+    private Rigidbody rb;
+    //private float previousDistance;
     [SerializeField] private Transform target;
+    [SerializeField] float moveSpeed = 4f;
 
-    //private void Start()
-    //{
-    //    rb = GetComponent<Rigidbody>();
-    //}
+        public override void Initialize()  
+    {
+        rb = GetComponent<Rigidbody>();
+    }
     public override void OnEpisodeBegin()
     {
-        transform.localPosition = new Vector3(0f,0.3f,0f);
-        int rand = Random.Range(0, 2);
-        if (rand == 0)
-        {
-            target.localPosition = new Vector3(-4f, 0.3f, 0f);
-        }
-        if (rand == 1)
-        {
-            target.localPosition = new Vector3(4f, 0.3f, 0f);
-        }
+        transform.localPosition = new Vector3(Random.Range(-4f,4f),0.3f, Random.Range(-4f, 4f));
+        
+            target.localPosition = new Vector3(Random.Range(-4f, 4f), 0.3f, Random.Range(-4f, 4f));
+       
+        
     }
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(transform.localPosition);
-        sensor.AddObservation(target.localRotation);
+
+        //sensor.AddObservation(target.localRotation);
     }
     public override void OnActionReceived(ActionBuffers actions)
     {
-        float move = actions.ContinuousActions[0];
-        float moveSpeed = 2f;
+        float moveRotate = actions.ContinuousActions[0];
+        float moveForward = actions.ContinuousActions[1];
 
-        transform.localPosition += new Vector3(move, 0f) * Time.deltaTime * moveSpeed;
+        rb.MovePosition(transform.position + transform.forward * moveForward * moveSpeed * Time.deltaTime);
+        transform.Rotate(0f, moveRotate * moveSpeed, 0f, Space.Self);
 
-        
+
+
+        /*
+        Vector3 velocity = new Vector3(moveX,0f,moveZ) ;
+        velocity = velocity.normalized * Time.deltaTime * moveSpeed;
+        transform.localPosition += velocity;
+        */
+
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -61,7 +67,9 @@ public class AgentController : Agent
     public override void Heuristic(in ActionBuffers actionsOut)
     {
         ActionSegment<float> continousActions = actionsOut.ContinuousActions;
+        continousActions[1] = Input.GetAxisRaw("Vertical");
         continousActions[0] = Input.GetAxisRaw("Horizontal");
+      
 
     }
     //void FixedUpdate()

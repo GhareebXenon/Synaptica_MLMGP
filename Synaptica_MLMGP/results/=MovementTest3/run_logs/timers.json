@@ -1,0 +1,49 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1708981405",
+        "python_version": "3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\GamesProject\\GIT\\Synaptica_MLMGP\\Synaptica_MLMGP\\venv\\Scripts\\mlagents-learn --run-id =MovementTest3 --resume",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.2.1+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1708981416"
+    },
+    "total": 11.4583258,
+    "count": 1,
+    "self": 0.00914900000000074,
+    "children": {
+        "run_training.setup": {
+            "total": 0.02771099999999982,
+            "count": 1,
+            "self": 0.02771099999999982
+        },
+        "TrainerController.start_learning": {
+            "total": 11.4214658,
+            "count": 1,
+            "self": 8.979999999958466e-05,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 11.317216499999999,
+                    "count": 1,
+                    "self": 11.317216499999999
+                },
+                "TrainerController._save_models": {
+                    "total": 0.10415950000000151,
+                    "count": 1,
+                    "self": 0.012729000000001989,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.09143049999999953,
+                            "count": 1,
+                            "self": 0.09143049999999953
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
