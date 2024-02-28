@@ -40,7 +40,7 @@ public class LaserReflector : MonoBehaviour
                 }
                 else if (hit.collider.CompareTag("CenterReflector"))
                 {
-                    OnCompleted.Invoke();
+                    OnCompleted?.Invoke();
                 }
                 else
                 {

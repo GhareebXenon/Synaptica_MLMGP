@@ -188,5 +188,6 @@ public class SlidingPuzzle : MonoBehaviour
         Cursor.visible = false;
         playerUI.SetActive(true);
         missionManager.UpdateMission(mission, 1);
+        missionManager.AddSubMission(new SubMission("Get access to the keypad", 1, true), "Find a way to open the door");
     }
 }

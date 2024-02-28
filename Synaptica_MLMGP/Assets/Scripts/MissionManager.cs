@@ -6,6 +6,8 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.ProBuilder.MeshOperations;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MissionManager : MonoBehaviour
 {
@@ -13,86 +15,118 @@ public class MissionManager : MonoBehaviour
     [SerializeField] private GameObject missionUI;
     [SerializeField] private GameObject missionPrefap;
 
+    private Mission activeMission;
     private int notMissions;
 
     private void Start()
     {
         notMissions = missionUI.transform.childCount;
+        switch (SceneManager.GetActiveScene().buildIndex)
+        {
+            case 2:
+                SetActiveMission("Get to the generator room and plant the explosives.");
+                break;
+        }
         RefreshMissions();
     }
 
     private void RefreshMissions()
     {
-        int missionCount = missionUI.transform.childCount - notMissions;
-
-        for (int i = 0; i < missions.Count; i++)
+        if (activeMission != null)
         {
-            Transform missionCheck = missionUI.transform.Find($"{missions[i].title}");
-            if (missions[i] != null)
+            Transform missionCheck = missionUI.transform.Find(activeMission.title);
+            if (missionCheck == null)
             {
-                if (missions[i].isActive && missionCheck == null)
+                GameObject instance = Instantiate(missionPrefap, missionUI.transform);
+                TextMeshProUGUI instanceText = instance.transform.Find("Text").GetComponent<TextMeshProUGUI>();
+                TextMeshProUGUI instanceValue = instance.transform.Find("Value").GetComponent<TextMeshProUGUI>();
+                instance.name = activeMission.title;
+                instanceText.text = activeMission.title;
+                if (activeMission.target > 1)
                 {
-                    int height = 0 - missionCount * 50;
-                    missionCount++;
-                    GameObject instance = Instantiate(missionPrefap, missionUI.transform);
-                    instance.name = $"{missions[i].title}";
-                    instance.transform.Find("MissionText").GetComponent<TextMeshProUGUI>().text = missions[i].title;
-                    instance.transform.localPosition = new Vector3(0, height, 0);
-                    foreach (SubMission subMission in missions[i].subMissions)
+                    instanceValue.text = $"{activeMission.achieved}/{activeMission.target}";
+                }
+                else
+                {
+                    instanceText.margin = new Vector4(-50, 0, -280, 0);
+                    instanceValue.gameObject.SetActive(false);
+                }
+                int subMissionCount = 1;
+                foreach (SubMission subMission in activeMission.subMissions)
+                {
+                    Transform subMissionCheck = missionUI.transform.Find(subMission.title);
+                    if (subMission.isActive && subMissionCheck == null)
                     {
-                        Transform subMissionCheck = missionUI.transform.Find($"{subMission.title}");
-                        if (subMission.isActive && subMissionCheck == null)
+                        int subHeight = 0 - subMissionCount * 45;
+                        subMissionCount++;
+                        GameObject subInstance = Instantiate(missionPrefap, missionUI.transform);
+                        TextMeshProUGUI subInstanceText = subInstance.transform.Find("Text").GetComponent<TextMeshProUGUI>();
+                        TextMeshProUGUI subInstanceValue = subInstance.transform.Find("Value").GetComponent<TextMeshProUGUI>();
+                        subInstance.name = subMission.title;
+                        subInstanceText.text = subMission.title;
+                        subInstanceText.fontStyle = FontStyles.Normal;
+                        subInstanceText.fontSize *= 0.85f;
+                        subInstance.transform.localPosition = new Vector3(0, subHeight, 0);
+                        if (subMission.target > 1)
                         {
-                            int subHeight = 0 - missionCount * 50;
-                            missionCount++;
-                            GameObject subInstance = Instantiate(missionPrefap, missionUI.transform);
-                            subInstance.name = $"{subMission.title}";
-                            subInstance.transform.Find("MissionText").GetComponent<TextMeshProUGUI>().text = subMission.title;
-                            subInstance.transform.Find("MissionText").GetComponent<TextMeshProUGUI>().fontStyle = FontStyles.Normal;
-                            subInstance.transform.Find("MissionText").GetComponent<TextMeshProUGUI>().fontSize *= 0.85f;
-                            subInstance.transform.localPosition = new Vector3(0, subHeight, 0);
+                            subInstanceValue.text = $"{subMission.achieved}/{subMission.target}";
                         }
-                        else if (subMission.isActive == false && subMissionCheck != null)
+                        else
                         {
-                            Destroy(subMissionCheck.gameObject);
+                            subInstanceText.margin = new Vector4(-50, 0, -280, 0);
+                            subInstanceValue.gameObject.SetActive(false);
                         }
                     }
-                }
-                else if (missions[i].isActive && missionCheck != null)
-                {
-                    foreach (SubMission subMission in missions[i].subMissions)
+                    else if (subMission.isActive == false && subMissionCheck != null)
                     {
-                        Transform subMissionCheck = missionUI.transform.Find($"{subMission.title}");
-                        if (subMission.isActive && subMissionCheck == null)
-                        {
-                            int subHeight = 0 - missionCount * 50;
-                            missionCount++;
-                            GameObject subInstance = Instantiate(missionPrefap, missionUI.transform);
-                            subInstance.name = $"{subMission.title}";
-                            subInstance.transform.Find("MissionText").GetComponent<TextMeshProUGUI>().text = subMission.title;
-                            subInstance.transform.Find("MissionText").GetComponent<TextMeshProUGUI>().fontStyle = FontStyles.Normal;
-                            subInstance.transform.Find("MissionText").GetComponent<TextMeshProUGUI>().fontSize *= 0.85f;
-                            subInstance.transform.localPosition = new Vector3(0, subHeight, 0);
-                        }
-                        else if (subMission.isActive == false && subMissionCheck != null)
-                        {
-                            Destroy(subMissionCheck.gameObject);
-                        }
+                        Destroy(subMissionCheck.gameObject);
                     }
-                }
-                else if (missions[i].isActive == false && missionCheck != null)
-                {
-                    Destroy(missionCheck.gameObject);
                 }
             }
-            
+            else if (missionCheck != null)
+            {
+                if (activeMission.target > 1)
+                {
+                    missionCheck.transform.Find("Value").GetComponent<TextMeshProUGUI>().text = $"{activeMission.achieved}/{activeMission.target}";
+                }
+                else
+                {
+                    missionCheck.transform.Find("Text").GetComponent<TextMeshProUGUI>().margin = new Vector4(-50, 0, -280, 0);
+                    missionCheck.transform.Find("Value").gameObject.SetActive(false);
+                }
+                int subMissionCount = 1;
+                foreach (SubMission subMission in activeMission.subMissions)
+                {
+                    Transform subMissionCheck = missionUI.transform.Find(subMission.title);
+                    if (subMission.isActive && subMissionCheck == null)
+                    {
+                        int subHeight = 0 - subMissionCount * 45;
+                        subMissionCount++;
+                        GameObject subInstance = Instantiate(missionPrefap, missionUI.transform);
+                        TextMeshProUGUI subInstanceText = subInstance.transform.Find("Text").GetComponent<TextMeshProUGUI>();
+                        TextMeshProUGUI subInstanceValue = subInstance.transform.Find("Value").GetComponent<TextMeshProUGUI>();
+                        subInstance.name = subMission.title;
+                        subInstanceText.text = subMission.title;
+                        subInstanceText.fontStyle = FontStyles.Normal;
+                        subInstanceText.fontSize *= 0.85f;
+                        subInstance.transform.localPosition = new Vector3(0, subHeight, 0);
+                        if (subMission.target > 1)
+                        {
+                            subInstanceValue.text = $"{activeMission.achieved}/{activeMission.target}";
+                        }
+                        else
+                        {
+                            subInstanceText.margin = new Vector4(-50, 0, -280, 0);
+                            subInstanceValue.gameObject.SetActive(false);
+                        }
+                    }
+                    else if (subMission.isActive == false && subMissionCheck != null)
+                    {
+                        Destroy(subMissionCheck.gameObject);
+                    }
+                }
+            }
         }
-
-        for (int i = 0; i < missions.Count; i++)
-        {
-            
-        }
-
         CheckCompleted();
     }
 
@@ -103,8 +137,7 @@ public class MissionManager : MonoBehaviour
         if (mission != null )
         {
             mission.achieved += achieved;
-            CheckCompleted();
-            return;
+            RefreshMissions();
         }
         else
         {
@@ -114,7 +147,7 @@ public class MissionManager : MonoBehaviour
                 if (subMission != null)
                 {
                     subMission.achieved += achieved;
-                    CheckCompleted();
+                    RefreshMissions();
                     return;
                 }
             }
@@ -123,30 +156,63 @@ public class MissionManager : MonoBehaviour
 
     private void CheckCompleted()
     {
-        foreach (Mission mission in missions)
+        if (activeMission == null)
+        {
+            foreach (Mission mission in missions)
+            {
+                int completion = 0;
+                foreach (SubMission subMission in mission.subMissions)
+                {
+                    if (subMission.achieved >= subMission.target)
+                    {
+                        TextMeshProUGUI missionText = missionUI.transform.Find(subMission.title).Find("Text").GetComponent<TextMeshProUGUI>();
+                        missionText.text = $" <s>{subMission.title}</s>";
+                        missionText.color = new Color(missionText.color.r, missionText.color.g, missionText.color.b, 0.7f);
+                        subMission.OnCompleted?.Invoke();
+                        completion++;
+                    }
+                }
+                if (mission.achieved >= mission.target)
+                {
+                    completion++;
+                }
+                if (completion == mission.subMissions.Count + 1)
+                {
+                    mission.OnCompleted?.Invoke();
+                }
+            }
+        }
+        else
         {
             int completion = 0;
-            foreach (SubMission subMission in mission.subMissions)
+            foreach (SubMission subMission in activeMission.subMissions)
             {
                 if (subMission.achieved >= subMission.target) 
                 {
-                    TextMeshProUGUI missionText = missionUI.transform.Find(subMission.title).Find("MissionText").GetComponent<TextMeshProUGUI>();
+                    TextMeshProUGUI missionText = missionUI.transform.Find(subMission.title).Find("Text").GetComponent<TextMeshProUGUI>();
                     missionText.text = $" <s>{subMission.title}</s>";
                     missionText.color = new Color(missionText.color.r, missionText.color.g, missionText.color.b, 0.7f);
-                    subMission.OnCompleted.Invoke();
+                    subMission.OnCompleted?.Invoke();
                     completion++;
                 }
             }
-            if (mission.achieved >= mission.target)
+            if (activeMission.achieved >= activeMission.target)
             {
                 completion++;
             }
-            if (completion == mission.subMissions.Count + 1)
+            if (completion == activeMission.subMissions.Count + 1)
             {
-                TextMeshProUGUI missionText = missionUI.transform.Find(mission.title).Find("MissionText").GetComponent<TextMeshProUGUI>();
-                missionText.text = $"<s>{mission.title}</s>";
-                missionText.color = new Color(missionText.color.r, missionText.color.g, missionText.color.b, 0.7f);
-                mission.OnCompleted.Invoke();
+                activeMission.OnCompleted?.Invoke();
+                Animator animator = missionUI.transform.Find(activeMission.title).GetComponent<Animator>();
+                if (animator != null)
+                {
+                    animator.SetBool("active", false);
+                }
+                Mission nextMission = missions[missions.IndexOf(activeMission) + 1];
+                if (nextMission != null)
+                {
+                    SetActiveMission(missions[missions.IndexOf(activeMission) + 1]);
+                }
             }
         }
     }
@@ -185,5 +251,68 @@ public class MissionManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SetActiveMission(string title)
+    {
+        Mission mission = missions.Find(mission => mission.title.Trim().ToLower() == title.Trim().ToLower());
+        if (mission != null)
+        {
+            if (activeMission != null)
+            {
+                Animator animator = missionUI.transform.Find(activeMission.title).GetComponent<Animator>();
+                if (animator != null)
+                {
+                    animator.SetBool("active", false);
+                }
+                StartCoroutine(DestroyActiveMission());
+            }
+            activeMission = mission;
+            Debug.Log($"activeMission set to {title}.");
+        }
+        else
+        {
+            StartCoroutine(DestroyActiveMission());
+            activeMission = null;
+            Debug.Log($"Mission {title} not found, activeMission set to null.");
+        }
+        RefreshMissions();
+    }
+
+    public void SetActiveMission(Mission mission)
+    {
+        if (missions.Contains(mission))
+        {
+            if (activeMission != null)
+            {
+                Animator animator = missionUI.transform.Find(activeMission.title).GetComponent<Animator>();
+                if (animator != null)
+                {
+                    animator.SetBool("active", false);
+                }
+                StartCoroutine(DestroyActiveMission());
+            }
+            StartCoroutine(ChangeActiveMission(mission));
+            Debug.Log($"activeMission set to {mission.title}.");
+        }
+        else
+        {
+            StartCoroutine(DestroyActiveMission());
+            StartCoroutine(ChangeActiveMission(null));
+            Debug.Log($"Mission {mission.title} not found, activeMission set to null.");
+        }
+    }
+
+    private IEnumerator DestroyActiveMission()
+    {
+        yield return new WaitForSeconds(0.34f);
+        Destroy(missionUI.transform.Find(activeMission.title).gameObject);
+    }
+
+    private IEnumerator ChangeActiveMission(Mission mission)
+    {
+        yield return new WaitForSeconds(0.34f);
+        activeMission = mission;
+        RefreshMissions();
     }
 }

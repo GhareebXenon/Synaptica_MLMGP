@@ -10,15 +10,13 @@ public class Mission
     public string title;
     public float target;
     public float achieved;
-    public bool isActive;
     public UnityEvent OnCompleted;
     public List<SubMission> subMissions = new List<SubMission>();
 
-    public Mission(string title, float target, bool isActive)
+    public Mission(string title, float target)
     {
         this.title = title;
         this.target = target;
-        this.isActive = isActive;
     }
 }
 
