@@ -35108,6 +35108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSController
       objectReference: {fileID: 0}
+    - target: {fileID: 3875321583514836798, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: bgm.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: e11a3f731847f0448845ec6c60b679ba, type: 3}
     - target: {fileID: 4695330422230923286, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -35124,86 +35128,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[0].title
-      value: Get to the generator room and plant the explosives.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].title
-      value: Mission for testing.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[0].target
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].target
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[0].subMissions.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[0].title
-      value: Sub 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[1].title
-      value: Sub 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[2].title
-      value: Sub 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[0].target
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[1].target
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[2].target
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[0].isActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[1].isActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[2].isActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[0].OnCompleted.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].OnCompleted.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[0].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1251304549}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1574797493}
     - target: {fileID: 8324836063925841454, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -59111,17 +59035,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4972167997025879799, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
   m_PrefabInstance: {fileID: 1574797490}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1574797493 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2255235327405816117, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
-  m_PrefabInstance: {fileID: 1574797490}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fad6b0a68cb501149b72a4d719c54185, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1576802791
 PrefabInstance:
   m_ObjectHideFlags: 0
