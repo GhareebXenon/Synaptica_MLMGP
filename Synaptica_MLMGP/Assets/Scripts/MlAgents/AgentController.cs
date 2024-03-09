@@ -5,6 +5,7 @@ using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using UnityEditor.ShaderGraph.Internal;
+using Google.Protobuf.WellKnownTypes;
 
 
 public class AgentController : Agent
@@ -13,8 +14,13 @@ public class AgentController : Agent
     //private float previousDistance;
     [SerializeField] private Transform target;
     [SerializeField] float moveSpeed = 4f;
+    [SerializeField] private Transform shootingPoint;
+    public int minTimeBetweenShots = 50;
+    public int damage = 100;
+    private bool shotAvailable = true;
+    private int stepsUntilShotAvailable = 0;
 
-        public override void Initialize()  
+    public override void Initialize()  
     {
         rb = GetComponent<Rigidbody>();
     }
@@ -25,6 +31,24 @@ public class AgentController : Agent
             target.localPosition = new Vector3(Random.Range(-4f, 4f), 0.3f, Random.Range(-4f, 4f));
        
         
+    }
+    private void Shoot()
+    {
+        if (!shotAvailable) return;
+
+        var layerMask = 1 << LayerMask.NameToLayer("Enemy");
+        var direction = transform.forward;
+
+        Debug.Log(message: "Shot");
+        Debug.DrawRay(shootingPoint.position, direction * 288f, Color.green,  2f);
+
+        if (Physics.Raycast(origin: shootingPoint.position, direction: direction, out var hit, 200f, layerMask: layerMask))
+        {
+            hit.transform.GetComponent<Enemy>().GetShot(damage,  this);
+        }
+
+        shotAvailable = false;
+        stepsUntilShotAvailable = minTimeBetweenShots;
     }
     public override void CollectObservations(VectorSensor sensor)
     {
@@ -72,18 +96,21 @@ public class AgentController : Agent
       
 
     }
-    //void FixedUpdate()
-    //{
-    //    // Measure distance moved
-    //    float currentDistance = Vector3.Distance(transform.position, rb.position);
-    //    float distanceMoved = Mathf.Abs(currentDistance - previousDistance);
+    void FixedUpdate()
+    { 
 
-    //    // If the agent has not moved significantly, apply penalty
-    //    if (distanceMoved < 1f)
-    //    {
-    //        AddReward(-1);
-    //    }
+           if (!shotAvailable)
 
-    //    previousDistance = currentDistance;
-    //}
+            stepsUntilShotAvailable--;  // Decrement StepsUntilShotIsAvailable
+
+                 if (stepsUntilShotAvailable <= 8)
+
+                  shotAvailable = true;
+
+    }
+    public void RegisterKill() {
+        AddReward(1f);
+        EndEpisode() ;
+
+    }
 }
