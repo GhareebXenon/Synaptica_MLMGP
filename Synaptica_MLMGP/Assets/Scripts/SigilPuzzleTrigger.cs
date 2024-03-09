@@ -1,22 +1,23 @@
 using cowsins;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlidingPuzzleTrigger : MonoBehaviour
+public class SigilPuzzleTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject playerUIContainer;
     [SerializeField] private GameObject mainCamera;
-    [SerializeField] private GameObject slidingPuzzleCamera;
+    [SerializeField] private GameObject sigilPuzzleCamera;
     [SerializeField] private WeaponController weaponController;
+    private SigilPuzzle sigilPuzzle;
     public bool enteredTrigger = false;
-    
+
 
 
     private void Start()
     {
-        slidingPuzzleCamera.SetActive(false);
+        sigilPuzzle = transform.parent.GetComponent<SigilPuzzle>();
+        sigilPuzzleCamera.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -24,7 +25,7 @@ public class SlidingPuzzleTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             mainCamera.SetActive(false);
-            slidingPuzzleCamera.SetActive(true);
+            sigilPuzzleCamera.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             //stats.LoseControl();
@@ -39,7 +40,7 @@ public class SlidingPuzzleTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             mainCamera.SetActive(true);
-            slidingPuzzleCamera.SetActive(false);
+            sigilPuzzleCamera.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             //stats.CheckIfCanGrantControl();
@@ -48,6 +49,4 @@ public class SlidingPuzzleTrigger : MonoBehaviour
             weaponController.canShoot = true;
         }
     }
-
-    
 }

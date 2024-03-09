@@ -25,6 +25,8 @@ public class SoundManager :MonoBehaviour
         bgmSrc = transform.Find("BGM").GetComponent<AudioSource>();
     }
 
+    
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -37,10 +39,24 @@ public class SoundManager :MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         bgmSrc.Stop();
-        if (bgm[scene.buildIndex] != null)
+        switch (scene.name)
         {
-            PlayMusic(bgm[scene.buildIndex], 0, 0, false, 0, true, "Music");
-        }
+            case "MainMenu 1":
+                    PlayMusic(bgm[0], 0, 0, false, 0, true, "Music");
+                    break;
+            case "Exposition":
+                    PlayMusic(bgm[1], 0, 0, false, 0, true, "Music");
+                    break;
+            case "Level 1":
+                    PlayMusic(bgm[2], 0, 0, false, 0, true, "Music");
+                    break;
+            case "Level 2":
+                    PlayMusic(bgm[2], 0, 0, false, 0, true, "Music");
+                    break;
+            default:
+                    PlayMusic(bgm[0], 0, 0, false, 0, true, "Music");
+                    break;
+            }
     }
 
     public void PlaySound(AudioClip clip, float delay = 0, float pitchAdded = 0, bool randomPitch = false, float spatialBlend = 0, bool loopable = false, string output = "Master")
@@ -48,9 +64,9 @@ public class SoundManager :MonoBehaviour
         StartCoroutine(Play(clip,delay,pitchAdded,randomPitch,spatialBlend, loopable,output)); 
     }
 
-    public void PlayMusic(AudioClip clip, float delay = 0, float pitchAdded = 0, bool randomPitch = false, float spatialBlend = 0, bool loopable = false, string output = "Master")
+    public void PlayMusic(AudioClip clip, float delay = 0, float pitchAdded = 0, bool randomPitch = false, float spatialBlend = 0, bool loopable = true, string output = "Music")
     {
-        StartCoroutine(PlayM(clip,delay,pitchAdded,randomPitch,spatialBlend, loopable,output)); 
+        StartCoroutine(PlayM(clip,delay,pitchAdded,randomPitch,spatialBlend, loopable)); 
     }
 
     private IEnumerator Play(AudioClip clip, float delay, float pitch, bool randomPitch,  float spatialBlend, bool loopable, string output)
@@ -66,16 +82,16 @@ public class SoundManager :MonoBehaviour
         yield return null; 
     }
 
-    private IEnumerator PlayM(AudioClip clip, float delay, float pitch, bool randomPitch,  float spatialBlend, bool loopable, string output)
+    private IEnumerator PlayM(AudioClip clip, float delay, float pitch, bool randomPitch,  float spatialBlend, bool loopable)
     {
         if (!clip) yield return null; 
         yield return new WaitForSeconds(delay);
-        bgmSrc.outputAudioMixerGroup = audioMixer.FindMatchingGroups(output)[0];
         bgmSrc.loop = loopable;
         bgmSrc.spatialBlend = spatialBlend;
         float pitchAdded = randomPitch ? Random.Range(-pitch, pitch) : pitch; 
         bgmSrc.pitch = 1 + pitchAdded;
-        bgmSrc.PlayOneShot(clip); 
+        bgmSrc.clip = clip;
+        bgmSrc.Play(); 
         yield return null; 
     }
 }
