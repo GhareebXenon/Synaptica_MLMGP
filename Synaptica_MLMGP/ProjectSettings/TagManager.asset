@@ -13,6 +13,7 @@ TagManager:
   - Reflector
   - CenterReflector
   - Wall
+  - ConnectingPoint
   layers:
   - Default
   - TransparentFX

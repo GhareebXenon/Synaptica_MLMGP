@@ -402,7 +402,7 @@ public class UIController : MonoBehaviour
 
     public void ChangeScene(int scene) => SceneManager.LoadScene(scene);
 
-    public void UpdateCoins(int amount) => coinsText.text = CoinManager.Instance.coins.ToString(); 
+    //public void UpdateCoins(int amount) => coinsText.text = CoinManager.Instance.coins.ToString(); 
 
     private void OnEnable()
     {
@@ -428,7 +428,7 @@ public class UIController : MonoBehaviour
         UIEvents.disableWeaponUI += DisableWeaponUI;
         UIEvents.setWeaponDisplay += SetWeaponDisplay;
         UIEvents.enableWeaponDisplay += EnableDisplay;
-        UIEvents.onCoinsChange += UpdateCoins; 
+        //UIEvents.onCoinsChange += UpdateCoins; 
 
         interactUI.SetActive(false);
     }

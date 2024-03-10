@@ -16514,7 +16514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4972167997025879801, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.1
+      value: -0.007
       objectReference: {fileID: 0}
     - target: {fileID: 4972167997025879807, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16526,7 +16526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4972167997025879807, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.05
+      value: -1.461
       objectReference: {fileID: 0}
     - target: {fileID: 4972167997025983191, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
       propertyPath: m_Name
@@ -35520,6 +35520,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1066969051130155960, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1992514698478742586, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.1
@@ -35576,10 +35580,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2223319734497157752, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: weapons.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2223319734497157752, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: weapons.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: a124665a74744f745941247b8b90640d, type: 2}
+    - target: {fileID: 2223319734497157752, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: initialWeapons.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1cb39c6c8005c554e93289889a1892e1, type: 2}
+    - target: {fileID: 2223319734497157752, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: initialWeapons.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: a124665a74744f745941247b8b90640d, type: 2}
     - target: {fileID: 2705673255436515047, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_Name
       value: FPSController
       objectReference: {fileID: 0}
+    - target: {fileID: 3875321583514836798, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: bgm.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875321583514836798, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: bgm.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: e11a3f731847f0448845ec6c60b679ba, type: 3}
+    - target: {fileID: 3875321583514836798, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: bgm.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: e11a3f731847f0448845ec6c60b679ba, type: 3}
     - target: {fileID: 4695330422230923286, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -35596,86 +35628,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[0].title
-      value: Get to the generator room and plant the explosives.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].title
-      value: Mission for testing.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[0].target
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].target
+    - target: {fileID: 8135312282458551410, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[0].subMissions.Array.size
+    - target: {fileID: 8135312282458551410, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: BypassEffects
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[0].title
-      value: Sub 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[1].title
-      value: Sub 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[2].title
-      value: Sub 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[0].target
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[1].target
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[2].target
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[0].isActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[1].isActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].subMissions.Array.data[2].isActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[0].OnCompleted.m_PersistentCalls.m_Calls.Array.size
+    - target: {fileID: 8135312282458551410, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].OnCompleted.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[0].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+    - target: {fileID: 8135312282458551410, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: OutputAudioMixerGroup
       value: 
-      objectReference: {fileID: 1251304549}
-    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
-      propertyPath: missions.Array.data[1].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1574797493}
+      objectReference: {fileID: -4957188267500556659, guid: 3dc5bcb72860b6345a662a8ccec7587f, type: 2}
     - target: {fileID: 8324836063925841454, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -60252,17 +60220,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4972167997025879799, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
   m_PrefabInstance: {fileID: 1574797490}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1574797493 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2255235327405816117, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
-  m_PrefabInstance: {fileID: 1574797490}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fad6b0a68cb501149b72a4d719c54185, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1576802791
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class SlidingPuzzleTrigger : MonoBehaviour
 {
-    [SerializeField] private GameObject playerUI;
+    [SerializeField] private GameObject playerUIContainer;
     [SerializeField] private GameObject mainCamera;
     [SerializeField] private GameObject slidingPuzzleCamera;
     [SerializeField] private WeaponController weaponController;
@@ -28,7 +28,7 @@ public class SlidingPuzzleTrigger : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             //stats.LoseControl();
-            playerUI.SetActive(false);
+            playerUIContainer.SetActive(false);
             enteredTrigger = true;
             weaponController.canShoot = false;
         }
@@ -43,7 +43,7 @@ public class SlidingPuzzleTrigger : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             //stats.CheckIfCanGrantControl();
-            playerUI.SetActive(true);
+            playerUIContainer.SetActive(true);
             enteredTrigger = false;
             weaponController.canShoot = true;
         }
