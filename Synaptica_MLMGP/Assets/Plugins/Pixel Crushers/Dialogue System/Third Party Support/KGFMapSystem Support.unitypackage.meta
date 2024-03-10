@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 guid: f73b81d6a28009a4d8a6cfa24e4f6670
+<<<<<<< Updated upstream
 labels:
 - Mapper
 - Kgf
@@ -7,6 +8,10 @@ labels:
 - Map
 - Minimap
 DefaultImporter:
+=======
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> Stashed changes
   userData: 
   assetBundleName: 
   assetBundleVariant: 

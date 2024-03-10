@@ -1,8 +1,13 @@
 fileFormatVersion: 2
 guid: c59e446cf466a424daed6859d731bc80
+<<<<<<< Updated upstream
 labels:
 - Unistorm
 DefaultImporter:
+=======
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> Stashed changes
   userData: 
   assetBundleName: 
   assetBundleVariant: 

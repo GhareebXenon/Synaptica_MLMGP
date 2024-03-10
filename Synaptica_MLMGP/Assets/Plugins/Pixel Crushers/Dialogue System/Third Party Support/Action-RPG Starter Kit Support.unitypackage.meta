@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 guid: b81586c5bf3938042babe319ccb6b693
+<<<<<<< Updated upstream
 labels:
 - Action
 - Rpg
@@ -7,6 +8,10 @@ labels:
 - Starter
 - Kit
 DefaultImporter:
+=======
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> Stashed changes
   userData: 
   assetBundleName: 
   assetBundleVariant: 

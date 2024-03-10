@@ -1,8 +1,13 @@
 fileFormatVersion: 2
 guid: 41dc081f41d06ad4cb3a976e3bc784ff
+<<<<<<< Updated upstream
 labels:
 - Gameflow
 DefaultImporter:
+=======
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> Stashed changes
   userData: 
   assetBundleName: 
   assetBundleVariant: 
