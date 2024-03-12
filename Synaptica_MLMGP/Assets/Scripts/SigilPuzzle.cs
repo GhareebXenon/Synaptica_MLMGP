@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SigilPuzzle : MonoBehaviour
 {
     [SerializeField] private GameObject pointPrefab;
     [SerializeField] private GameObject board;
     [SerializeField] private GameObject[] connectingPoints;
+    [SerializeField] private string[] solutionCount;
     [SerializeField] private Material selectMaterial;
     [SerializeField] private Material unselectMaterial;
     [SerializeField] private GameObject selectedPoint;
+    [SerializeField] private UnityEvent OnCompleted;
     private Camera sigilPuzzleCamera;
     private List<GameObject> drawnPoints = new List<GameObject>();
 
@@ -34,12 +38,10 @@ public class SigilPuzzle : MonoBehaviour
             {
                 if (hit.collider.CompareTag("ConnectingPoint"))
                 {
-                    Vector3 pointPosition = hit.point;
-
                     if (selectedPoint != null && selectedPoint != hit.collider.gameObject)
                     {
                         Vector3 start = selectedPoint.transform.position + new Vector3(0, 0, 0.001f);
-                        Vector3 end = pointPosition + new Vector3(0, 0, 0.001f);
+                        Vector3 end = hit.collider.transform.position + new Vector3(0, 0, 0.001f);
                         DrawLine(start, end);
                         hit.collider.GetComponent<MeshRenderer>().material = selectMaterial;
                         hit.collider.gameObject.name += "*";
@@ -64,6 +66,8 @@ public class SigilPuzzle : MonoBehaviour
                     }
                 }
             }
+
+            CheckCompleted();
         }
         else if (Input.GetMouseButtonUp(0))
         {
@@ -82,6 +86,26 @@ public class SigilPuzzle : MonoBehaviour
             Vector3 currentPosition = start + new Vector3(direction.x * i, direction.y * i, 0);
             GameObject newPoint = Instantiate(pointPrefab, currentPosition, pointPrefab.transform.rotation, transform);
             drawnPoints.Add(newPoint);
+        }
+    }
+
+    private void CheckCompleted()
+    {
+        int count = 0;
+
+        for (int i = 0; i < connectingPoints.Length; i++)
+        {
+            if (connectingPoints[i].name.Contains(solutionCount[i]))
+            {
+                count++;
+                Debug.Log($"Count = {count}");
+            }
+        }
+
+        if (count == connectingPoints.Length)
+        {
+            Debug.Log($"Solved, Count = {count}");
+            OnCompleted?.Invoke();
         }
     }
 }

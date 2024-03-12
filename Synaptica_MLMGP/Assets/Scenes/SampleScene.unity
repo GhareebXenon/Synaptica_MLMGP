@@ -123,6 +123,71 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &16931737
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1478988564685148830, guid: b95441ac701fdd4449ec2e9dc56cd9ce, type: 3}
+      propertyPath: m_Name
+      value: Gate_Small (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123421521871701778, guid: b95441ac701fdd4449ec2e9dc56cd9ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 188.83147
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123421521871701778, guid: b95441ac701fdd4449ec2e9dc56cd9ce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3355894
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123421521871701778, guid: b95441ac701fdd4449ec2e9dc56cd9ce, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123421521871701778, guid: b95441ac701fdd4449ec2e9dc56cd9ce, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123421521871701778, guid: b95441ac701fdd4449ec2e9dc56cd9ce, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123421521871701778, guid: b95441ac701fdd4449ec2e9dc56cd9ce, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123421521871701778, guid: b95441ac701fdd4449ec2e9dc56cd9ce, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123421521871701778, guid: b95441ac701fdd4449ec2e9dc56cd9ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123421521871701778, guid: b95441ac701fdd4449ec2e9dc56cd9ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123421521871701778, guid: b95441ac701fdd4449ec2e9dc56cd9ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281681288993736649, guid: b95441ac701fdd4449ec2e9dc56cd9ce, type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 1230633309}
+    - target: {fileID: 3281681288993736649, guid: b95441ac701fdd4449ec2e9dc56cd9ce, type: 3}
+      propertyPath: UseText
+      value: 
+      objectReference: {fileID: 1481621462}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b95441ac701fdd4449ec2e9dc56cd9ce, type: 3}
 --- !u!1 &25462161 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 92639481142969673, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
@@ -5371,6 +5436,17 @@ LightingSettings:
   m_PVRTiledBaking: 0
   m_NumRaysToShootPerTexel: -1
   m_RespectSceneVisibilityWhenBakingGI: 0
+--- !u!114 &1885911200 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1893070811143212500, guid: b95441ac701fdd4449ec2e9dc56cd9ce, type: 3}
+  m_PrefabInstance: {fileID: 16931737}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ff8077f7eeefb4481705248e8572e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2187666778616118499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5617,6 +5693,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4018425024369468166, guid: 577970bd635bb4b41be584dc408f3478, type: 3}
+      propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1885911200}
     - target: {fileID: 6190825693569339335, guid: 577970bd635bb4b41be584dc408f3478, type: 3}
       propertyPath: m_Name
       value: SigillPuzzle
@@ -5713,5 +5793,6 @@ SceneRoots:
   - {fileID: 2193993134045787270}
   - {fileID: 2187666778616118499}
   - {fileID: 1713827870}
+  - {fileID: 16931737}
   - {fileID: 1481621460}
   - {fileID: 3664367625388177850}
