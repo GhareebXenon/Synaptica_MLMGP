@@ -10,13 +10,14 @@ public class SigilPuzzle : MonoBehaviour
     [SerializeField] private GameObject pointPrefab;
     [SerializeField] private GameObject board;
     [SerializeField] private GameObject[] connectingPoints;
-    [SerializeField] private string[] solutionCount;
+    [SerializeField] private List<SigilLine> solutionLines = new();
     [SerializeField] private Material selectMaterial;
     [SerializeField] private Material unselectMaterial;
     [SerializeField] private GameObject selectedPoint;
     [SerializeField] private UnityEvent OnCompleted;
     private Camera sigilPuzzleCamera;
-    private List<GameObject> drawnPoints = new List<GameObject>();
+    [SerializeField] private List<SigilLine> solvedLines = new();
+    private List<GameObject> drawnPoints = new();
 
     private void Start()
     {
@@ -26,6 +27,16 @@ public class SigilPuzzle : MonoBehaviour
         {
             point.GetComponent<MeshRenderer>().material = unselectMaterial;
         }
+
+        List<SigilLine> addedLines = new();
+        for (int i = 0; i < solutionLines.Count; i++)
+        {
+            SigilLine line = solutionLines[i];
+            SigilLine invertedLine = new(line.endPoint, line.startPoint);
+            addedLines.Add(invertedLine);
+            Debug.Log($"Added line from {line.endPoint} to {line.startPoint}.");
+        }
+        solutionLines.AddRange(addedLines);
     }
 
     private void Update()
@@ -40,9 +51,8 @@ public class SigilPuzzle : MonoBehaviour
                 {
                     if (selectedPoint != null && selectedPoint != hit.collider.gameObject)
                     {
-                        Vector3 start = selectedPoint.transform.position + new Vector3(0, 0, 0.001f);
-                        Vector3 end = hit.collider.transform.position + new Vector3(0, 0, 0.001f);
-                        DrawLine(start, end);
+                        SigilLine line = new SigilLine(selectedPoint, hit.collider.gameObject);
+                        DrawLine(line);
                         hit.collider.GetComponent<MeshRenderer>().material = selectMaterial;
                         hit.collider.gameObject.name += "*";
                         selectedPoint.name += "*";
@@ -75,8 +85,10 @@ public class SigilPuzzle : MonoBehaviour
         }
     }
 
-    private void DrawLine(Vector3 start, Vector3 end)
+    private void DrawLine(SigilLine line)
     {
+        Vector3 start = line.startPoint.transform.position + new Vector3(0, 0, 0.001f);
+        Vector3 end = line.endPoint.transform.position + new Vector3(0, 0, 0.001f);
         Vector3 direction = end - new Vector3(start.x, start.y, 0);
         float distance = direction.magnitude;
         direction.Normalize();
@@ -87,22 +99,31 @@ public class SigilPuzzle : MonoBehaviour
             GameObject newPoint = Instantiate(pointPrefab, currentPosition, pointPrefab.transform.rotation, transform);
             drawnPoints.Add(newPoint);
         }
+        solvedLines.Add(line);
     }
 
     private void CheckCompleted()
     {
         int count = 0;
 
-        for (int i = 0; i < connectingPoints.Length; i++)
+        for (int i = 0; i < solvedLines.Count; i++)
         {
-            if (connectingPoints[i].name.Contains(solutionCount[i]))
+            for (int j = 0; j < solutionLines.Count; j++)
             {
-                count++;
-                Debug.Log($"Count = {count}");
+                if (solvedLines[i].startPoint == solutionLines[j].startPoint && solvedLines[i].endPoint == solutionLines[j].endPoint)
+                {
+                    count++;
+                    Debug.Log($"The line from {solutionLines[i].startPoint.name} to {solutionLines[i].endPoint.name} is correct, Count is {count}.");
+                    break;
+                }
+                else
+                {
+                    Debug.Log($"The line from {solutionLines[i].startPoint.name} to {solutionLines[i].endPoint.name} is incorrect, Count is still {count}.");
+                }
             }
         }
 
-        if (count == connectingPoints.Length)
+        if (count == solutionLines.Count / 2)
         {
             Debug.Log($"Solved, Count = {count}");
             OnCompleted?.Invoke();

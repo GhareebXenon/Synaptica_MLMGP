@@ -318,6 +318,17 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""7dcc2ffe-d698-4d8d-951f-9616f516be53"",
+                    ""path"": ""<Gamepad>/dpad"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Scrolling"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""5c8f736a-9941-41e1-8593-180e5f2a7d79"",
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",

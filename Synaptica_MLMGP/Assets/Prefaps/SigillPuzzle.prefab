@@ -796,15 +796,17 @@ MonoBehaviour:
   - {fileID: 132841877449165898}
   - {fileID: 2669225690720691232}
   - {fileID: 1837634530103988637}
-  solutionCount:
-  - '*'
-  - '**'
-  - '*'
-  - '*'
-  - '**'
-  - '*'
-  - '*'
-  - '*'
+  solutionLines:
+  - startPoint: {fileID: 8651147705116089111}
+    endPoint: {fileID: 132841877449165898}
+  - startPoint: {fileID: 116949540917071231}
+    endPoint: {fileID: 7795233764354264529}
+  - startPoint: {fileID: 116949540917071231}
+    endPoint: {fileID: 1837634530103988637}
+  - startPoint: {fileID: 4870593601084546540}
+    endPoint: {fileID: 5422837226986129361}
+  - startPoint: {fileID: 4870593601084546540}
+    endPoint: {fileID: 2669225690720691232}
   selectMaterial: {fileID: -6859131090662043704, guid: d103ad6761569474abe6d9a4ba37586d, type: 3}
   unselectMaterial: {fileID: -3661639628750336703, guid: d56b267d9037abe4cbd78057745172a4, type: 3}
   selectedPoint: {fileID: 0}
@@ -1931,7 +1933,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 53
+  m_VersionIndex: 56
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
