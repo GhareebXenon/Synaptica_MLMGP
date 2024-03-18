@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
     private void Die(AgentController shooter)
     {
         Debug.Log("I Died!");
-        
+        shooter.RegisterKill();
         Respawn();
     }
 

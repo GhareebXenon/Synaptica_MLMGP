@@ -19,6 +19,7 @@ public class AgentController : Agent
     public int damage = 100;
     private bool shotAvailable = true;
     private int stepsUntilShotAvailable = 0;
+    private Vector3 StartingPosition;
 
     public override void Initialize()  
     {
@@ -26,10 +27,12 @@ public class AgentController : Agent
     }
     public override void OnEpisodeBegin()
     {
-        transform.localPosition = new Vector3(Random.Range(-4f,4f),0.3f, Random.Range(-4f, 4f));
-        
-            target.localPosition = new Vector3(Random.Range(-4f, 4f), 0.3f, Random.Range(-4f, 4f));
-       
+        transform.localPosition = new Vector3(Random.Range(-4f, 4f), 0.3f, Random.Range(-4f, 4f));
+
+        target.localPosition = new Vector3(Random.Range(-4f, 4f), 0.3f, Random.Range(-4f, 4f));
+        rb.velocity = Vector3.zero;
+    
+        shotAvailable = true;
         
     }
     private void Shoot()
@@ -44,6 +47,7 @@ public class AgentController : Agent
 
         if (Physics.Raycast(origin: shootingPoint.position, direction: direction, out var hit, 200f, layerMask: layerMask))
         {
+            
             hit.transform.GetComponent<Enemy>().GetShot(damage,  this);
         }
 
@@ -64,7 +68,10 @@ public class AgentController : Agent
         rb.MovePosition(transform.position + transform.forward * moveForward * moveSpeed * Time.deltaTime);
         transform.Rotate(0f, moveRotate * moveSpeed, 0f, Space.Self);
 
-
+        if (Mathf.RoundToInt(actions.ContinuousActions[2] ) >= 1)
+        {
+            Shoot();
+        }
 
         /*
         Vector3 velocity = new Vector3(moveX,0f,moveZ) ;
@@ -77,9 +84,9 @@ public class AgentController : Agent
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Enemy")
+        if(other.gameObject.tag == "Player")
         {
-            AddReward(3f);
+            AddReward(1f);
             EndEpisode();
         }
         if (other.gameObject.tag == "Wall")
@@ -91,8 +98,10 @@ public class AgentController : Agent
     public override void Heuristic(in ActionBuffers actionsOut)
     {
         ActionSegment<float> continousActions = actionsOut.ContinuousActions;
+     
         continousActions[1] = Input.GetAxisRaw("Vertical");
         continousActions[0] = Input.GetAxisRaw("Horizontal");
+        continousActions[2] = Input.GetKey(KeyCode.P)? 1f:0f;
       
 
     }

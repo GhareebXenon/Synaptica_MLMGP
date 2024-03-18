@@ -179,28 +179,28 @@ public class PlayerMovement : MonoBehaviour
     [Range(0, 1), SerializeField]
     private float controlAirborne = .5f;
 
-    [Tooltip("Turn this on to allow the player to crouch while jumping")]
-    public bool allowCrouchWhileJumping;
-    //Aim assist
-    [Tooltip("Determine wether to apply aim assist or not.")]
-    public bool applyAimAssist;
+        [Tooltip("Turn this on to allow the player to crouch while jumping")]
+        public bool allowCrouchWhileJumping;
+        //Aim assist
+        [Tooltip("Determine wether to apply aim assist or not.")]
+        public bool applyAimAssist;
 
-    [Min(.1f), SerializeField]
-    private float maximumDistanceToAssistAim;
+        [Min(.1f), SerializeField]
+        private float maximumDistanceToAssistAim;
 
-    [Tooltip("Snapping speed."), SerializeField]
-    private float aimAssistSpeed;
+        [Tooltip("Snapping speed."), SerializeField]
+        private float aimAssistSpeed;
 
-    [Tooltip("size of the aim assist range."), SerializeField]
-    private float aimAssistSensitivity = 3f;
+        [Tooltip("size of the aim assist range."), SerializeField]
+        private float aimAssistSensitivity = 3f;
 
-    private RaycastHit hit;
+        private RaycastHit hit;
 
-    private Transform target;
+        private Transform target;
 
 
-    //Stamina
-    [Tooltip("You will lose stamina on performing actions when true.")]
+        //Stamina
+        [Tooltip("You will lose stamina on performing actions when true.")]
     public bool usesStamina;
 
     [SerializeField] private float stamina;
