@@ -6097,7 +6097,7 @@ PrefabInstance:
     - target: {fileID: 21060792307320737, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: bgm.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: e11a3f731847f0448845ec6c60b679ba, type: 3}
+      objectReference: {fileID: 8300000, guid: 1eb80db1fa08994439b33655657c76ec, type: 3}
     - target: {fileID: 3756996986451591745, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: m_Name
       value: GeneralManagers

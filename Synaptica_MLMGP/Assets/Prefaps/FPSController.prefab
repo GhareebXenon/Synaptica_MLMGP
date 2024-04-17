@@ -239,11 +239,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 11986c1487b69b24fa433a76cf966fb5, type: 2}
   - {fileID: 11400000, guid: 1cb39c6c8005c554e93289889a1892e1, type: 2}
   - {fileID: 11400000, guid: 4c06f015e8485e24cb7166f90f9f3503, type: 2}
+  - {fileID: 11400000, guid: a124665a74744f745941247b8b90640d, type: 2}
   initialWeapons:
   - {fileID: 11400000, guid: 1d20e1aeca53c9449a1d7219d9022761, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 1cb39c6c8005c554e93289889a1892e1, type: 2}
   - {fileID: 11400000, guid: 11986c1487b69b24fa433a76cf966fb5, type: 2}
-  - {fileID: 11400000, guid: 907aa7bd70f532947bfa1d5f3ce12fa9, type: 2}
+  - {fileID: 11400000, guid: a124665a74744f745941247b8b90640d, type: 2}
   inventory: []
   slots: []
   weapon: {fileID: 0}
@@ -2268,9 +2269,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1992514698478742586}
     m_Modifications:
+    - target: {fileID: 21060792307320737, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: bgm.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1eb80db1fa08994439b33655657c76ec, type: 3}
     - target: {fileID: 3756996986451591745, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: m_Name
       value: GeneralManagers
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270424468231686951, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002186044841700589, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5557718541209803843, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: m_LocalPosition.x
