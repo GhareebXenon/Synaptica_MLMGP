@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Synaptica_MLMGP/Assets/Blaze AI/Demos/Assets/Audios/Attack Sound 2.wav.meta
+guid: 4028075e082a7b7478c2f0a087b7d1ff
+========
+guid: 32307e7323fb7e84987e1d81fe584c9c
+>>>>>>>> Dialogue-system:Synaptica_MLMGP/Assets/Plugins/Pixel Crushers/Dialogue System/Resources/ARE YOU READY FOR IT - 1.wav.meta
+AudioImporter:
+  externalObjects: {}
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  preloadAudioData: 1
+  loadInBackground: 0
+  ambisonic: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
