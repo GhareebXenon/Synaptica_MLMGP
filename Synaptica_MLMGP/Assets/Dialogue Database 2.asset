@@ -227,7 +227,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(Stay focused Anubis We 1)'
+          AudioWait(Ds level 2/Stay focused Anubis
+          We 1 (1))'
         type: 0
         typeString: 
       conversationID: 1
@@ -251,7 +252,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.64000034
   - id: 2
     fields:
     - title: Title
@@ -758,7 +759,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(What is that 1)'
+          AudioWait(Ds level 2/What is that 1 (1))'
         type: 0
         typeString: 
       conversationID: 3
@@ -815,7 +816,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(Disabled enemies What-s 1)'
+          AudioWait(Ds level 2/Disabled enemies
+          What-s 1 (1))'
         type: 0
         typeString: 
       conversationID: 3
@@ -970,7 +972,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(Perfect spot for some fir 1)'
+          AudioWait(Ds level 2/Perfect spot for
+          some fir 1 (1))'
         type: 0
         typeString: 
       conversationID: 4
@@ -1125,7 +1128,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}}) ;
 
-          AudioWait(Finally a moment of peac 1)'
+          AudioWait(Ds level 2/Finally a moment
+          of peac 1 (1))'
         type: 0
         typeString: 
       conversationID: 5
@@ -1378,7 +1382,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(Welcome Anubis I-ve bee 1)'
+          AudioWait(Ds level 2/Welcome Anubis I-ve
+          bee 1 (1))'
         type: 0
         typeString: 
       conversationID: 7
@@ -1435,7 +1440,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(You are Strong but I am 2)'
+          AudioWait(Ds level 2/You are Strong but
+          I am 1)'
         type: 0
         typeString: 
       conversationID: 7
@@ -1459,7 +1465,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.97
+    canvasZoom: 0.6100004
   syncInfo:
     syncActors: 0
     syncItems: 0

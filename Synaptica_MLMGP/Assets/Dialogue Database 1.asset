@@ -250,7 +250,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(Watch out there-s two rob 1)'
+          AudioWait(Watch out there-s two rob 2)'
         type: 0
         typeString: 
       conversationID: 1
@@ -387,11 +387,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -405,7 +405,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(Agent Sarah are you with 2)'
+          AudioWait(DS level 1/Agent Sarah are you
+          with 1)'
         type: 0
         typeString: 
       conversationID: 2
@@ -444,11 +445,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -462,8 +463,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(I-ve reached the Generato 1
-          (1))'
+          AudioWait(DS level 1/I-ve reached the
+          Generato 1 (2))'
         type: 0
         typeString: 
       conversationID: 2
@@ -524,8 +525,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(You need to plant an expl 1
-          (1))'
+'
         type: 0
         typeString: 
       conversationID: 2
@@ -583,7 +583,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(Yes Noah I-ve breached 1)'
+          AudioWait(Yes Noah I-ve breached 2)'
         type: 0
         typeString: 
       conversationID: 2
@@ -607,7 +607,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.265823
+        x: 33.439735
         y: 220
         width: 160
         height: 30
@@ -641,7 +641,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(Noah it appears there ar 1)'
+          AudioWait(Noah it appears there ar 2)'
         type: 0
         typeString: 
       conversationID: 2
@@ -680,11 +680,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -699,7 +699,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(Understood We need to fi 1)'
+          AudioWait(DS level 1/Understood We need
+          to fi 1 (1))'
         type: 0
         typeString: 
       conversationID: 2
@@ -757,7 +758,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(You Can Destroy Them From 1)'
+          AudioWait(You Can Destroy Them From 2)'
         type: 0
         typeString: 
       conversationID: 2
@@ -780,8 +781,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 25.970865}
-    canvasZoom: 0.6100004
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.46000046
   - id: 3
     fields:
     - title: Title
@@ -912,7 +913,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(Stealth or aggression ch 1)'
+          AudioWait(DS level 1/Stealth or aggression
+          ch 1 (1))'
         type: 0
         typeString: 
       conversationID: 3
@@ -969,7 +971,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(I need to plant The Explo 1)'
+          AudioWait(DS level 1/I need to plant The
+          Explo 1 (1))'
         type: 0
         typeString: 
       conversationID: 3
@@ -1026,7 +1029,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(I Planted Now let-s mak 1)'
+          AudioWait(DS level 1/I Planted Now let-s
+          mak 1 (1))'
         type: 0
         typeString: 
       conversationID: 3
@@ -1045,12 +1049,12 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 160
-        y: 180
+        y: 178.78049
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.8200002
   - id: 4
     fields:
     - title: Title
@@ -1163,11 +1167,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1181,7 +1185,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(Another damn puzzle Thes 1 (1))'
+          AudioWait(DS level 1/Another damn puzzle
+          Thes 1 (2))'
         type: 0
         typeString: 
       conversationID: 4
@@ -1239,7 +1244,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(There-s a Riddle on the W 1)'
+          AudioWait(There-s a Riddle on the W 2)'
         type: 0
         typeString: 
       conversationID: 4

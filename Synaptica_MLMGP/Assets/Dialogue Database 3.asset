@@ -209,11 +209,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -227,7 +227,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(God - what in the bloody 2)'
+          AudioWait(God - what in the bloody 2 (1))'
         type: 0
         typeString: 
       conversationID: 1
@@ -252,7 +252,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 160
-        y: 78
+        y: 79
         width: 160
         height: 30
     - id: 2
@@ -284,7 +284,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(Gosh I can-t even look 1)'
+          AudioWait(Gosh I can-t even look 1 (1))'
         type: 0
         typeString: 
       conversationID: 1
@@ -303,12 +303,12 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 160
-        y: 130
+        y: 128.36066
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.6100004
   - id: 2
     fields:
     - title: Title
@@ -421,11 +421,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -439,7 +439,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(I sense great danger comi 1)'
+          AudioWait(I sense great danger comi 1
+          (1))'
         type: 0
         typeString: 
       conversationID: 2
@@ -496,7 +497,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(ARE YOU READY FOR IT - 1)'
+          AudioWait(ARE YOU READY FOR IT - 2)'
         type: 0
         typeString: 
       conversationID: 2
@@ -535,11 +536,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -553,7 +554,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(I WAS BORN READY - 1)'
+          AudioWait(I WAS BORN READY - 1 (1))'
         type: 0
         typeString: 
       conversationID: 2
@@ -577,7 +578,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.5500004
   - id: 3
     fields:
     - title: Title
@@ -709,7 +710,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(Looks like I-ll have to a 1)'
+          AudioWait(Looks like I-ll have to a 1
+          (1))'
         type: 0
         typeString: 
       conversationID: 3
@@ -733,7 +735,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.73000026
   - id: 4
     fields:
     - title: Title
@@ -864,7 +866,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(Be cautious Anubis ther 1)'
+          AudioWait(Be cautious Anubis ther 2)'
         type: 0
         typeString: 
       conversationID: 4
@@ -1019,7 +1021,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(HEY Smartness - you think 1)'
+          AudioWait(HEY Smartness - you think 2)'
         type: 0
         typeString: 
       conversationID: 5
@@ -1174,7 +1176,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          AudioWait(_THAT SHOULD GUIDE ME TO 1)'
+          AudioWait(_THAT SHOULD GUIDE ME TO 1 (2))'
         type: 0
         typeString: 
       conversationID: 6
@@ -1193,7 +1195,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 160
-        y: 80
+        y: 81
         width: 160
         height: 30
     entryGroups: []
@@ -1480,7 +1482,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Delay({{end}})
+        value: 'Delay({{end}});
+
+          AudioWait(AH NOT AGAIN Sarah have 3)'
         type: 0
         typeString: 
       conversationID: 8
@@ -1535,7 +1539,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Delay({{end}})
+        value: 'Delay({{end}});
+
+          AudioWait(Sarah - 1)'
         type: 0
         typeString: 
       conversationID: 8
@@ -1590,7 +1596,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Delay({{end}})
+        value: 'Delay({{end}});
+
+          AudioWait(I CAN SOLVE THIS ONE BY M 1)'
         type: 0
         typeString: 
       conversationID: 8
@@ -1614,7 +1622,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.5800004
   syncInfo:
     syncActors: 0
     syncItems: 0
