@@ -5,14 +5,13 @@ using System.Collections;
 
 namespace PixelCrushers.DialogueSystem.SequencerCommands
 {
-
+    
     /// <summary>
     /// Implements sequencer command: AudioWait(audioClip[, subject[, audioClips...]])
     /// </summary>
     [AddComponentMenu("")] // Hide from menu.
     public class SequencerCommandAudioWait : SequencerCommand
     {
-
         protected float stopTime = 0;
         protected AudioSource audioSource = null;
         protected int nextClipIndex = 2;
