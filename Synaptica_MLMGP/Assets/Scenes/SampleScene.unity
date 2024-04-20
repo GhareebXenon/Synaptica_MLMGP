@@ -446,6 +446,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+--- !u!1 &615182519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3056342939625914904, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+  m_PrefabInstance: {fileID: 615182518}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &753177002
 Mesh:
   m_ObjectHideFlags: 0
@@ -5617,9 +5622,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4018425024369468166, guid: 577970bd635bb4b41be584dc408f3478, type: 3}
+      propertyPath: playerUI
+      value: 
+      objectReference: {fileID: 1416366881}
+    - target: {fileID: 4018425024369468166, guid: 577970bd635bb4b41be584dc408f3478, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 615182519}
+    - target: {fileID: 4018425024369468166, guid: 577970bd635bb4b41be584dc408f3478, type: 3}
+      propertyPath: bloodPrefab
+      value: 
+      objectReference: {fileID: 7462476265211607496, guid: 91429388b85c85e42bd0619129e5f3eb, type: 3}
+    - target: {fileID: 4018425024369468166, guid: 577970bd635bb4b41be584dc408f3478, type: 3}
+      propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 808901344}
     - target: {fileID: 6190825693569339335, guid: 577970bd635bb4b41be584dc408f3478, type: 3}
       propertyPath: m_Name
-      value: SigillPuzzle
+      value: SigilPuzzle
       objectReference: {fileID: 0}
     - target: {fileID: 6829008501823434362, guid: 577970bd635bb4b41be584dc408f3478, type: 3}
       propertyPath: m_Mesh
