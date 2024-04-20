@@ -5,22 +5,19 @@ using UnityEngine;
 
 public class MusicTrigger : MonoBehaviour
 {
-    [SerializeField] private AudioClip musicOld;
     [SerializeField] private AudioClip musicNew;
-    [SerializeField] private float transitionTime = 1.5f;
-    [SerializeField] private float volume = 0.25f;
-    [SerializeField] private bool loopable = true;
+    [SerializeField] private AudioClip musicOld;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            AudioClip musicCurr = SoundManager.Instance.GetMusicSource()?.clip;
+            AudioClip musicCurr = SoundManager.Instance.GetMusicSource().clip;
             Debug.LogWarning("Player entered the music trigger.");
 
             if (musicNew != null && musicNew != musicCurr)
             {
-                SoundManager.Instance.PlayMusicFadeIn(musicNew, volume, transitionTime, loopable);
+                SoundManager.Instance.PlayMusicFadeIn(musicNew, 0.22f);
                 Debug.LogWarning($"Music changed to '{musicNew.name}'.");
             }
         }

@@ -51,19 +51,19 @@ namespace cowsins
                     PlayMusicFadeIn(bgm[1], 1, 1);
                     break;
                 case "Level 1":
-                    PlayMusicFadeIn(bgm[2], 0.25f, 1);
+                    PlayMusicFadeIn(bgm[2], 0.22f, 1);
                     break;
                 case "Level 2":
-                    PlayMusicFadeIn(bgm[3], 0.3f, 0.33f);
+                    PlayMusicFadeIn(bgm[2], 0.22f, 1);
                     break;
                 case "Level 3":
-                    PlayMusicFadeIn(bgm[2], 0.25f, 1);
+                    PlayMusicFadeIn(bgm[2], 0.22f, 1);
                     break;
                 case "Level 4":
-                    PlayMusicFadeIn(bgm[4], 0.25f, 1);
+                    PlayMusicFadeIn(bgm[2], 0.22f, 1);
                     break;
                 default:
-                    PlayMusicFadeIn(bgm[2], 0.25f, 1);
+                    PlayMusicFadeIn(bgm[2], 0.22f, 1);
                     break;
             }
         }
@@ -155,7 +155,7 @@ namespace cowsins
 
         private IEnumerator PlayMFadeIn(AudioClip clip, float volume, float fadeDuration, bool loopable)
         {
-            if (clip == null || fadeDuration < 0 || (bgmSrc == null && bgmSrcSec == null))
+            if (clip == null || fadeDuration <= 0 || (bgmSrc == null && bgmSrcSec == null))
             {
                 Debug.LogError("Invalid parameters for PlayMFadeIn coroutine.");
                 yield break;
@@ -164,9 +164,10 @@ namespace cowsins
             AudioSource fadeInSource = bgmSrc != null && bgmSrc.isPlaying ? bgmSrc : bgmSrcSec;
             AudioSource fadeOutSource = bgmSrcSec != null && bgmSrcSec.isPlaying ? bgmSrcSec : bgmSrc;
 
+            float startVolume = 0f;
             float targetVolume = volume;
-            float elapsedTime = 0f;
 
+            float elapsedTime = 0f;
             while (elapsedTime < fadeDuration)
             {
                 fadeOutSource.volume = Mathf.Lerp(volume, 0, elapsedTime / fadeDuration);
@@ -182,7 +183,7 @@ namespace cowsins
             elapsedTime = 0f;
             while (elapsedTime < fadeDuration)
             {
-                fadeInSource.volume = Mathf.Lerp(0, targetVolume, elapsedTime / fadeDuration);
+                fadeInSource.volume = Mathf.Lerp(startVolume, targetVolume, elapsedTime / fadeDuration);
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }

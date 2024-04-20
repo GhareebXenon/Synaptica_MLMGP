@@ -181,8 +181,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: dc10efb100925c84e8ecc09e62369dd4, type: 3}
   - {fileID: 8300000, guid: c4592c813be33d846a63b66ae8a20b9b, type: 3}
   - {fileID: 8300000, guid: 3f9453bf9f4fd96419960d0c0ecf460f, type: 3}
-  - {fileID: 8300000, guid: 89c30bbb8b56f8245bb2a4d276742862, type: 3}
-  - {fileID: 8300000, guid: 063e2143805e87647b72a49a9ff8ca51, type: 3}
   audioMixer: {fileID: 24100000, guid: 3dc5bcb72860b6345a662a8ccec7587f, type: 2}
 --- !u!114 &320432767103634656
 MonoBehaviour:
