@@ -16155,6 +16155,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7211258500399187493, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: applyAimAssist
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211258500399187493, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: wallRunDuration
       value: 0.5
       objectReference: {fileID: 0}
