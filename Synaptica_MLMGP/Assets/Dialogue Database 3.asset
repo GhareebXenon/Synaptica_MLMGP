@@ -91,7 +91,7 @@ MonoBehaviour:
     - title: Initial Value
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Description
       value: 
       type: 0
@@ -307,8 +307,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6100004
+    canvasScrollPosition: {x: 49.491066, y: 39.61573}
+    canvasZoom: 0.8800001
   - id: 2
     fields:
     - title: Title
@@ -577,8 +577,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.5500004
+    canvasScrollPosition: {x: 34.573513, y: 63.02127}
+    canvasZoom: 0.85000026
   - id: 3
     fields:
     - title: Title
@@ -889,8 +889,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.94
+    canvasScrollPosition: {x: 18.994745, y: 18.538261}
+    canvasZoom: 0.96999997
   - id: 5
     fields:
     - title: Title

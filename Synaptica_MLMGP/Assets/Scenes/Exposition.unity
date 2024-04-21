@@ -5163,6 +5163,26 @@ PrefabInstance:
       propertyPath: m_ClearFlags
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3875321583514836798, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: bgm.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875321583514836798, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: bgm.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d61bd5815fba8544b993cda7e655650b, type: 3}
+    - target: {fileID: 3875321583514836798, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: bgm.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 39e4c1d6f78f80d4d9c3f0559173a7dc, type: 3}
+    - target: {fileID: 3875321583514836798, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: bgm.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 16d36ec49f9abee4da8a72ae22ea6263, type: 3}
+    - target: {fileID: 3875321583514836798, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: bgm.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 56a80ec21569b3c459f72804ac025667, type: 3}
     - target: {fileID: 4695330422230923286, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

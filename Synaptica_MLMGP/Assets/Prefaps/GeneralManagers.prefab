@@ -179,8 +179,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgm:
   - {fileID: 8300000, guid: dc10efb100925c84e8ecc09e62369dd4, type: 3}
-  - {fileID: 8300000, guid: 7090bc22cd2b0784fa06953851006af1, type: 3}
-  - {fileID: 8300000, guid: a99feff549e900d44ac015d9360018b2, type: 3}
+  - {fileID: 8300000, guid: d61bd5815fba8544b993cda7e655650b, type: 3}
+  - {fileID: 8300000, guid: 39e4c1d6f78f80d4d9c3f0559173a7dc, type: 3}
+  - {fileID: 8300000, guid: 16d36ec49f9abee4da8a72ae22ea6263, type: 3}
+  - {fileID: 8300000, guid: 56a80ec21569b3c459f72804ac025667, type: 3}
   audioMixer: {fileID: 24100000, guid: 3dc5bcb72860b6345a662a8ccec7587f, type: 2}
 --- !u!114 &320432767103634656
 MonoBehaviour:
