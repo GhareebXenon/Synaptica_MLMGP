@@ -252,7 +252,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 160
-        y: 79
+        y: 76.272736
         width: 160
         height: 30
     - id: 2
@@ -303,12 +303,12 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 160
-        y: 128.36066
+        y: 126.54248
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 49.491066, y: 39.61573}
-    canvasZoom: 0.8800001
+    canvasScrollPosition: {x: 0, y: 27.358454}
+    canvasZoom: 0.7600002
   - id: 2
     fields:
     - title: Title
@@ -464,8 +464,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 80
+        x: 165.24588
+        y: 77.377045
         width: 160
         height: 30
     - id: 2
@@ -522,7 +522,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 160
-        y: 130
+        y: 126.06558
         width: 160
         height: 30
     - id: 3
@@ -577,8 +577,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 34.573513, y: 63.02127}
-    canvasZoom: 0.85000026
+    canvasScrollPosition: {x: 44.98127, y: 45.427128}
+    canvasZoom: 0.49000058
   - id: 3
     fields:
     - title: Title
@@ -729,8 +729,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 79
+        x: 161.09589
+        y: 71.32875
         width: 160
         height: 30
     entryGroups: []
@@ -884,8 +884,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 79
+        x: 160.82474
+        y: 77.35051
         width: 160
         height: 30
     entryGroups: []
@@ -1045,7 +1045,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.85000014
   - id: 6
     fields:
     - title: Title
@@ -1200,7 +1200,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.85000014
   - id: 7
     fields:
     - title: Title
@@ -1508,7 +1508,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
+        x: 161.73912
         y: 80
         width: 160
         height: 30
@@ -1616,13 +1616,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
+        x: 165.46008
         y: 180
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.5800004
+    canvasZoom: 0.43000045
   syncInfo:
     syncActors: 0
     syncItems: 0

@@ -17,11 +17,23 @@ public class GameSettingsManager : MonoBehaviour
 
     [HideInInspector] public float masterVolume;
 
+    [HideInInspector] public float vocalsVolume;
+
+    [HideInInspector] public float sfxVolume;
+
+    [HideInInspector] public float musicVolume;
+
     [SerializeField] private TMP_Dropdown frameRateDropdown, resolutionRateDropdown, graphicsDropdown;
 
     [SerializeField] private UnityEngine.UI.Toggle fullScreenToggle,vsyncToggle;
 
     [SerializeField] private UnityEngine.UI.Slider masterVolumeSlider;
+
+    [SerializeField] private UnityEngine.UI.Slider vocalsVolumeSlider;
+
+    [SerializeField] private UnityEngine.UI.Slider sfxVolumeSlider;
+
+    [SerializeField] private UnityEngine.UI.Slider musicVolumeSlider;
 
     [SerializeField] private AudioMixer masterMixer; 
 
@@ -58,11 +70,33 @@ public class GameSettingsManager : MonoBehaviour
         masterVolumeSlider.onValueChanged.AddListener(delegate
         {
             masterVolume = OnDropDownChanged(masterVolumeSlider);
-            masterMixer.SetFloat("Volume", Mathf.Log10(masterVolume) * 20);
+            masterMixer.SetFloat("masterVolume", Mathf.Log10(masterVolume) * 20);
+        });
+        vocalsVolumeSlider.onValueChanged.AddListener(delegate
+        {
+            vocalsVolume = OnDropDownChanged(vocalsVolumeSlider);
+            masterMixer.SetFloat("vocalsVolume", Mathf.Log10(vocalsVolume) * 20);
+        });
+        sfxVolumeSlider.onValueChanged.AddListener(delegate
+        {
+            sfxVolume = OnDropDownChanged(sfxVolumeSlider);
+            masterMixer.SetFloat("sfxVolume", Mathf.Log10(sfxVolume) * 20);
+        });
+        musicVolumeSlider.onValueChanged.AddListener(delegate
+        {
+            musicVolume = OnDropDownChanged(musicVolumeSlider);
+            masterMixer.SetFloat("musicVolume", Mathf.Log10(musicVolume) * 20);
         });
     }
 
-    private void Update() =>  masterMixer.SetFloat("Volume", Mathf.Log10(masterVolume) * 20); // Change the volume
+    private void Update()
+    {
+        // Change the volume
+        masterMixer.SetFloat("masterVolume", Mathf.Log10(masterVolume) * 20);
+        masterMixer.SetFloat("vocalsVolume", Mathf.Log10(vocalsVolume) * 20);
+        masterMixer.SetFloat("sfxVolume", Mathf.Log10(sfxVolume) * 20);
+        masterMixer.SetFloat("musicVolume", Mathf.Log10(musicVolume) * 20);
+    }
 
     public void SetWindowedScreen() => fullScreen = 0;
 
@@ -75,7 +109,10 @@ public class GameSettingsManager : MonoBehaviour
         PlayerPrefs.SetInt("maxFrameRate", maxFrameRate);
         PlayerPrefs.SetInt("vsync", vsync);
         PlayerPrefs.SetInt("graphicsQuality", graphicsQuality);
-        PlayerPrefs.SetFloat("masterVolume",masterVolume);
+        PlayerPrefs.SetFloat("masterVolume", masterVolume);
+        PlayerPrefs.SetFloat("vocalsVolume", vocalsVolume);
+        PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
+        PlayerPrefs.SetFloat("musicVolume", musicVolume);
     }
 
     public void LoadSettings()
@@ -88,6 +125,9 @@ public class GameSettingsManager : MonoBehaviour
         graphicsQuality = PlayerPrefs.GetInt("graphicsQuality");
         // Audio
         masterVolume = PlayerPrefs.GetFloat("masterVolume");
+        vocalsVolume = PlayerPrefs.GetFloat("vocalsVolume");
+        sfxVolume = PlayerPrefs.GetFloat("sfxVolume");
+        musicVolume = PlayerPrefs.GetFloat("musicVolume");
         // Video
         switch (maxFrameRate)
         {
@@ -117,7 +157,10 @@ public class GameSettingsManager : MonoBehaviour
         QualitySettings.vSyncCount = vsync;
         QualitySettings.SetQualityLevel(graphicsQuality);
         //Audio
-        masterMixer.SetFloat("Volume", Mathf.Log10(masterVolume) * 20);
+        masterMixer.SetFloat("masterVolume", Mathf.Log10(masterVolume) * 20);
+        masterMixer.SetFloat("vocalsVolume", Mathf.Log10(vocalsVolume) * 20);
+        masterMixer.SetFloat("sfxVolume", Mathf.Log10(sfxVolume) * 20);
+        masterMixer.SetFloat("musicVolume", Mathf.Log10(musicVolume) * 20);
         // Video UI
         frameRateDropdown.value = maxFrameRate;
         resolutionRateDropdown.value = res;
