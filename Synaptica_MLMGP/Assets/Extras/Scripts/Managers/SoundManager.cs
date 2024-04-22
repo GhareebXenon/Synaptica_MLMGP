@@ -41,7 +41,8 @@ namespace cowsins
         }
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            bgmSrc?.Stop();
+            //Change music for each scene when it loads
+            bgmSrc.Stop();
             switch (scene.name)
             {
                 case "MainMenu 1":
@@ -78,6 +79,7 @@ namespace cowsins
             StartCoroutine(PlayM(clip, volume, delay, loopable));
         }
 
+        //Function to start the fade in coroutine
         public void PlayMusicFadeIn(AudioClip clip, float volume = 1, float fadeDuration = 1.5f, bool loopable = true)
         {
             StartCoroutine(PlayMFadeIn(clip, volume, fadeDuration, loopable));
@@ -153,6 +155,7 @@ namespace cowsins
             yield return null;
         }
 
+        //Coroutine to play music with fade in effect
         private IEnumerator PlayMFadeIn(AudioClip clip, float volume, float fadeDuration, bool loopable)
         {
             if (clip == null || fadeDuration < 0 || (bgmSrc == null && bgmSrcSec == null))

@@ -8,7 +8,7 @@ public class MusicTrigger : MonoBehaviour
 {
     [Header("Clips")]
     [SerializeField] private AudioClip musicOld;
-    [SerializeField] private AudioClip musicNew;
+    [SerializeField][Tooltip("Plays when the player enter the trigger.")] private AudioClip musicNew;
     [SerializeField][Tooltip("Plays after Music New, leave it Null if playing one track.")] private AudioClip musicAfter;
 
     [Header("Attributes for Music New")]
@@ -25,17 +25,17 @@ public class MusicTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            AudioClip musicCurr = SoundManager.Instance.GetMusicSource()?.clip;
+            AudioClip musicCurr = SoundManager.Instance.GetMusicSource()?.clip; //Get current music playing in audio source
             Debug.LogWarning("Player entered the music trigger.");
 
-            if (musicNew != null && musicNew != musicCurr)
+            if (musicNew != null && musicNew != musicCurr) //Check if musicNew is not null and not playing
             {
-                if (musicAfter == null)
+                if (musicAfter == null) //if we didn't put a reference for musicAfter just play musicNew
                 {
                     SoundManager.Instance.PlayMusicFadeIn(musicNew, volume, transitionTime, loopable);
                     Debug.LogWarning($"Music changed to '{musicNew.name}'.");
                 }
-                else
+                else //else if we put a reference for musicAfter start the coroutine that plays it after musicNew
                 {
                     StartCoroutine(PlayMusicAfter());
                 }

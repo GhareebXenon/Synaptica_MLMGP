@@ -831,15 +831,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3932596582306609077, guid: 659dd384efb04d749ab4fe3bd043e90a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32
+      value: -33
       objectReference: {fileID: 0}
     - target: {fileID: 3932596582306609077, guid: 659dd384efb04d749ab4fe3bd043e90a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.65
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 3932596582306609077, guid: 659dd384efb04d749ab4fe3bd043e90a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 45.75
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 3932596582306609077, guid: 659dd384efb04d749ab4fe3bd043e90a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1021,7 +1021,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.5, y: 0.1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &218865802
 AudioSource:
@@ -15372,11 +15372,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5232887182982456895, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.25
+      value: -31.75
       objectReference: {fileID: 0}
     - target: {fileID: 5232887182982456895, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.918
       objectReference: {fileID: 0}
     - target: {fileID: 5232887182982456895, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16031,6 +16031,10 @@ PrefabInstance:
       propertyPath: displaySettings.dialogueUI
       value: 
       objectReference: {fileID: 190722, guid: 90632d3b48c4c204a8745ed54bc1f708, type: 3}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: warmUpConversationController
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16980,7 +16984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3932596582306609077, guid: 659dd384efb04d749ab4fe3bd043e90a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27
+      value: -25.25
       objectReference: {fileID: 0}
     - target: {fileID: 3932596582306609077, guid: 659dd384efb04d749ab4fe3bd043e90a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16988,7 +16992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3932596582306609077, guid: 659dd384efb04d749ab4fe3bd043e90a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 42
+      value: 39.25
       objectReference: {fileID: 0}
     - target: {fileID: 3932596582306609077, guid: 659dd384efb04d749ab4fe3bd043e90a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17266,7 +17270,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 1, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1216316509
 GameObject:
