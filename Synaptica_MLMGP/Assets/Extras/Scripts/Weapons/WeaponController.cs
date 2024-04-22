@@ -5,6 +5,8 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using cowsins;
+using BlazeAIDemo;
+using BlazeAISpace;
 #if UNITY_EDITOR
 using UnityEditor.Presets;
 #endif
@@ -367,7 +369,13 @@ public class WeaponController : MonoBehaviour
                     Hit(newHit.collider.gameObject.layer, dmg_, newHit, true);
                 }
             }
-
+            //Blaze Ai 
+            if(hit.collider.gameObject.GetComponent<BlazeAI>())
+                {
+                    GameObject Player = GameObject.FindGameObjectWithTag("Player");
+                    hit.collider.gameObject.GetComponent<BlazeAI>().Hit(Player.gameObject);
+                    hit.collider.gameObject.GetComponent<Health>().maxHealth -= damagePerBullet;
+                }
         // Handle Bullet Trails
         if (weapon.bulletTrail == null) return; 
 

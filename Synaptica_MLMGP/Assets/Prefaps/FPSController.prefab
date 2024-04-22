@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 3368376228077284100}
   - component: {fileID: 8864517750839389117}
   - component: {fileID: 4758278259486977299}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 2800000, guid: 36fa8c512d75b634ca0c945caa8b3f65, type: 3}
@@ -98,7 +98,7 @@ MonoBehaviour:
   directionalJumpForce: 0
   controlAirborne: 0.2
   allowCrouchWhileJumping: 0
-  applyAimAssist: 1
+  applyAimAssist: 0
   maximumDistanceToAssistAim: 50
   aimAssistSpeed: 1.5
   aimAssistSensitivity: 0.5
@@ -241,9 +241,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4c06f015e8485e24cb7166f90f9f3503, type: 2}
   initialWeapons:
   - {fileID: 11400000, guid: 1d20e1aeca53c9449a1d7219d9022761, type: 2}
-  - {fileID: 0}
   - {fileID: 11400000, guid: 11986c1487b69b24fa433a76cf966fb5, type: 2}
-  - {fileID: 11400000, guid: 907aa7bd70f532947bfa1d5f3ce12fa9, type: 2}
+  - {fileID: 11400000, guid: 1cb39c6c8005c554e93289889a1892e1, type: 2}
   inventory: []
   slots: []
   weapon: {fileID: 0}
@@ -1407,7 +1406,7 @@ GameObject:
   - component: {fileID: 5232887182982456895}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1421,7 +1420,7 @@ Transform:
   m_GameObject: {fileID: 8791096044205725871}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -45.4, y: 4.55, z: 38.9}
+  m_LocalPosition: {x: 0, y: 0.79, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2640,6 +2639,34 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 3447679242689059165, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447679242689059165, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447679242689059165, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447679242689059165, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447679242689059165, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 143.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447679242689059165, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 83.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447679242689059165, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3447679242731633335, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -2647,6 +2674,34 @@ PrefabInstance:
     - target: {fileID: 3447679242759990753, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447679242775261656, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447679242775261656, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447679242775261656, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447679242775261656, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447679242775261656, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 296.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447679242775261656, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 44.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447679242775261656, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3447679242775261659, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
       propertyPath: m_StaticEditorFlags
