@@ -534,7 +534,7 @@ public class WeaponController : MonoBehaviour
             case int l when l == LayerMask.NameToLayer("Enemy"):
                 impact = Instantiate(effects.enemyImpact, h.point, Quaternion.identity); // Enemy
                 impact.transform.rotation = Quaternion.LookRotation(h.normal);
-                if (weapon != null) impactBullet = Instantiate(weapon.bulletHoleImpact.enemyImpact, h.point, Quaternion.identity);
+                //if (weapon != null) impactBullet = Instantiate(weapon.bulletHoleImpact.enemyImpact, h.point, Quaternion.identity);
                 break;
         }
 
