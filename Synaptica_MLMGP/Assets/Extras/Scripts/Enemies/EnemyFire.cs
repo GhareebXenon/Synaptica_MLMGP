@@ -7,7 +7,7 @@ namespace cowsins
     {
         [SerializeField, Header("References")] private bool displayGizmos = true;
         [SerializeField] private Animator animator;
-        [SerializeField, Tooltip("The part of the turret that rotates.")] private Transform turretHead;
+        //[SerializeField, Tooltip("The part of the turret that rotates.")] private Transform turretHead;
 
 
         [SerializeField, Tooltip("Detection range for the player."), Header("Basic Settings")] private float detectionRange = 10f;
@@ -38,27 +38,36 @@ namespace cowsins
             }
         }
         Vector3 targetDirection;
-        Quaternion targetRotation; 
+        Quaternion targetRotation;
         void Update()
         {
             if (player == null) return;
-            // Calculate the direction to rotate towards to ( Towards the player )
-            //targetDirection = player.position - transform.position;
-            //if (!allowVerticalMovement) targetDirection.y = 0f; // Ignore vertical difference if not allowed.
 
-            // Handle shooting if the target is within the radius or detection range.
-            if (targetDirection.magnitude <= detectionRange)
+            // Calculate direction towards the player
+            targetDirection = player.position - transform.position;
+            if (!allowVerticalMovement) targetDirection.y = 0f;
+
+            // Calculate the angle between the turret's forward direction and the direction towards the player
+            float angle = Vector3.Angle(transform.forward, targetDirection);
+
+            // Perform a Raycast towards the player
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, targetDirection, out hit, detectionRange))
             {
-                canShoot = true;
-                targetRotation = Quaternion.LookRotation(targetDirection);
-                turretHead.rotation = Quaternion.Lerp(turretHead.rotation, targetRotation, lerpSpeed * Time.deltaTime);
-                fireCooldown -= Time.deltaTime;
-                Fire();
-            }
-            else
-            {
-                fireCooldown = fireRate;
-                canShoot = false;
+                // Check if the raycast hit a player and the player is in front of the turret
+                if (hit.collider.CompareTag("Player") && angle <= 45.0f)  // 45 degrees can be replaced with your desired angle range
+                {
+                    canShoot = true;
+                    //targetRotation = Quaternion.LookRotation(targetDirection);
+                    //turretHead.rotation = Quaternion.Lerp(turretHead.rotation, targetRotation, lerpSpeed * Time.deltaTime);
+                    fireCooldown -= Time.deltaTime;
+                    Fire();
+                }
+                else
+                {
+                    fireCooldown = fireRate;
+                    canShoot = false;
+                }
             }
         }
 
@@ -67,17 +76,17 @@ namespace cowsins
             // Only shoot if we are allowed to do it. 
             if (canShoot && fireCooldown <= 0)
             {
-                if (animator != null) animator.SetTrigger("Fire"); 
+                if (animator != null) animator.SetTrigger("Fire");
                 fireCooldown = fireRate;
-                TurretProjectile proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity).GetComponent<TurretProjectile>();
+                // Set the bullet's rotation to be the same as the turret's rotation
+                TurretProjectile proj = Instantiate(projectilePrefab, firePoint.position, transform.rotation).GetComponent<TurretProjectile>();
                 Instantiate(muzzleFlash, firePoint.position, targetRotation);
-                proj.dir = targetDirection;
+                proj.dir = -transform.forward;  // Set the bullet's direction to be the turret's forward direction
                 proj.damage = projectileDamage;
                 proj.speed = projectileSpeed;
                 Destroy(proj.gameObject, projectileDuration);
             }
         }
-
         // Draw Gizmos
         void OnDrawGizmosSelected()
         {
