@@ -57,15 +57,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 201b27d51d6e3624790e6766d8129c60, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.266788
+      value: -5.3169565
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 201b27d51d6e3624790e6766d8129c60, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0000009536743
+      value: 0.00000011920929
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 201b27d51d6e3624790e6766d8129c60, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -97.37724
+      value: -1.4805622
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 201b27d51d6e3624790e6766d8129c60, type: 3}
       propertyPath: m_LocalRotation.w
@@ -540,6 +540,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 201b27d51d6e3624790e6766d8129c60, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: c084f672b85a58049af2d0532bd830ca, type: 3}
+    - target: {fileID: 5866666021909216657, guid: 201b27d51d6e3624790e6766d8129c60, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 9e1e18d6ee06f434c9e8f8f9ac0c4fd2, type: 2}
@@ -664,8 +668,16 @@ PrefabInstance:
       addedObject: {fileID: 5793974916418238299}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 201b27d51d6e3624790e6766d8129c60, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2533373738266784076}
+      addedObject: {fileID: 4830455892073156867}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 201b27d51d6e3624790e6766d8129c60, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 571338312155365574}
   m_SourcePrefab: {fileID: 100100000, guid: 201b27d51d6e3624790e6766d8129c60, type: 3}
+--- !u!4 &4101540018152069348 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3321919801592875672, guid: 201b27d51d6e3624790e6766d8129c60, type: 3}
+  m_PrefabInstance: {fileID: 7569903773774556556}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7335478350845415645 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 201b27d51d6e3624790e6766d8129c60, type: 3}
@@ -849,13 +861,13 @@ MonoBehaviour:
     leftTurnAnimAlert: 
     turningAnimT: 0.25
   vision:
-    visionPosition: {x: 0, y: 1, z: 0}
-    maxSightLevel: 1
+    visionPosition: {x: 0, y: 2.91, z: 0}
+    maxSightLevel: 3
     checkTargetHeight: 0
     useMinLevel: 1
-    minSightLevel: -1
+    minSightLevel: 0.4
     visionDuringNormalState:
-      coneAngle: 90
+      coneAngle: 101
       sightRange: 10
     visionDuringAlertState:
       coneAngle: 100
@@ -864,7 +876,7 @@ MonoBehaviour:
       coneAngle: 360
       sightRange: 20
       alwaysApply: 1
-    head: {fileID: 0}
+    head: {fileID: 4101540018152069348}
     showNormalVision: 1
     showAlertVision: 1
     showAttackVision: 1
@@ -1081,18 +1093,18 @@ MonoBehaviour:
   onStateExit:
     m_PersistentCalls:
       m_Calls: []
-  ranged: 0
+  ranged: 1
   distanceFromEnemy: 5
-  attackDistance: 1
+  attackDistance: 2
   layersCheckOnAttacking:
     serializedVersion: 2
     m_Bits: 0
   attacks:
-  - attackAnim: Shoot
-    attackDuration: 1
+  - attackAnim: Magic Attack
+    attackDuration: 0.6
     animT: 0.25
     useAudio: 1
-    audioIndex: 1
+    audioIndex: 0
   attackEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1368,14 +1380,38 @@ MonoBehaviour:
       m_Calls: []
   blaze: {fileID: 0}
   ragdollState: 0
---- !u!114 &2533373738266784076
+--- !u!114 &4830455892073156867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7335478350845415645}
-  m_Enabled: 1
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8c75cb739e7ee4d949eb9a499d03ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayGizmos: 1
+  animator: {fileID: 0}
+  detectionRange: 10
+  allowVerticalMovement: 0
+  lerpSpeed: 5
+  projectilePrefab: {fileID: 4788661151330834344, guid: 7a0f6b3f4b031ea4cac9dadef4b415de, type: 3}
+  projectileSpeed: 5
+  projectileDamage: 10
+  projectileDuration: 3
+  firePoint: {fileID: 4381743866825616077}
+  muzzleFlash: {fileID: 1336949550903370, guid: 8cf5557d6c0260745966dc2d92db1d99, type: 3}
+  fireRate: 2
+--- !u!114 &571338312155365574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7335478350845415645}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 461dc970bbeae75419e9ddadc17352f7, type: 3}
   m_Name: 

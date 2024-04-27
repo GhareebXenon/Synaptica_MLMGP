@@ -71,7 +71,7 @@ namespace cowsins
             }
         }
 
-        void Fire()
+       public void Fire()
         {
             // Only shoot if we are allowed to do it. 
             if (canShoot && fireCooldown <= 0)
@@ -81,7 +81,7 @@ namespace cowsins
                 // Set the bullet's rotation to be the same as the turret's rotation
                 TurretProjectile proj = Instantiate(projectilePrefab, firePoint.position, transform.rotation).GetComponent<TurretProjectile>();
                 Instantiate(muzzleFlash, firePoint.position, targetRotation);
-                proj.dir = -transform.forward;  // Set the bullet's direction to be the turret's forward direction
+                proj.dir = transform.forward;  // Set the bullet's direction to be the turret's forward direction
                 proj.damage = projectileDamage;
                 proj.speed = projectileSpeed;
                 Destroy(proj.gameObject, projectileDuration);
