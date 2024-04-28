@@ -242,7 +242,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""1c69fce5-dcf1-4b50-ae6b-d3372c606109"",
-                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""path"": ""<Keyboard>/c"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -438,7 +438,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""Movement"",
+                    ""name"": ""WASD"",
                     ""id"": ""9641315e-6e66-42c2-8bcc-73439d9c4630"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
@@ -493,7 +493,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""Movement"",
+                    ""name"": ""Left Stick"",
                     ""id"": ""960c68ab-4a4d-4f29-8f16-295baf53fb9b"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
