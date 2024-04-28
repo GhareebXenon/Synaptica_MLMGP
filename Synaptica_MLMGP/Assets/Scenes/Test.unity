@@ -3083,13 +3083,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -5846270692196909274, guid: 54828acc0011fd34f84d0ff18876f781, type: 3}
-      insertIndex: -1
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 54828acc0011fd34f84d0ff18876f781, type: 3}
+      insertIndex: 7
       addedObject: {fileID: 1712208385}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 54828acc0011fd34f84d0ff18876f781, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1013601510}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 54828acc0011fd34f84d0ff18876f781, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1013601503}
@@ -3338,14 +3335,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   ranged: 1
-  distanceFromEnemy: 5
-  attackDistance: 10
+  distanceFromEnemy: 10
+  attackDistance: 15
   layersCheckOnAttacking:
     serializedVersion: 2
     m_Bits: 128
   attacks:
   - attackAnim: Magic Attack1
-    attackDuration: 1
+    attackDuration: 1.25
     animT: 0.25
     useAudio: 1
     audioIndex: 0
@@ -3354,7 +3351,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1013601509}
         m_TargetAssemblyTypeName: cowsins.EnemyFire, Assembly-CSharp
-        m_MethodName: Fire
+        m_MethodName: Shoot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3377,7 +3374,7 @@ MonoBehaviour:
   callOthersTime: 0
   receiveCallFromOthers: 0
   moveBackwards: 0
-  moveBackwardsDistance: 4.5
+  moveBackwardsDistance: 0.5
   moveBackwardsSpeed: 3
   moveBackwardsAnim: 
   moveBackwardsAnimT: 0.25
@@ -3534,13 +3531,13 @@ MonoBehaviour:
     minSightLevel: 0.51
     visionDuringNormalState:
       coneAngle: 90
-      sightRange: 10
+      sightRange: 11.8
     visionDuringAlertState:
       coneAngle: 100
-      sightRange: 15
+      sightRange: 14.75
     visionDuringAttackState:
       coneAngle: 360
-      sightRange: 20
+      sightRange: 12.7
       alwaysApply: 1
     head: {fileID: 0}
     showNormalVision: 1
@@ -3795,11 +3792,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!4 &1013601505 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 54828acc0011fd34f84d0ff18876f781, type: 3}
-  m_PrefabInstance: {fileID: 1013601492}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1013601506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3902,36 +3894,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8c75cb739e7ee4d949eb9a499d03ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayGizmos: 1
-  animator: {fileID: 0}
-  detectionRange: 10
-  allowVerticalMovement: 0
-  lerpSpeed: 5
-  projectilePrefab: {fileID: 4788661151330834344, guid: 7a0f6b3f4b031ea4cac9dadef4b415de, type: 3}
-  projectileSpeed: 5
-  projectileDamage: 5
-  projectileDuration: 1
-  firePoint: {fileID: 1013601505}
-  muzzleFlash: {fileID: 1336949550903370, guid: 8cf5557d6c0260745966dc2d92db1d99, type: 3}
-  fireRate: 15
---- !u!114 &1013601510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013601493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfcd5241e2e14ca489f31cc833c114a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 3290827857210479736, guid: 7a67bb3ba747b1f49a06cbc4c0facc7f, type: 3}
+  projectileSpeed: 10
   firePoint: {fileID: 1712208385}
-  bulletPrefab: {fileID: 4788661151330834344, guid: 7a0f6b3f4b031ea4cac9dadef4b415de, type: 3}
-  muzzleFlashPrefab: {fileID: 1336949550903370, guid: 8cf5557d6c0260745966dc2d92db1d99, type: 3}
-  detectionDistance: 100
-  bulletDamage: 10
-  bulletSpeed: 10
+  bulletDamage: 30
+--- !u!4 &1013601511 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 54828acc0011fd34f84d0ff18876f781, type: 3}
+  m_PrefabInstance: {fileID: 1013601492}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1097352300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4344,11 +4315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1237209693 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -5846270692196909274, guid: 54828acc0011fd34f84d0ff18876f781, type: 3}
-  m_PrefabInstance: {fileID: 1013601492}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1401036644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5465940246521907071, guid: 75e62dc78442f064eb7dedae294b83e2, type: 3}
@@ -4402,11 +4368,11 @@ Transform:
   m_GameObject: {fileID: 1712208384}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.094, y: 2.337, z: 0.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1237209693}
+  m_Father: {fileID: 1013601511}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1809179798 stripped
 GameObject:
