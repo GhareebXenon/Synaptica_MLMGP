@@ -71,8 +71,7 @@ public class ObeliskPuzzle : MonoBehaviour
 
     public void CheckComplete()
     {
-        int result = 0;
-
+        int result;
         if (operation == "+")
         {
             result = runesSelected[0] + runesSelected[1] + runesSelected[2];

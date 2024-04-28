@@ -38155,7 +38155,7 @@ PrefabInstance:
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: musicOld
       value: 
-      objectReference: {fileID: 8300000, guid: d2e746e1630c0724bba6fad2d43de7a5, type: 3}
+      objectReference: {fileID: 8300000, guid: 1b9880c3d7d7f67488ba2756198283da, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39049,13 +39049,29 @@ PrefabInstance:
       value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: loopable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: musicNew
       value: 
-      objectReference: {fileID: 8300000, guid: d2e746e1630c0724bba6fad2d43de7a5, type: 3}
+      objectReference: {fileID: 8300000, guid: 8e198a9d4a0c358418237f460fb6edd1, type: 3}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: musicOld
       value: 
       objectReference: {fileID: 8300000, guid: 39e4c1d6f78f80d4d9c3f0559173a7dc, type: 3}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: musicAfter
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b9880c3d7d7f67488ba2756198283da, type: 3}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: volumeAfter
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: transitionTimeAfter
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -62721,13 +62737,29 @@ PrefabInstance:
       value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: loopable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: musicNew
       value: 
-      objectReference: {fileID: 8300000, guid: d2e746e1630c0724bba6fad2d43de7a5, type: 3}
+      objectReference: {fileID: 8300000, guid: 8e198a9d4a0c358418237f460fb6edd1, type: 3}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: musicOld
       value: 
       objectReference: {fileID: 8300000, guid: 39e4c1d6f78f80d4d9c3f0559173a7dc, type: 3}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: musicAfter
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b9880c3d7d7f67488ba2756198283da, type: 3}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: volumeAfter
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: transitionTimeAfter
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -69158,13 +69190,29 @@ PrefabInstance:
       value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: loopable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: musicNew
       value: 
-      objectReference: {fileID: 8300000, guid: d2e746e1630c0724bba6fad2d43de7a5, type: 3}
+      objectReference: {fileID: 8300000, guid: 8e198a9d4a0c358418237f460fb6edd1, type: 3}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: musicOld
       value: 
       objectReference: {fileID: 8300000, guid: 39e4c1d6f78f80d4d9c3f0559173a7dc, type: 3}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: musicAfter
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b9880c3d7d7f67488ba2756198283da, type: 3}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: volumeAfter
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: transitionTimeAfter
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -75819,13 +75867,29 @@ PrefabInstance:
       value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: loopable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: musicNew
       value: 
-      objectReference: {fileID: 8300000, guid: d2e746e1630c0724bba6fad2d43de7a5, type: 3}
+      objectReference: {fileID: 8300000, guid: 8e198a9d4a0c358418237f460fb6edd1, type: 3}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: musicOld
       value: 
       objectReference: {fileID: 8300000, guid: 39e4c1d6f78f80d4d9c3f0559173a7dc, type: 3}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: musicAfter
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b9880c3d7d7f67488ba2756198283da, type: 3}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: volumeAfter
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: transitionTimeAfter
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
