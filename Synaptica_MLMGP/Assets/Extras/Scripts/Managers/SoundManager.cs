@@ -46,7 +46,7 @@ namespace cowsins
             switch (scene.name)
             {
                 case "MainMenu 1":
-                    PlayMusicFadeIn(bgm[0], 0.4f, 1);
+                    PlayMusicFadeIn(bgm[0], 0.5f, 0.4f);
                     break;
                 case "Exposition":
                     PlayMusicFadeIn(bgm[1], 1, 1);
