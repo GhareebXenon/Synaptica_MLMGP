@@ -26,6 +26,9 @@ public class MissionManager : MonoBehaviour
             case 2:
                 SetActiveMission("Get to the generator room and plant the explosives.");
                 break;
+            case 4:
+                SetActiveMission("Keypad 2");
+                break;
         }
         RefreshMissions();
     }

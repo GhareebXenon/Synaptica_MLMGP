@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using cowsins;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -41,6 +42,11 @@ public class LaserReflector : MonoBehaviour
                 else if (hit.collider.CompareTag("CenterReflector"))
                 {
                     OnCompleted?.Invoke();
+                }
+                else if (hit.collider.CompareTag("Player"))
+                {
+                    PlayerStats player = hit.collider.gameObject.GetComponent<PlayerStats>();
+                    player.Damage(1);
                 }
                 else
                 {
