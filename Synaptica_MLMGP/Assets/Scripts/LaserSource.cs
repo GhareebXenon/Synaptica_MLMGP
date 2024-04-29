@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using cowsins;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -27,6 +28,11 @@ public class LaserSource : MonoBehaviour
                 tempReflector = hit.collider.gameObject;
                 Vector3 temp = Vector3.Reflect(direction, hit.normal);// calc the new direction
                 hit.collider.gameObject.GetComponent<LaserReflector>().OpenRay(hit.point, temp);// activate the reflector
+            }
+            else if (hit.collider.CompareTag("Player"))
+            {
+                PlayerStats player = hit.collider.gameObject.GetComponent<PlayerStats>();
+                player.Damage(1);
             }
             else
             {

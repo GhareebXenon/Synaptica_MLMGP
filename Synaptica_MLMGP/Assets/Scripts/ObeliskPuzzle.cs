@@ -13,7 +13,7 @@ public class ObeliskPuzzle : MonoBehaviour
     [SerializeField] private ObeliskRunes operationRune;
     [SerializeField] private ObeliskRunes solutionRune;
     [SerializeField] private string mission;
-    [SerializeField] private UnityEvent<string, float> OnCompleted;
+    [SerializeField] private UnityEvent OnCompleted;
     [SerializeField] private bool completed = false;
     public List<int> runesNumbers;
     [SerializeField] private int[] runesSelected;
@@ -47,7 +47,7 @@ public class ObeliskPuzzle : MonoBehaviour
     {
         if (completed)
         {
-            OnCompleted?.Invoke(mission, 1);
+            OnCompleted?.Invoke();
             completed = false;
         }
     }
@@ -56,7 +56,7 @@ public class ObeliskPuzzle : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            int rotation = (int)cubes[i].eulerAngles.y;
+            int rotation = (int)cubes[i].localEulerAngles.y;
             if (rotation == -90)
             {
                 runesSelected[i] = runesNumbers[(i * 4) + 3];
@@ -65,6 +65,7 @@ public class ObeliskPuzzle : MonoBehaviour
             {
                 runesSelected[i] = runesNumbers[(Mathf.Abs(rotation) / 90) + (i * 4)];
             }
+            Debug.LogWarning(cubes[i].name + "Rotation = " + rotation);
         }
         CheckComplete();
     }

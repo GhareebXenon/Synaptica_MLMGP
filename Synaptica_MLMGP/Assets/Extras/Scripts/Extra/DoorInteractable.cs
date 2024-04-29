@@ -44,13 +44,7 @@ public class DoorInteractable : Interactable
     }
     private void Update()
     {
-        if (isLocked) interactText = lockedInteractionText; 
-        // if we are trying to it, open it
-        if(isOpened) doorPivot.localRotation = Quaternion.Lerp(doorPivot.localRotation,
-            Quaternion.Euler(new Vector3(doorPivot.localRotation.x, openedDoorRotation * side, doorPivot.localRotation.z)), 
-                Time.deltaTime * speed);
-        // If we closed it, close it
-        if (!isOpened) doorPivot.rotation = Quaternion.Lerp(doorPivot.rotation, closedRot, Time.deltaTime * speed);
+            Open();
     }
     /// <summary>
     /// Check for interaction. Overriding from Interactable.cs
@@ -80,5 +74,15 @@ public class DoorInteractable : Interactable
     public void UnLock() => isLocked = false;
 
     public void ToggleLock() => isLocked = !isLocked;
+        public void Open()
+        {
+            if (isLocked) interactText = lockedInteractionText;
+            // if we are trying to it, open it
+            if (isOpened) doorPivot.localRotation = Quaternion.Lerp(doorPivot.localRotation,
+                Quaternion.Euler(new Vector3(doorPivot.localRotation.x, openedDoorRotation * side, doorPivot.localRotation.z)),
+                    Time.deltaTime * speed);
+            // If we closed it, close it
+            if (!isOpened) doorPivot.rotation = Quaternion.Lerp(doorPivot.rotation, closedRot, Time.deltaTime * speed);
+        }
 }
 }
