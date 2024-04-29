@@ -1714,13 +1714,14 @@ GameObject:
   - component: {fileID: 4824731951489456753}
   - component: {fileID: 4819185662483336146}
   - component: {fileID: 5461045440758566654}
+  - component: {fileID: 7638836994394963036}
   m_Layer: 7
   m_Name: Robot
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1665498145440329401
 Transform:
   m_ObjectHideFlags: 0
@@ -2114,8 +2115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f9d81f41de4ac4e944188683471a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  turnSpeed: 5
+  moveSpeed: 2
+  turnSpeed: 4
   idleAnim:
   - Robot_Idle
   moveAnim: Walk_Robot_idle
@@ -2209,8 +2210,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   ranged: 1
-  distanceFromEnemy: 5
-  attackDistance: 15
+  distanceFromEnemy: 15
+  attackDistance: 10
   layersCheckOnAttacking:
     serializedVersion: 2
     m_Bits: 0
@@ -2224,8 +2225,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   chaseOnEvade: 0
-  attackInIntervals: 0
-  attackInIntervalsTime: {x: 1, y: 4}
+  attackInIntervals: 1
+  attackInIntervalsTime: {x: 0.6, y: 1}
   callOthers: 0
   callRadius: 0
   showCallRadius: 0
@@ -2254,8 +2255,8 @@ MonoBehaviour:
   strafeLayersToAvoid:
     serializedVersion: 2
     m_Bits: 0
-  onAttackRotateSpeed: 10
-  onAttackRotate: 0
+  onAttackRotateSpeed: 8
+  onAttackRotate: 1
   searchLocationRadius: 0
   timeToStartSearch: 2
   searchPoints: 3
@@ -2455,6 +2456,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+--- !u!114 &7638836994394963036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042058151045018627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8c75cb739e7ee4d949eb9a499d03ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 4788661151330834344, guid: e549fc90d6c695f4f960351c910fa7d6, type: 3}
+  projectileSpeed: 50
+  firePoint: {fileID: 2711194421463426242}
+  bulletDamage: 10
 --- !u!1 &2082889749290442042
 GameObject:
   m_ObjectHideFlags: 0
@@ -7293,6 +7310,37 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.029162122, y: 0.9377321, z: 0.045791168}
     m_Extent: {x: 0.017428176, y: 0.05963424, z: 0.049558457}
   m_DirtyAABB: 0
+--- !u!1 &8183457189983315691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2711194421463426242}
+  m_Layer: 0
+  m_Name: Robot_FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2711194421463426242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8183457189983315691}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.16413015, y: 0.6380179, z: 0.07621835, w: 0.7484552}
+  m_LocalPosition: {x: 2.991, y: -0.115, z: 0.031}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2155628268691467731}
+  m_LocalEulerAnglesHint: {x: 8.536, y: 82.33, z: 19.096}
 --- !u!1 &8207653799439362869
 GameObject:
   m_ObjectHideFlags: 0
@@ -8214,7 +8262,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5efa901c0e3dcfe4bac41b6c5b35d44b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2711194421463426242}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5efa901c0e3dcfe4bac41b6c5b35d44b, type: 3}
 --- !u!4 &2155628268691467731 stripped
