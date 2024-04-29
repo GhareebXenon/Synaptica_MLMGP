@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4440,6 +4440,91 @@ Transform:
   - {fileID: 1146718039}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &421831225
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7365730222466553980, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: waypoints.randomizeRadius
+      value: 7.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7365730222466553980, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: waypoints.showRandomizeRadius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7365730222466553980, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: vision.visionDuringAlertState.coneAngle
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 7365730222466553980, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: vision.visionDuringAlertState.sightRange
+      value: 14.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7365730222466553980, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: vision.visionDuringNormalState.coneAngle
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 7365730222466553980, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: vision.visionDuringAttackState.sightRange
+      value: 10.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7365730222466553980, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: vision.visionDuringNormalState.sightRange
+      value: 15.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373518655220045831, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373518655220045831, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373518655220045831, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -97.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373518655220045831, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373518655220045831, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373518655220045831, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373518655220045831, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373518655220045831, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373518655220045831, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373518655220045831, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9187174425052512957, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
+      propertyPath: m_Name
+      value: azi_Idle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4a7da5215f8770c4d80521097399a29c, type: 3}
 --- !u!43 &432194868
 Mesh:
   m_ObjectHideFlags: 0
@@ -55322,3 +55407,4 @@ SceneRoots:
   - {fileID: 1099705063}
   - {fileID: 1369511982}
   - {fileID: 259234332}
+  - {fileID: 421831225}
