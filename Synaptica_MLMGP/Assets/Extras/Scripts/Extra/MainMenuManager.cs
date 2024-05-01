@@ -1,5 +1,7 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 namespace cowsins {
     public class MainMenuManager : MonoBehaviour
     {
@@ -9,6 +11,23 @@ namespace cowsins {
 
         private CanvasGroup from, to;
         private GameObject View;
+
+        [SerializeField]private CanvasGroup settingsMenu;
+        private CanvasGroup videoTab;
+        private CanvasGroup audioTab;
+        private CanvasGroup controlsTab;
+        private GameObject resetButton;
+        private GameObject applyButton;
+
+        private void Start()
+        {
+            videoTab = settingsMenu.transform.Find("VIDEO TAB").GetComponent<CanvasGroup>();
+            audioTab = settingsMenu.transform.Find("AUDIO TAB").GetComponent<CanvasGroup>();
+            controlsTab = settingsMenu.transform.Find("CONTROLS TAB").GetComponent<CanvasGroup>();
+            resetButton = settingsMenu.transform.Find("TopTabButton | Reset").gameObject;
+            applyButton = settingsMenu.transform.Find("TopTabButton | Apply").gameObject;
+            ResetTabs();
+        }
 
         private void Update()
         {
@@ -40,7 +59,24 @@ namespace cowsins {
         public void QuitGame() {
             Debug.Log("Exited");
             Application.Quit();
-        } 
+        }
 
+        public void ResetTabs()
+        {
+            videoTab.gameObject.SetActive(false);
+            videoTab.alpha = 0;
+            audioTab.gameObject.SetActive(false);
+            audioTab.alpha = 0;
+            controlsTab.gameObject.SetActive(false);
+            controlsTab.alpha = 0;
+            resetButton.SetActive(false);
+            applyButton.SetActive(false);
+        }
+
+        public void ActivateSettingsButtons()
+        {
+            resetButton.SetActive(true);
+            applyButton.SetActive(true);
+        }
     }
 }

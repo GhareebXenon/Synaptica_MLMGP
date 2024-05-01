@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace cowsins
@@ -17,6 +18,15 @@ namespace cowsins
 
         [SerializeField] private float fadeSpeed;
 
+        private CanvasGroup mainMenu;
+        private CanvasGroup settingsMenu;
+        private CanvasGroup videoTab;
+        private CanvasGroup audioTab;
+        private CanvasGroup controlsTab;
+        private GameObject resetButton;
+        private GameObject applyButton;
+
+
         private void Awake()
         {
             if (Instance != null && Instance != this) Destroy(this);
@@ -26,7 +36,18 @@ namespace cowsins
             menu.gameObject.SetActive(false);
             menu.alpha = 0;
         }
-        
+
+        private void Start()
+        {
+            mainMenu = menu.transform.Find("Main").GetComponent<CanvasGroup>();
+            settingsMenu = menu.transform.Find("Settings").GetComponent<CanvasGroup>();
+            videoTab = settingsMenu.transform.Find("VIDEO TAB").GetComponent<CanvasGroup>();
+            audioTab = settingsMenu.transform.Find("AUDIO TAB").GetComponent<CanvasGroup>();
+            controlsTab = settingsMenu.transform.Find("CONTROLS TAB").GetComponent<CanvasGroup>();
+            resetButton = settingsMenu.transform.Find("TopTabButton | Reset").gameObject;
+            applyButton = settingsMenu.transform.Find("TopTabButton | Apply").gameObject;
+        }
+
         private void Update()
         {
             if (InputManager.pausing) isPaused = !isPaused;
@@ -46,18 +67,84 @@ namespace cowsins
             else
             {
                 menu.alpha -= Time.deltaTime * fadeSpeed;
-                if (menu.alpha <= 0) menu.gameObject.SetActive(false);
-            }
+                if (menu.alpha <= 0)
+                {
+                    CloseSettings();
+                    menu.gameObject.SetActive(false);
+                }
+                }
         }
 
         public void UnPause()
         {
             isPaused = false;
-            stats.CheckIfCanGrantControl();
+            StartCoroutine(CheckIfCanGrantControl());
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
 
             playerUI.SetActive(true);
+        }
+
+        public void OpenSettings()
+        {
+            mainMenu.gameObject.SetActive(false);
+            settingsMenu.gameObject.SetActive(true);
+            mainMenu.alpha = 0;
+            settingsMenu.alpha = 1;
+            ResetTabs();
+        }
+        public void CloseSettings()
+        {
+            settingsMenu.gameObject.SetActive(false);
+            mainMenu.gameObject.SetActive(true);
+            settingsMenu.alpha = 0;
+            mainMenu.alpha = 1;
+            ResetTabs();
+        }
+
+        public void SwitchVideoTab()
+        {
+            audioTab.gameObject.SetActive(false);
+            audioTab.alpha = 0;
+            controlsTab.gameObject.SetActive(false);
+            controlsTab.alpha = 0;
+            videoTab.gameObject.SetActive(true);
+            videoTab.alpha = 1;
+            resetButton.SetActive(true);
+            applyButton.SetActive(true);
+        }
+        public void SwitchAudioTab()
+        {
+            videoTab.gameObject.SetActive(false);
+            videoTab.alpha = 0;
+            controlsTab.gameObject.SetActive(false);
+            controlsTab.alpha = 0;
+            audioTab.gameObject.SetActive(true);
+            audioTab.alpha = 1;
+            resetButton.SetActive(true);
+            applyButton.SetActive(true);
+        }
+        public void SwitchControlsTab()
+        {
+            videoTab.gameObject.SetActive(false);
+            videoTab.alpha = 0;
+            audioTab.gameObject.SetActive(false);
+            audioTab.alpha = 0;
+            controlsTab.gameObject.SetActive(true);
+            controlsTab.alpha = 1;
+            resetButton.SetActive(true);
+            applyButton.SetActive(true);
+        }
+        public void ResetTabs()
+        {
+            videoTab.gameObject.SetActive(false);
+            videoTab.alpha = 0;
+            audioTab.gameObject.SetActive(false);
+            audioTab.alpha = 0;
+            controlsTab.gameObject.SetActive(false);
+            controlsTab.alpha = 0;
+            resetButton.SetActive(false);
+            applyButton.SetActive(false);
         }
 
         public void QuitGame() => Application.Quit();
@@ -74,12 +161,18 @@ namespace cowsins
             }
             else
             {
-                stats.CheckIfCanGrantControl();
+                StartCoroutine(CheckIfCanGrantControl());
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
 
                 playerUI.SetActive(true);
             }
+        }
+
+        private IEnumerator CheckIfCanGrantControl()
+        {
+            yield return new WaitForEndOfFrame();
+            stats.CheckIfCanGrantControl();
         }
 
     }
