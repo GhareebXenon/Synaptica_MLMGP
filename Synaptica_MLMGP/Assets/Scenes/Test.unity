@@ -3422,57 +3422,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4425686986661705175, guid: 63da23ebdb872f44aa563407b248ca67, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4425686986661705175, guid: 63da23ebdb872f44aa563407b248ca67, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4425686986661705175, guid: 63da23ebdb872f44aa563407b248ca67, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4425686986661705175, guid: 63da23ebdb872f44aa563407b248ca67, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4425686986661705175, guid: 63da23ebdb872f44aa563407b248ca67, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4425686986661705175, guid: 63da23ebdb872f44aa563407b248ca67, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4425686986661705175, guid: 63da23ebdb872f44aa563407b248ca67, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4425686986661705175, guid: 63da23ebdb872f44aa563407b248ca67, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4425686986661705175, guid: 63da23ebdb872f44aa563407b248ca67, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4425686986661705175, guid: 63da23ebdb872f44aa563407b248ca67, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6240864272742026922, guid: 63da23ebdb872f44aa563407b248ca67, type: 3}
-      propertyPath: attackDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6240864272742026922, guid: 63da23ebdb872f44aa563407b248ca67, type: 3}
-      propertyPath: attacks.Array.data[0].attackDuration
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198326822752062284, guid: 63da23ebdb872f44aa563407b248ca67, type: 3}
-      propertyPath: projectileSpeed
-      value: 30
+    - target: {fileID: 209463862661248300, guid: 63da23ebdb872f44aa563407b248ca67, type: 3}
+      propertyPath: maxHealth
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 8598622503257230489, guid: 63da23ebdb872f44aa563407b248ca67, type: 3}
       propertyPath: m_Name
