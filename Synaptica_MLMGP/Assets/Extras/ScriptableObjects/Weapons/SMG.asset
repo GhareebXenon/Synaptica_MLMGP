@@ -98,7 +98,7 @@ MonoBehaviour:
   useProceduralShot: 0
   proceduralShotPattern: {fileID: 0}
   audioSFX:
-    firing: {fileID: 8300000, guid: e80b27983a0d60141a8e2fd43f9dc827, type: 3}
+    firing: {fileID: 8300000, guid: 532202fb5a978964891e7a0346eb3331, type: 3}
     holster: {fileID: 8300000, guid: b2c939ee2ab26a14b81d51fe66235d2f, type: 3}
     unholster: {fileID: 8300000, guid: b2c939ee2ab26a14b81d51fe66235d2f, type: 3}
     reload: {fileID: 8300000, guid: aded5749092a3ea4ab4e69754d28a5c4, type: 3}

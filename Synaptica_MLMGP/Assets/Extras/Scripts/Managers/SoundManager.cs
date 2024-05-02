@@ -69,7 +69,7 @@ namespace cowsins
             }
         }
 
-        public void PlaySound(AudioClip clip, float delay = 0, float pitchAdded = 0, bool randomPitch = false, float spatialBlend = 0, bool loopable = false, string output = "Master")
+        public void PlaySound(AudioClip clip, float delay = 0, float pitchAdded = 0, bool randomPitch = false, float spatialBlend = 0, bool loopable = false, string output = "SFX")
         {
             StartCoroutine(Play(clip, delay, pitchAdded, randomPitch, spatialBlend, loopable, output));
         }

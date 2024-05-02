@@ -1,5 +1,33 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-6241122467610889261
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 374b86d5dca414f47ba18a5c334ae7ec
+  m_EffectName: Duck Volume
+  m_MixLevel: 78a80298a719d4b48a1da09e3370731d
+  m_Parameters:
+  - m_ParameterName: Threshold
+    m_GUID: 7532623e95f706743a75219b7a4c63d2
+  - m_ParameterName: Ratio
+    m_GUID: 49a623612153c6e489e6479bd4bdd519
+  - m_ParameterName: Attack Time
+    m_GUID: a4fe73997a03ab2489bc1ebc3f9016f7
+  - m_ParameterName: Release Time
+    m_GUID: dfe0f0d08cdfee5499f91574da428dca
+  - m_ParameterName: Make-up Gain
+    m_GUID: 1aa87135de9b3b4468628d7203d4a23d
+  - m_ParameterName: Knee
+    m_GUID: 9a3e7f0c92d41cc4e8d901e1c72be701
+  - m_ParameterName: Sidechain Mix
+    m_GUID: 3476e48557b30644fba9f457a66e2d2a
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &-5606515069873772281
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -92,10 +120,25 @@ AudioMixerGroupController:
   m_Effects:
   - {fileID: -5606515069873772281}
   - {fileID: -120194835842427351}
+  - {fileID: -450865683543540390}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &-450865683543540390
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 7ebac6ce04667d34ca18e044f488f680
+  m_EffectName: Send
+  m_MixLevel: c0499bd6c7935fc47bf6da814f69f026
+  m_Parameters: []
+  m_SendTarget: {fileID: -6241122467610889261}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &-120194835842427351
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -189,12 +232,17 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 12a5b91c9363bed4c988d9163bd77546
   m_FloatValues:
+    dfe0f0d08cdfee5499f91574da428dca: 0
     1ed3cf513d75796409e4d3b62d3a90d9: 0
     5ab14d6156a2e8940a0f594db49f8808: -41
     f4af2ad16799f014db419c144d7734da: 0.085
     4dc920f253d918441a883e64f604d9dd: 0
+    c0499bd6c7935fc47bf6da814f69f026: 0
     b5d203a7345b38e45beb15f1fe66e780: 0.115
+    a4fe73997a03ab2489bc1ebc3f9016f7: 0
     046b082e946c4ed448b10af1be1ab205: 0
+    7532623e95f706743a75219b7a4c63d2: -20
+    df94336f8d9670646813ca845801cced: 0.028543865
     72f7199f9b821304dba6f83403faed5a: 2
   m_TransitionOverrides: {}
 --- !u!244 &734171398473772099
@@ -226,6 +274,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 734171398473772099}
+  - {fileID: -6241122467610889261}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
