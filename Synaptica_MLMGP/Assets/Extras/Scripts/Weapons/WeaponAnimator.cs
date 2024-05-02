@@ -39,10 +39,13 @@ namespace cowsins
 
         public void StopWalkAndRunMotion()
         {
-            Animator weapon = wc.inventory[wc.currentWeapon].GetComponentInChildren<Animator>(); 
-            CowsinsUtilities.StopAnim("inspect", weapon);
-            CowsinsUtilities.StopAnim("walking", weapon);
-            CowsinsUtilities.StopAnim("running", weapon);
+            Animator weapon = wc?.inventory[wc.currentWeapon].GetComponentInChildren<Animator>(); 
+            if (weapon != null)
+            {
+                CowsinsUtilities.StopAnim("inspect", weapon);
+                CowsinsUtilities.StopAnim("walking", weapon);
+                CowsinsUtilities.StopAnim("running", weapon);
+            }
         }
     }
 
