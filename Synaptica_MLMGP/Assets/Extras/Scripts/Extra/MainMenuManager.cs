@@ -27,6 +27,8 @@ namespace cowsins {
             resetButton = settingsMenu.transform.Find("TopTabButton | Reset").gameObject;
             applyButton = settingsMenu.transform.Find("TopTabButton | Apply").gameObject;
             ResetTabs();
+            UnityEngine.Cursor.lockState = CursorLockMode.None;
+            UnityEngine.Cursor.visible = true;
         }
 
         private void Update()
