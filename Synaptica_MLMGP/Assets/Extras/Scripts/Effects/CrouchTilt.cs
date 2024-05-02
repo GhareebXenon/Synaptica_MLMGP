@@ -33,12 +33,14 @@ public class CrouchTilt : MonoBehaviour
 
     void Update()
     {
+            Debug.Log("HI KHALED");
         // If we are crouching + not aiming Tilt
         if (player.isCrouching && !wp.isAiming)
         {
             crouching = true;
            transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(tiltRot), Time.deltaTime * tiltSpeed);
             transform.localPosition = Vector3.Lerp(transform.localPosition, origPos+ tiltPosOffset, Time.deltaTime * tiltSpeed);
+               
         }
         else // If not, come back
         {
