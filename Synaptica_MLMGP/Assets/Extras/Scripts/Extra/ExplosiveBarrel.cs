@@ -27,7 +27,7 @@ public class ExplosiveBarrel : Destructible
     /// </summary>
     public override void Die()
     {
-        SoundManager.Instance.PlaySound(destroyedSFX, 0, .1f, true, 0);
+        SoundManager.Instance.PlaySound(destroyedSFX, 0, .05f, true, 0);
         Collider[] cols = Physics.OverlapSphere(transform.position, explosionRadius);
 
         Instantiate(destroyedObject,transform.position,Quaternion.identity);

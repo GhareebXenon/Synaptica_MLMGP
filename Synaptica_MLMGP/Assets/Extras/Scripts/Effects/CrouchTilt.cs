@@ -33,7 +33,7 @@ public class CrouchTilt : MonoBehaviour
 
     void Update()
     {
-            Debug.Log("HI KHALED");
+            
         // If we are crouching + not aiming Tilt
         if (player.isCrouching && !wp.isAiming)
         {

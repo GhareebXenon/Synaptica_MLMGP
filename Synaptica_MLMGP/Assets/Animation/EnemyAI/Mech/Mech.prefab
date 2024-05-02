@@ -702,6 +702,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 12133487c20ef4e439e9f9cd907cc5ed, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1873481456269421587}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 12133487c20ef4e439e9f9cd907cc5ed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7031161531083187741}
     - targetCorrespondingSourceObject: {fileID: 7214185091339604006, guid: 12133487c20ef4e439e9f9cd907cc5ed, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4460443104473985733}
@@ -747,6 +750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d967638f9b9144b85e2e7bd36e1ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meleeDmg: 20
 --- !u!4 &6802267415957899156 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6488672871488129444, guid: 12133487c20ef4e439e9f9cd907cc5ed, type: 3}
@@ -1490,3 +1494,16 @@ MonoBehaviour:
       m_Calls: []
   blaze: {fileID: 0}
   ragdollState: 0
+--- !u!114 &7031161531083187741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8598622503257230489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db1a8b7da3eb33649b79d70c343e1551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionVFX: {fileID: 5018994898019192216, guid: ab977a440365d1c4092c15552e5ff157, type: 3}
