@@ -2,6 +2,7 @@ using cowsins;
 using System;
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -130,6 +131,7 @@ public class Keypad : MonoBehaviour
         panelMesh.material.SetVector("_EmissionColor", screenGrantedColor * screenIntensity);
         audioSource.PlayOneShot(accessGrantedSfx);
         StartCoroutine(Countdown());
+            
     }
 
     IEnumerator Countdown()

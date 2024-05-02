@@ -16,11 +16,9 @@ public class MissionManager : MonoBehaviour
     [SerializeField] private GameObject missionPrefap;
 
     private Mission activeMission;
-    private int notMissions;
 
     private void Start()
     {
-        notMissions = missionUI.transform.childCount;
         switch (SceneManager.GetActiveScene().buildIndex)
         {
             case 2:
@@ -37,10 +35,10 @@ public class MissionManager : MonoBehaviour
     {
         if (activeMission != null)
         {
-            Transform missionCheck = missionUI.transform.Find(activeMission.title);
+            Transform missionCheck = missionUI?.transform.Find(activeMission.title);
             if (missionCheck == null)
             {
-                GameObject instance = Instantiate(missionPrefap, missionUI.transform);
+                GameObject instance = Instantiate(missionPrefap, missionUI?.transform);
                 TextMeshProUGUI instanceText = instance.transform.Find("Text").GetComponent<TextMeshProUGUI>();
                 TextMeshProUGUI instanceValue = instance.transform.Find("Value").GetComponent<TextMeshProUGUI>();
                 instance.name = activeMission.title;
@@ -57,12 +55,12 @@ public class MissionManager : MonoBehaviour
                 int subMissionCount = 1;
                 foreach (SubMission subMission in activeMission.subMissions)
                 {
-                    Transform subMissionCheck = missionUI.transform.Find(subMission.title);
+                    Transform subMissionCheck = missionUI?.transform.Find(subMission.title);
                     if (subMission.isActive && subMissionCheck == null)
                     {
                         int subHeight = 0 - subMissionCount * 45;
                         subMissionCount++;
-                        GameObject subInstance = Instantiate(missionPrefap, missionUI.transform);
+                        GameObject subInstance = Instantiate(missionPrefap, missionUI?.transform);
                         TextMeshProUGUI subInstanceText = subInstance.transform.Find("Text").GetComponent<TextMeshProUGUI>();
                         TextMeshProUGUI subInstanceValue = subInstance.transform.Find("Value").GetComponent<TextMeshProUGUI>();
                         subInstance.name = subMission.title;
@@ -100,12 +98,12 @@ public class MissionManager : MonoBehaviour
                 int subMissionCount = 1;
                 foreach (SubMission subMission in activeMission.subMissions)
                 {
-                    Transform subMissionCheck = missionUI.transform.Find(subMission.title);
+                    Transform subMissionCheck = missionUI?.transform.Find(subMission.title);
                     if (subMission.isActive && subMissionCheck == null)
                     {
                         int subHeight = 0 - subMissionCount * 45;
                         subMissionCount++;
-                        GameObject subInstance = Instantiate(missionPrefap, missionUI.transform);
+                        GameObject subInstance = Instantiate(missionPrefap, missionUI?.transform);
                         TextMeshProUGUI subInstanceText = subInstance.transform.Find("Text").GetComponent<TextMeshProUGUI>();
                         TextMeshProUGUI subInstanceValue = subInstance.transform.Find("Value").GetComponent<TextMeshProUGUI>();
                         subInstance.name = subMission.title;
@@ -168,7 +166,7 @@ public class MissionManager : MonoBehaviour
                 {
                     if (subMission.achieved >= subMission.target)
                     {
-                        TextMeshProUGUI missionText = missionUI.transform.Find(subMission.title).Find("Text").GetComponent<TextMeshProUGUI>();
+                        TextMeshProUGUI missionText = missionUI?.transform.Find(subMission.title).Find("Text").GetComponent<TextMeshProUGUI>();
                         missionText.text = $" <s>{subMission.title}</s>";
                         missionText.color = new Color(missionText.color.r, missionText.color.g, missionText.color.b, 0.7f);
                         subMission.OnCompleted?.Invoke();
@@ -192,7 +190,7 @@ public class MissionManager : MonoBehaviour
             {
                 if (subMission.achieved >= subMission.target) 
                 {
-                    TextMeshProUGUI missionText = missionUI.transform.Find(subMission.title).Find("Text").GetComponent<TextMeshProUGUI>();
+                    TextMeshProUGUI missionText = missionUI?.transform.Find(subMission.title).Find("Text").GetComponent<TextMeshProUGUI>();
                     missionText.text = $" <s>{subMission.title}</s>";
                     missionText.color = new Color(missionText.color.r, missionText.color.g, missionText.color.b, 0.7f);
                     subMission.OnCompleted?.Invoke();
@@ -206,7 +204,7 @@ public class MissionManager : MonoBehaviour
             if (completion == activeMission.subMissions.Count + 1)
             {
                 activeMission.OnCompleted?.Invoke();
-                Animator animator = missionUI.transform.Find(activeMission.title).GetComponent<Animator>();
+                Animator animator = missionUI?.transform.Find(activeMission.title).GetComponent<Animator>();
                 if (animator != null)
                 {
                     animator.SetBool("active", false);
@@ -263,7 +261,7 @@ public class MissionManager : MonoBehaviour
         {
             if (activeMission != null)
             {
-                Animator animator = missionUI.transform.Find(activeMission.title).GetComponent<Animator>();
+                Animator animator = missionUI?.transform.Find(activeMission.title).GetComponent<Animator>();
                 if (animator != null)
                 {
                     animator.SetBool("active", false);
@@ -288,7 +286,7 @@ public class MissionManager : MonoBehaviour
         {
             if (activeMission != null)
             {
-                Animator animator = missionUI.transform.Find(activeMission.title).GetComponent<Animator>();
+                Animator animator = missionUI?.transform.Find(activeMission.title).GetComponent<Animator>();
                 if (animator != null)
                 {
                     animator.SetBool("active", false);
@@ -309,7 +307,7 @@ public class MissionManager : MonoBehaviour
     private IEnumerator DestroyActiveMission()
     {
         yield return new WaitForSeconds(0.34f);
-        Destroy(missionUI.transform.Find(activeMission.title).gameObject);
+        Destroy(missionUI?.transform.Find(activeMission.title).gameObject);
     }
 
     private IEnumerator ChangeActiveMission(Mission mission)
