@@ -51,6 +51,8 @@ MonoBehaviour:
   interactText: PLANT EXPLOSIVE
   explosivePlantingSFX: {fileID: 8300000, guid: 2ba9327c845c615408279ba556a2462b, type: 3}
   explosionSFX: {fileID: 0}
+  missionManager: {fileID: 0}
+  mission: 
 --- !u!65 &7740655684225604628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -134,7 +136,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eaab8f01531b364419aed41fb2752f46, type: 2}
+  - {fileID: 2100000, guid: 7600f89dcb219a648b3efb78871c277a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
