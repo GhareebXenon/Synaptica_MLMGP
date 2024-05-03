@@ -46,7 +46,7 @@ public class MissionManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("activeMission: " + activeMission.title);
+      //  Debug.Log("activeMission: " + activeMission.title);
     }
 
     private void RefreshMissions()
