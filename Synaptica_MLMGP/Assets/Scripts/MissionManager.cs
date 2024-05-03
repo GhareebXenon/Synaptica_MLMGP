@@ -1,3 +1,4 @@
+using BlazeAISpace;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,16 +20,33 @@ public class MissionManager : MonoBehaviour
 
     private void Start()
     {
-        switch (SceneManager.GetActiveScene().buildIndex)
+        RefreshMissions();
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        switch (scene.name)
         {
-            case 2:
-                SetActiveMission("Get to the generator room and plant the explosives.");
+            case "Level 1":
+                SetActiveMission("Get to the generator room");
                 break;
-            case 4:
-                SetActiveMission("Keypad 2");
+            default:
                 break;
         }
-        RefreshMissions();
+    }
+
+    private void Update()
+    {
+        Debug.Log("activeMission: " + activeMission.title);
     }
 
     private void RefreshMissions()
@@ -212,7 +230,7 @@ public class MissionManager : MonoBehaviour
                 Mission nextMission = missions[missions.IndexOf(activeMission) + 1];
                 if (nextMission != null)
                 {
-                    SetActiveMission(missions[missions.IndexOf(activeMission) + 1]);
+                    SetActiveMission(nextMission);
                 }
             }
         }
@@ -268,16 +286,15 @@ public class MissionManager : MonoBehaviour
                 }
                 StartCoroutine(DestroyActiveMission());
             }
-            activeMission = mission;
+            StartCoroutine(ChangeActiveMission(mission));
             Debug.Log($"activeMission set to {title}.");
         }
         else
         {
             StartCoroutine(DestroyActiveMission());
-            activeMission = null;
+            StartCoroutine(ChangeActiveMission(null));
             Debug.Log($"Mission {title} not found, activeMission set to null.");
         }
-        RefreshMissions();
     }
 
     public void SetActiveMission(Mission mission)
@@ -307,12 +324,12 @@ public class MissionManager : MonoBehaviour
     private IEnumerator DestroyActiveMission()
     {
         yield return new WaitForSeconds(0.34f);
-        Destroy(missionUI?.transform.Find(activeMission.title).gameObject);
+        Destroy(missionUI?.transform.Find(activeMission?.title).gameObject);
     }
 
     private IEnumerator ChangeActiveMission(Mission mission)
     {
-        yield return new WaitForSeconds(0.34f);
+        yield return new WaitForSeconds(0.35f);
         activeMission = mission;
         RefreshMissions();
     }

@@ -6637,19 +6637,43 @@ PrefabInstance:
       objectReference: {fileID: 3470991385982544944}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.size
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[0].title
+      value: Get to the generator room
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[1].title
+      value: Silent Sabotage
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[2].title
       value: keypad 3
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[0].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[2].target
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[1].subMissions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[2].subMissions.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[1].subMissions.Array.data[0].title
+      value: Plant explosives on the generators
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[1].subMissions.Array.data[1].title
+      value: Unlock the door
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[2].subMissions.Array.data[0].title
@@ -6662,6 +6686,14 @@ PrefabInstance:
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[2].subMissions.Array.data[2].title
       value: Sub 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[1].subMissions.Array.data[0].target
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[1].subMissions.Array.data[1].target
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[2].subMissions.Array.data[0].target
