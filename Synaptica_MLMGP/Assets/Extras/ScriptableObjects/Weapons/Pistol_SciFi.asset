@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01ed731769af95429c32ba164942b3e, type: 3}
   m_Name: Pistol_SciFi
   m_EditorClassIdentifier: 
-  weaponObject: {fileID: 4366474878721369578, guid: bef8bf58e38b3994caf6b56b3e3a0dfb, type: 3}
+  weaponObject: {fileID: 4366474878721369578, guid: 769216d86e0767a4ab272ebcfce23ae7, type: 3}
   _name: Pistol
   pickUpGraphics: {fileID: 919132149155446097, guid: 1e98a3a7da994eb4094ed6780b56a26c, type: 3}
   icon: {fileID: 21300000, guid: 3919001d25c497d45b9bca84e848d826, type: 3}
@@ -77,7 +77,7 @@ MonoBehaviour:
   applyDifferentRecoilOnAiming: 0
   xRecoilAmountOnAiming: 0
   yRecoilAmountOnAiming: 0
-  damagePerBullet: 2
+  damagePerBullet: 10
   applyDamageReductionBasedOnDistance: 0
   minimumDistanceToApplyDamageReduction: 0
   damageReductionMultiplier: 0
