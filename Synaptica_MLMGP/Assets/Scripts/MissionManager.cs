@@ -1,4 +1,5 @@
 using BlazeAISpace;
+using cowsins;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,11 +13,23 @@ using UnityEngine.UI;
 
 public class MissionManager : MonoBehaviour
 {
+    public static MissionManager Instance;
     [SerializeField] private List<Mission> missions = new List<Mission>();
     [SerializeField] private GameObject missionUI;
     [SerializeField] private GameObject missionPrefap;
 
     private Mission activeMission;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            transform.parent = null;
+            DontDestroyOnLoad(gameObject);
+        }
+        else Destroy(this.gameObject);
+    }
 
     private void Start()
     {
@@ -34,6 +47,8 @@ public class MissionManager : MonoBehaviour
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        missionUI = GameObject.Find("MissionUI");
+        ResetMissionsProgress();
         switch (scene.name)
         {
             case "Level 1":
@@ -42,11 +57,6 @@ public class MissionManager : MonoBehaviour
             default:
                 break;
         }
-    }
-
-    private void Update()
-    {
-      //  Debug.Log("activeMission: " + activeMission.title);
     }
 
     private void RefreshMissions()
@@ -67,7 +77,7 @@ public class MissionManager : MonoBehaviour
                 }
                 else
                 {
-                    instanceText.margin = new Vector4(-50, 0, -280, 0);
+                    instanceText.margin = new Vector4(-50, 0, -180, 0);
                     instanceValue.gameObject.SetActive(false);
                 }
                 int subMissionCount = 1;
@@ -92,7 +102,7 @@ public class MissionManager : MonoBehaviour
                         }
                         else
                         {
-                            subInstanceText.margin = new Vector4(-50, 0, -280, 0);
+                            subInstanceText.margin = new Vector4(-50, 0, -180, 0);
                             subInstanceValue.gameObject.SetActive(false);
                         }
                     }
@@ -106,11 +116,11 @@ public class MissionManager : MonoBehaviour
                         }
                         else
                         {
-                            subInstanceText.margin = new Vector4(-50, 0, -280, 0);
+                            subInstanceText.margin = new Vector4(-50, 0, -180, 0);
                             subInstanceValue.gameObject.SetActive(false);
                         }
                     }
-                    else if (subMission.isActive == false && subMissionCheck != null)
+                    else
                     {
                         Destroy(subMissionCheck.gameObject);
                     }
@@ -124,7 +134,7 @@ public class MissionManager : MonoBehaviour
                 }
                 else
                 {
-                    missionCheck.transform.Find("Text").GetComponent<TextMeshProUGUI>().margin = new Vector4(-50, 0, -280, 0);
+                    missionCheck.transform.Find("Text").GetComponent<TextMeshProUGUI>().margin = new Vector4(-50, 0, -180, 0);
                     missionCheck.transform.Find("Value").gameObject.SetActive(false);
                 }
                 int subMissionCount = 1;
@@ -149,7 +159,7 @@ public class MissionManager : MonoBehaviour
                         }
                         else
                         {
-                            subInstanceText.margin = new Vector4(-50, 0, -280, 0);
+                            subInstanceText.margin = new Vector4(-50, 0, -180, 0);
                             subInstanceValue.gameObject.SetActive(false);
                         }
                     }
@@ -163,18 +173,17 @@ public class MissionManager : MonoBehaviour
                         }
                         else
                         {
-                            subInstanceText.margin = new Vector4(-50, 0, -280, 0);
+                            subInstanceText.margin = new Vector4(-50, 0, -180, 0);
                             subInstanceValue.gameObject.SetActive(false);
                         }
                     }
-                    else if (subMission.isActive == false && subMissionCheck != null)
+                    else
                     {
                         Destroy(subMissionCheck.gameObject);
                     }
                 }
             }
         }
-        CheckCompleted();
     }
 
     public void UpdateMission(string title, float achieved)
@@ -185,6 +194,7 @@ public class MissionManager : MonoBehaviour
         {
             mission.achieved += achieved;
             RefreshMissions();
+            CheckCompleted();
         }
         else
         {
@@ -195,6 +205,7 @@ public class MissionManager : MonoBehaviour
                 {
                     subMission.achieved += achieved;
                     RefreshMissions();
+                    CheckCompleted();
                     return;
                 }
             }
@@ -232,20 +243,27 @@ public class MissionManager : MonoBehaviour
         else
         {
             int completion = 0;
-            foreach (SubMission subMission in activeMission.subMissions)
+            if (activeMission.subMissions.Count > 0)
             {
-                if (subMission.achieved >= subMission.target) 
+                foreach (SubMission subMission in activeMission.subMissions)
                 {
-                    TextMeshProUGUI missionText = missionUI?.transform.Find(subMission.title).Find("Text").GetComponent<TextMeshProUGUI>();
-                    missionText.text = $" <s>{subMission.title}</s>";
-                    missionText.color = new Color(missionText.color.r, missionText.color.g, missionText.color.b, 0.7f);
-                    subMission.OnCompleted?.Invoke();
+                    if (subMission.achieved >= subMission.target)
+                    {
+                        TextMeshProUGUI missionText = missionUI?.transform.Find(subMission.title).Find("Text").GetComponent<TextMeshProUGUI>();
+                        missionText.text = $" <s>{subMission.title}</s>";
+                        missionText.color = new Color(missionText.color.r, missionText.color.g, missionText.color.b, 0.7f);
+                        subMission.OnCompleted?.Invoke();
+                        completion++;
+                    }
+                }
+                completion++;
+            }
+            else
+            {
+                if (activeMission.achieved >= activeMission.target)
+                {
                     completion++;
                 }
-            }
-            if (activeMission.achieved >= activeMission.target)
-            {
-                completion++;
             }
             if (completion == activeMission.subMissions.Count + 1)
             {
@@ -276,6 +294,7 @@ public class MissionManager : MonoBehaviour
             {
                 missions.Add(mission);
                 RefreshMissions();
+                CheckCompleted();
             }
         }
     }
@@ -295,6 +314,7 @@ public class MissionManager : MonoBehaviour
                 {
                     mainMission.subMissions.Add(mission);
                     RefreshMissions();
+                    CheckCompleted();
                 }
             }
         }
@@ -307,6 +327,7 @@ public class MissionManager : MonoBehaviour
         {
             if (activeMission != null)
             {
+                RefreshMissions();
                 Animator animator = missionUI?.transform.Find(activeMission.title).GetComponent<Animator>();
                 if (animator != null)
                 {
@@ -315,13 +336,11 @@ public class MissionManager : MonoBehaviour
                 StartCoroutine(DestroyActiveMission());
             }
             StartCoroutine(ChangeActiveMission(mission));
-            Debug.Log($"activeMission set to {title}.");
         }
         else
         {
             StartCoroutine(DestroyActiveMission());
             StartCoroutine(ChangeActiveMission(null));
-            Debug.Log($"Mission {title} not found, activeMission set to null.");
         }
     }
 
@@ -331,6 +350,7 @@ public class MissionManager : MonoBehaviour
         {
             if (activeMission != null)
             {
+                RefreshMissions();
                 Animator animator = missionUI?.transform.Find(activeMission.title).GetComponent<Animator>();
                 if (animator != null)
                 {
@@ -339,13 +359,11 @@ public class MissionManager : MonoBehaviour
                 StartCoroutine(DestroyActiveMission());
             }
             StartCoroutine(ChangeActiveMission(mission));
-            Debug.Log($"activeMission set to {mission.title}.");
         }
         else
         {
             StartCoroutine(DestroyActiveMission());
             StartCoroutine(ChangeActiveMission(null));
-            Debug.Log($"Mission {mission.title} not found, activeMission set to null.");
         }
     }
 
@@ -367,6 +385,7 @@ public class MissionManager : MonoBehaviour
                     Debug.Log($"Sub-Mission {subMission.title} set to Inactive.");
                 }
                 RefreshMissions();
+                CheckCompleted();
                 return;
             }
             else
@@ -376,16 +395,40 @@ public class MissionManager : MonoBehaviour
         }
     }
 
+    private void ResetMissionsProgress()
+    {
+        foreach (Mission mission in missions)
+        {
+            foreach (SubMission subMission in mission.subMissions)
+            {
+                subMission.achieved = 0;
+            }
+            mission.achieved = 0;
+        }
+    }
+
     private IEnumerator DestroyActiveMission()
     {
         yield return new WaitForSeconds(0.34f);
-        Destroy(missionUI?.transform.Find(activeMission?.title).gameObject);
+        if (activeMission != null)
+        {
+            foreach (SubMission subMission in activeMission.subMissions)
+            {
+                Destroy(missionUI?.transform.Find(subMission.title).gameObject);
+            }
+            Destroy(missionUI?.transform.Find(activeMission.title).gameObject);
+        }
     }
 
     private IEnumerator ChangeActiveMission(Mission mission)
     {
         yield return new WaitForSeconds(0.35f);
         activeMission = mission;
+        if (mission == null)
+            Debug.Log($"Mission {mission.title} could not be found, activeMission set to null.");
+        else
+            Debug.Log($"activeMission set to {mission.title}.");
         RefreshMissions();
+        CheckCompleted();
     }
 }

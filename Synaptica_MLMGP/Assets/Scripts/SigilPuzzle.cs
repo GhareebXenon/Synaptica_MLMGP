@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class SigilPuzzle : MonoBehaviour
 {
+    [SerializeField] private string mission;
     [SerializeField] private GameObject mainCamera;
     [SerializeField] private GameObject sigilPuzzleCamera;
     [SerializeField] private GameObject playerUI;
@@ -158,6 +159,7 @@ public class SigilPuzzle : MonoBehaviour
     private void GrantAccess()
     {
         onAccessGranted?.Invoke();
+        MissionManager.Instance.UpdateMission(mission, 1);
         StartCoroutine(ChangeColor(drawnPoints, accessGrantedColor));
         StartCoroutine(LightsOn());
     }
