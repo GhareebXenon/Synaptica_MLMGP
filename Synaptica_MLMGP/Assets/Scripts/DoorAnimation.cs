@@ -9,11 +9,20 @@ using cowsins;
 
 public class DoorAnimation : Interactable
 {
-    [SerializeField]private Animator animator;
+    [SerializeField] private Animator animator;
+    [SerializeField] private bool isLocked = true;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        if (isLocked)
+        {
+            interactText = "Locked";
+        }
     }
 
     public override void Interact()
@@ -30,8 +39,11 @@ public class DoorAnimation : Interactable
 
     public void Open()
     {
-        animator.SetBool("IsOpen", true);
-        interactText = "close";
+        if (!isLocked)
+        {
+            animator.SetBool("IsOpen", true);
+            interactText = "close";
+        }
     }
 
     public void Close()
@@ -39,4 +51,6 @@ public class DoorAnimation : Interactable
         animator.SetBool("IsOpen", false);
         interactText = "open";
     }
+
+    public void UnLock() => isLocked = false;
 }

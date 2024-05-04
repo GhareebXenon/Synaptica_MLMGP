@@ -48,11 +48,13 @@ public class MissionManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         missionUI = GameObject.Find("MissionUI");
-        ResetMissionsProgress();
         switch (scene.name)
         {
+            case "Exposition":
+                SetInitialMission("Enter the BIO-NEXUS building");
+                break;
             case "Level 1":
-                SetActiveMission("Get to the generator room");
+                SetInitialMission("Get to the generator room");
                 break;
             default:
                 break;
@@ -77,7 +79,7 @@ public class MissionManager : MonoBehaviour
                 }
                 else
                 {
-                    instanceText.margin = new Vector4(-50, 0, -180, 0);
+                    instanceText.margin = new Vector4(-50, 0, -185, 0);
                     instanceValue.gameObject.SetActive(false);
                 }
                 int subMissionCount = 1;
@@ -102,7 +104,7 @@ public class MissionManager : MonoBehaviour
                         }
                         else
                         {
-                            subInstanceText.margin = new Vector4(-50, 0, -180, 0);
+                            subInstanceText.margin = new Vector4(-50, 0, -185, 0);
                             subInstanceValue.gameObject.SetActive(false);
                         }
                     }
@@ -116,7 +118,7 @@ public class MissionManager : MonoBehaviour
                         }
                         else
                         {
-                            subInstanceText.margin = new Vector4(-50, 0, -180, 0);
+                            subInstanceText.margin = new Vector4(-50, 0, -185, 0);
                             subInstanceValue.gameObject.SetActive(false);
                         }
                     }
@@ -134,7 +136,7 @@ public class MissionManager : MonoBehaviour
                 }
                 else
                 {
-                    missionCheck.transform.Find("Text").GetComponent<TextMeshProUGUI>().margin = new Vector4(-50, 0, -180, 0);
+                    missionCheck.transform.Find("Text").GetComponent<TextMeshProUGUI>().margin = new Vector4(-50, 0, -185, 0);
                     missionCheck.transform.Find("Value").gameObject.SetActive(false);
                 }
                 int subMissionCount = 1;
@@ -159,7 +161,7 @@ public class MissionManager : MonoBehaviour
                         }
                         else
                         {
-                            subInstanceText.margin = new Vector4(-50, 0, -180, 0);
+                            subInstanceText.margin = new Vector4(-50, 0, -185, 0);
                             subInstanceValue.gameObject.SetActive(false);
                         }
                     }
@@ -173,7 +175,7 @@ public class MissionManager : MonoBehaviour
                         }
                         else
                         {
-                            subInstanceText.margin = new Vector4(-50, 0, -180, 0);
+                            subInstanceText.margin = new Vector4(-50, 0, -185, 0);
                             subInstanceValue.gameObject.SetActive(false);
                         }
                     }
@@ -192,7 +194,7 @@ public class MissionManager : MonoBehaviour
         SubMission subMission;
         if (mission != null )
         {
-            mission.achieved += achieved;
+            mission.achieved = Mathf.Clamp(mission.achieved + achieved, 0, mission.target);
             RefreshMissions();
             CheckCompleted();
         }
@@ -203,7 +205,7 @@ public class MissionManager : MonoBehaviour
                 subMission = m.subMissions.Find(subMission => subMission.title.Trim().ToLower() == title.Trim().ToLower());
                 if (subMission != null)
                 {
-                    subMission.achieved += achieved;
+                    subMission.achieved = Mathf.Clamp(subMission.achieved + achieved, 0, subMission.target);
                     RefreshMissions();
                     CheckCompleted();
                     return;
@@ -273,10 +275,13 @@ public class MissionManager : MonoBehaviour
                 {
                     animator.SetBool("active", false);
                 }
-                Mission nextMission = missions[missions.IndexOf(activeMission) + 1];
-                if (nextMission != null)
+                if (missions.IndexOf(activeMission) + 1 < missions.Count)
                 {
-                    SetActiveMission(nextMission);
+                    Mission nextMission = missions[missions.IndexOf(activeMission) + 1];
+                    if (nextMission != null)
+                    {
+                        SetActiveMission(nextMission);
+                    }
                 }
             }
         }
@@ -395,17 +400,31 @@ public class MissionManager : MonoBehaviour
         }
     }
 
-    private void ResetMissionsProgress()
+    private void SetInitialMission(string title)
     {
-        foreach (Mission mission in missions)
+        Mission mission = missions.Find(mission => mission.title.Trim().ToLower() == title.Trim().ToLower());
+        SetActiveMission(mission);
+        for (int i = missions.IndexOf(mission) + 1; i < missions.Count; i++)
         {
-            foreach (SubMission subMission in mission.subMissions)
+            foreach (SubMission subMission in missions[i].subMissions)
             {
                 subMission.achieved = 0;
             }
-            mission.achieved = 0;
+            missions[i].achieved = 0;
         }
     }
+
+    //private void ResetMissionsProgress()
+    //{
+    //    foreach (Mission mission in missions)
+    //    {
+    //        foreach (SubMission subMission in mission.subMissions)
+    //        {
+    //            subMission.achieved = 0;
+    //        }
+    //        mission.achieved = 0;
+    //    }
+    //}
 
     private IEnumerator DestroyActiveMission()
     {
