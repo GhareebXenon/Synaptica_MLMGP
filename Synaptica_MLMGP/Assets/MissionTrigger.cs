@@ -7,7 +7,6 @@ using UnityEngine.Rendering;
 
 public class MissionTrigger : MonoBehaviour
 {
-    [SerializeField] private MissionManager missionManager;
     [SerializeField] private string mission;
     [SerializeField] private float acheived = 1;
 
@@ -15,7 +14,7 @@ public class MissionTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            missionManager.UpdateMission(mission, acheived);
+            MissionManager.Instance.UpdateMission(mission, acheived);
         }
     }
 }

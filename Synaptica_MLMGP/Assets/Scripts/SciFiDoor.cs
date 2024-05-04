@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SciFiDoor : MonoBehaviour
 {
+    public bool isLocked = true;
     public bool isOpen = false;
     [SerializeField] private Vector3 slideDirection = Vector3.back;
     [SerializeField] private float slideAmount = 3f;
@@ -53,5 +54,10 @@ public class SciFiDoor : MonoBehaviour
             targetPos = startPos;
             isMoving = true;
         }
+    }
+
+    public void Unlock()
+    {
+        isLocked = false;
     }
 }

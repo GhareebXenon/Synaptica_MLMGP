@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.InputSystem;
 using Unity.VisualScripting;
 using UnityEngine.Events;
+using cowsins;
 
 public class DoorActions : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class DoorActions : MonoBehaviour
     private float MaxUseDistance = 5f;
     [SerializeField]
     private LayerMask InteractLayer;
+    [SerializeField]
+    private AudioSource audioSource;
+    [SerializeField]
+    private AudioClip lockedSfx;
 
 
     private void Awake()
@@ -52,12 +57,15 @@ public class DoorActions : MonoBehaviour
                     door.Close();
                    
                 }
-                else
+                else if(!door.isOpen & !door.isLocked)
                 {
                     door.Open();
                  
                 }
-            
+                else
+                {
+                    if (!audioSource.isPlaying) audioSource.PlayOneShot(lockedSfx);
+                }
             }
         }
     }
@@ -68,9 +76,14 @@ public class DoorActions : MonoBehaviour
         { 
             if(door.isOpen) {
                 UseText.SetText("Close \"E\"");
-            }else
+            }
+            else if (!door.isOpen && !door.isLocked)
             {
                 UseText.SetText("Open \"E\"");
+            }
+            else
+            {
+                UseText.SetText("Locked");
             }
             UseText.gameObject.SetActive(true);
             UseText.transform.position = hit.point-(hit.point -Camera.position).normalized *0.5f;

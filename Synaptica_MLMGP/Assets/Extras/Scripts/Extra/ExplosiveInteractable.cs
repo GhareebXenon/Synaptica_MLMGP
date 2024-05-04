@@ -6,7 +6,6 @@ using UnityEngine;
 public class ExplosiveInteractable : Interactable
 {
     [SerializeField] private AudioClip explosivePlantingSFX, explosionSFX;
-    [SerializeField] private MissionManager missionManager;
     [SerializeField] private string mission;
 
     private void Start()
@@ -18,7 +17,7 @@ public class ExplosiveInteractable : Interactable
     {
         transform.Find("Explosive").gameObject.SetActive(true);
         SoundManager.Instance.PlaySound(explosivePlantingSFX, 0, 0, false, 0.25f);
-        missionManager.UpdateMission(mission, 1);
+        MissionManager.Instance.UpdateMission(mission, 1);
         GetComponent<BoxCollider>().enabled = false;
         gameObject.layer = 11;
     }

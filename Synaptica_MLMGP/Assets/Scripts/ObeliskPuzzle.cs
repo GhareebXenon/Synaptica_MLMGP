@@ -8,13 +8,13 @@ using UnityEngine.Events;
 
 public class ObeliskPuzzle : MonoBehaviour
 {
+    [SerializeField] private string mission;
+    [SerializeField] private UnityEvent OnCompleted;
+    [SerializeField] private bool completed = false;
     [SerializeField] private Transform[] cubes;
     [SerializeField] private ObeliskRunes[] runes;
     [SerializeField] private ObeliskRunes operationRune;
     [SerializeField] private ObeliskRunes solutionRune;
-    [SerializeField] private string mission;
-    [SerializeField] private UnityEvent OnCompleted;
-    [SerializeField] private bool completed = false;
     public List<int> runesNumbers;
     [SerializeField] private int[] runesSelected;
     [SerializeField] private int solution;
@@ -48,6 +48,7 @@ public class ObeliskPuzzle : MonoBehaviour
         if (completed)
         {
             OnCompleted?.Invoke();
+            MissionManager.Instance.UpdateMission(mission, 1);
             completed = false;
         }
     }

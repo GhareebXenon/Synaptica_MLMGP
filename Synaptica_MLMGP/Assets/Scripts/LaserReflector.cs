@@ -14,6 +14,7 @@ public class LaserReflector : MonoBehaviour
     Vector3 direction;
     LineRenderer lr;
     public bool isOpen;
+    [SerializeField] private string mission;
     [SerializeField] private UnityEvent OnCompleted;
 
     GameObject tempReflector;
@@ -42,6 +43,7 @@ public class LaserReflector : MonoBehaviour
                 else if (hit.collider.CompareTag("CenterReflector"))
                 {
                     OnCompleted?.Invoke();
+                    MissionManager.Instance.UpdateMission(mission, 1);
                 }
                 else if (hit.collider.CompareTag("Player"))
                 {
