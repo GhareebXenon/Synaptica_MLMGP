@@ -222,7 +222,7 @@ public class SigilPuzzle : MonoBehaviour
     IEnumerator MoveUp(float transitionTime = 5f)
     {
         float elapsedTime = 0f;
-        yield return new WaitForSeconds(0.44f);
+        yield return new WaitForSeconds(0.5f);
         while (elapsedTime < transitionTime)
         {
             float newHeight = Mathf.Lerp(transform.localPosition.y, 8, elapsedTime / transitionTime);

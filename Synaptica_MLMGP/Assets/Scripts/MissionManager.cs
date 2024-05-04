@@ -62,6 +62,9 @@ public class MissionManager : MonoBehaviour
             case "Level 3":
                 SetInitialMission("Explore the area");
                 break;
+            case "Level 4":
+                SetInitialMission("Find a way out of the maze");
+                break;
             default:
                 break;
         }
