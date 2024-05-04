@@ -96,6 +96,20 @@ public class MissionManager : MonoBehaviour
                             subInstanceValue.gameObject.SetActive(false);
                         }
                     }
+                    else if (subMission.isActive && subMissionCheck != null)
+                    {
+                        TextMeshProUGUI subInstanceText = subMissionCheck.Find("Text").GetComponent<TextMeshProUGUI>();
+                        TextMeshProUGUI subInstanceValue = subMissionCheck.Find("Value").GetComponent<TextMeshProUGUI>();
+                        if (subMission.target > 1)
+                        {
+                            subInstanceValue.text = $"{subMission.achieved}/{subMission.target}";
+                        }
+                        else
+                        {
+                            subInstanceText.margin = new Vector4(-50, 0, -280, 0);
+                            subInstanceValue.gameObject.SetActive(false);
+                        }
+                    }
                     else if (subMission.isActive == false && subMissionCheck != null)
                     {
                         Destroy(subMissionCheck.gameObject);
@@ -132,6 +146,20 @@ public class MissionManager : MonoBehaviour
                         if (subMission.target > 1)
                         {
                             subInstanceValue.text = $"{activeMission.achieved}/{activeMission.target}";
+                        }
+                        else
+                        {
+                            subInstanceText.margin = new Vector4(-50, 0, -280, 0);
+                            subInstanceValue.gameObject.SetActive(false);
+                        }
+                    }
+                    else if (subMission.isActive && subMissionCheck != null)
+                    {
+                        TextMeshProUGUI subInstanceText = subMissionCheck.Find("Text").GetComponent<TextMeshProUGUI>();
+                        TextMeshProUGUI subInstanceValue = subMissionCheck.Find("Value").GetComponent<TextMeshProUGUI>();
+                        if (subMission.target > 1)
+                        {
+                            subInstanceValue.text = $"{subMission.achieved}/{subMission.target}";
                         }
                         else
                         {
@@ -318,6 +346,33 @@ public class MissionManager : MonoBehaviour
             StartCoroutine(DestroyActiveMission());
             StartCoroutine(ChangeActiveMission(null));
             Debug.Log($"Mission {mission.title} not found, activeMission set to null.");
+        }
+    }
+
+    public void SetActiveSubMission(Mission mission, bool isActive)
+    {
+        SubMission subMission;
+        foreach (Mission m in missions)
+        {
+            subMission = m.subMissions.Find(subMission => subMission.title.Trim().ToLower() == mission.title.Trim().ToLower());
+            if (subMission != null)
+            {
+                subMission.isActive = isActive;
+                if (isActive)
+                {
+                    Debug.Log($"Sub-Mission {subMission.title} set to Active.");
+                }
+                else
+                {
+                    Debug.Log($"Sub-Mission {subMission.title} set to Inactive.");
+                }
+                RefreshMissions();
+                return;
+            }
+            else
+            {
+                Debug.Log($"Sub-Mission {subMission.title} not found, cannot activate the mission.");
+            }
         }
     }
 
