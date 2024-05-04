@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01ed731769af95429c32ba164942b3e, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: 
-  weaponObject: {fileID: 4366474878721369578, guid: 866bf6803807eff4cad16e0ebed2e8f8, type: 3}
+  weaponObject: {fileID: 4366474878721369578, guid: 86a6276e7873af743ad168398ff3dab9, type: 3}
   _name: Shotgun
-  pickUpGraphics: {fileID: 2092819957812016947, guid: 5f0b070383feac14d98e11a8628abf20, type: 3}
+  pickUpGraphics: {fileID: 3156254974450815629, guid: 67adf4fbce63dd047ac5a3ed06a92897, type: 3}
   icon: {fileID: 21300000, guid: 15745d5342e0447468f077b4299353cd, type: 3}
   shootStyle: 0
   shootMethod: 1
