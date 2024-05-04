@@ -28,6 +28,12 @@ public class DoorActions : MonoBehaviour
     {
         input = new PlayerActions();
     }
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void OnEnable()
     {
         input.Enable();

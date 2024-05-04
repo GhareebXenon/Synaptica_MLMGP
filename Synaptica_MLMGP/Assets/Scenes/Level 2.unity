@@ -150,6 +150,87 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7582782408630673860, guid: b01e687598c5f0945b7b4f56bf034bee, type: 3}
+--- !u!1001 &55037915
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 38.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -85.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 801526711308284417, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 801526711308284417, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 801526711308284417, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_Size.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365839563944039132, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_Name
+      value: MissionTrigger (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877254305080646707, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: mission
+      value: Escape
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
 --- !u!1001 &80918596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8779,6 +8860,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obelisk (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7879052245798290989, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: mission
+      value: Solve the riddle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7879052245798290989, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8555644889917812784, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -10836,6 +10925,87 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1908629218}
   m_SourcePrefab: {fileID: 100100000, guid: b01e687598c5f0945b7b4f56bf034bee, type: 3}
+--- !u!1001 &590338862
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 42.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 785973285602842608, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 801526711308284417, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_Size.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 801526711308284417, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 801526711308284417, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_Size.z
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365839563944039132, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: m_Name
+      value: MissionTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877254305080646707, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
+      propertyPath: mission
+      value: ' '
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4838702b34c02ec48aaebf0be6fbc797, type: 3}
 --- !u!1001 &592510202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15304,6 +15474,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive
       objectReference: {fileID: 0}
+    - target: {fileID: 3958597192275444896, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: mission
+      value: Plant explosives
+      objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.20000002
@@ -16354,6 +16528,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: missions.Array.data[8].OnCompleted.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: missions.Array.data[8].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
     - target: {fileID: 7451978896340577413, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -17221,6 +17403,10 @@ PrefabInstance:
     - target: {fileID: 125075974311270728, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_Name
       value: Explosive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958597192275444896, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: mission
+      value: Plant explosives
       objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalScale.y
@@ -30004,6 +30190,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obelisk
       objectReference: {fileID: 0}
+    - target: {fileID: 7879052245798290989, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: mission
+      value: Solve the riddle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7879052245798290989, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8555644889917812784, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -30220,6 +30414,10 @@ PrefabInstance:
     - target: {fileID: 125075974311270728, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_Name
       value: Explosive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958597192275444896, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: mission
+      value: Plant explosives
       objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalScale.y
@@ -31836,6 +32034,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive
       objectReference: {fileID: 0}
+    - target: {fileID: 3958597192275444896, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: mission
+      value: Plant explosives
+      objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.20000002
@@ -32373,3 +32575,5 @@ SceneRoots:
   - {fileID: 1132421116}
   - {fileID: 1689381415}
   - {fileID: 784712702}
+  - {fileID: 590338862}
+  - {fileID: 55037915}

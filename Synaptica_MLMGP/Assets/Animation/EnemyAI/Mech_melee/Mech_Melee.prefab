@@ -1567,7 +1567,7 @@ AudioSource:
   m_GameObject: {fileID: 5216046859312980073}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2063251707394765409, guid: 3dc5bcb72860b6345a662a8ccec7587f, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1815,6 +1815,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  mission: 
   destroyOnDeath: 0
   timeBeforeDestroy: 5
   companionMode: 0

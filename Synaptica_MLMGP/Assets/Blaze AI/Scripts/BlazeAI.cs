@@ -171,6 +171,8 @@ public class BlazeAI : MonoBehaviour
     [Space(15), Tooltip("Set an event to trigger on death.")]
     public UnityEvent deathEvent;
 
+    public string deathMission;
+
     [Header("Destroy")]
     [Tooltip("Will destroy this gameobject on death.")]
     public bool destroyOnDeath;
@@ -3419,6 +3421,7 @@ public class BlazeAI : MonoBehaviour
 
         // invoke event
         deathEvent.Invoke();
+        MissionManager.Instance.UpdateMission(deathMission, 1);
         
         // turn on ragdoll or play death animation depending on the set options
         RagdollOrDeathAnim();

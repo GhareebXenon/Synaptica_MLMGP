@@ -56,6 +56,12 @@ public class MissionManager : MonoBehaviour
             case "Level 1":
                 SetInitialMission("Get to the generator room");
                 break;
+            case "Level 2":
+                SetInitialMission(" ");
+                break;
+            case "Level 3":
+                SetInitialMission("Explore the area");
+                break;
             default:
                 break;
         }
@@ -404,7 +410,15 @@ public class MissionManager : MonoBehaviour
     {
         Mission mission = missions.Find(mission => mission.title.Trim().ToLower() == title.Trim().ToLower());
         SetActiveMission(mission);
-        for (int i = missions.IndexOf(mission) + 1; i < missions.Count; i++)
+        for (int i = 0; i < missions.IndexOf(mission); i++)
+        {
+            foreach (SubMission subMission in missions[i].subMissions)
+            {
+                subMission.achieved = subMission.target;
+            }
+            missions[i].achieved = missions[i].target;
+        }
+        for (int i = missions.IndexOf(mission); i < missions.Count - 1; i++)
         {
             foreach (SubMission subMission in missions[i].subMissions)
             {

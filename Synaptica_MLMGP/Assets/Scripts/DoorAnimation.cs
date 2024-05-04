@@ -10,11 +10,14 @@ using cowsins;
 public class DoorAnimation : Interactable
 {
     [SerializeField] private Animator animator;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip lockedSfx;
     [SerializeField] private bool isLocked = true;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -27,23 +30,24 @@ public class DoorAnimation : Interactable
 
     public override void Interact()
     {
-        if (animator.GetBool("IsOpen") == false)
+        if (animator.GetBool("IsOpen") == false && !isLocked)
         {
             Open();
         }
-        else
+        else if (animator.GetBool("IsOpen") == true)
         {
             Close();
+        }
+        else
+        {
+            if (!audioSource.isPlaying) audioSource.PlayOneShot(lockedSfx);
         }
     }
 
     public void Open()
     {
-        if (!isLocked)
-        {
-            animator.SetBool("IsOpen", true);
-            interactText = "close";
-        }
+        animator.SetBool("IsOpen", true);
+        interactText = "close";
     }
 
     public void Close()

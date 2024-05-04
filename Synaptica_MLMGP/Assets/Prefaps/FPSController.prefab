@@ -6615,7 +6615,7 @@ PrefabInstance:
       objectReference: {fileID: 3470991385982544944}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.size
-      value: 7
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[0].title
@@ -6646,8 +6646,48 @@ PrefabInstance:
       value: Solve the obelisks riddle to unlock the gate
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[7].title
+      value: ' '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[8].title
+      value: Escape
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].title
+      value: Calm Amidst Chaos
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[0].target
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[10].title
+      value: Explore the area
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].title
+      value: Find out what to do with the laser
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].title
+      value: Go past the door
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].title
+      value: Destroy the mech
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].title
+      value: Take the note
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].title
+      value: Solve the obelisk riddle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].title
+      value: Exit the area
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[2].target
@@ -6670,6 +6710,46 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[7].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[8].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[10].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[1].achieved
       value: 0
       objectReference: {fileID: 0}
@@ -6687,6 +6767,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[5].subMissions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].subMissions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].subMissions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].subMissions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].subMissions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].subMissions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].subMissions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].subMissions.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
@@ -6726,6 +6834,62 @@ PrefabInstance:
       value: Exit the cargo room
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].subMissions.Array.data[0].title
+      value: Plant explosive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].subMissions.Array.data[1].title
+      value: Solve the riddle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].subMissions.Array.data[0].title
+      value: Plant explosive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].subMissions.Array.data[1].title
+      value: Solve the riddle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].subMissions.Array.data[0].title
+      value: Plant explosive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].subMissions.Array.data[1].title
+      value: Solve the riddle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].subMissions.Array.data[0].title
+      value: Plant explosive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].subMissions.Array.data[1].title
+      value: Solve the riddle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].subMissions.Array.data[0].title
+      value: Plant explosive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].subMissions.Array.data[1].title
+      value: Solve the riddle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].subMissions.Array.data[0].title
+      value: Plant explosive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].subMissions.Array.data[1].title
+      value: Solve the riddle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].subMissions.Array.data[0].title
+      value: Plant explosive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].subMissions.Array.data[1].title
+      value: Solve the riddle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[1].subMissions.Array.data[0].target
       value: 4
       objectReference: {fileID: 0}
@@ -6762,6 +6926,62 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].subMissions.Array.data[0].target
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].subMissions.Array.data[1].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].subMissions.Array.data[0].target
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].subMissions.Array.data[1].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].subMissions.Array.data[0].target
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].subMissions.Array.data[1].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].subMissions.Array.data[0].target
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].subMissions.Array.data[1].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].subMissions.Array.data[0].target
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].subMissions.Array.data[1].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].subMissions.Array.data[0].target
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].subMissions.Array.data[1].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].subMissions.Array.data[0].target
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].subMissions.Array.data[1].target
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[2].subMissions.Array.data[0].isActive
       value: 1
       objectReference: {fileID: 0}
@@ -6790,6 +7010,62 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].subMissions.Array.data[0].isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].subMissions.Array.data[1].isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].subMissions.Array.data[0].isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].subMissions.Array.data[1].isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].subMissions.Array.data[0].isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].subMissions.Array.data[1].isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].subMissions.Array.data[0].isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].subMissions.Array.data[1].isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].subMissions.Array.data[0].isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].subMissions.Array.data[1].isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].subMissions.Array.data[0].isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].subMissions.Array.data[1].isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].subMissions.Array.data[0].isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].subMissions.Array.data[1].isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[2].OnCompleted.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -6799,6 +7075,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[6].OnCompleted.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[8].OnCompleted.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].OnCompleted.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].OnCompleted.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].OnCompleted.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].OnCompleted.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].OnCompleted.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].OnCompleted.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].OnCompleted.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
@@ -6822,6 +7130,70 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[8].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[8].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[2].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -6839,6 +7211,70 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[6].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[8].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[8].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
@@ -6862,6 +7298,70 @@ PrefabInstance:
       value: Open
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[8].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnLock
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[8].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnLock
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnLock
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnLock
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnLock
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnLock
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnLock
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnLock
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[2].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SciFiDoor, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -6882,6 +7382,70 @@ PrefabInstance:
       value: DoorAnimation, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[8].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[8].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[2].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -6899,6 +7463,70 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[6].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[8].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[8].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[9].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[11].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[12].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[13].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[14].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[15].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[16].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []

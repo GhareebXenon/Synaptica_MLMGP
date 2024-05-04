@@ -836,7 +836,7 @@ AudioSource:
   m_GameObject: {fileID: 8598622503257230489}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2063251707394765409, guid: 3dc5bcb72860b6345a662a8ccec7587f, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1072,6 +1072,7 @@ MonoBehaviour:
   deathEvent:
     m_PersistentCalls:
       m_Calls: []
+  mission: 
   destroyOnDeath: 0
   timeBeforeDestroy: 5
   companionMode: 0
