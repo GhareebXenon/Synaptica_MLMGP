@@ -90,14 +90,14 @@ public class SigilPuzzle : MonoBehaviour
 
     private void DrawLine(SigilLine line)
     {
-        Vector3 offset = new Vector3(0, 0, connectingPoints[0].transform.localPosition.z + 0.006f);
+        Vector3 offset = new Vector3(0, 0, connectingPoints[0].transform.localPosition.z + 0.007f);
         Vector3 start = line.startPoint.transform.position + offset;
         Vector3 end = line.endPoint.transform.position + offset;
         Vector3 direction = end - new Vector3(start.x, start.y, 0);
         float distance = direction.magnitude;
         direction.Normalize();
 
-        for (float i = 0; i < distance; i += 0.025f)
+        for (float i = 0; i < distance; i += 0.4f)
         {
             Vector3 currentPosition = start + new Vector3(direction.x * i, direction.y * i, 0);
             GameObject newPoint = Instantiate(bloodPrefab, currentPosition, bloodPrefab.transform.rotation, board.transform);
@@ -158,8 +158,6 @@ public class SigilPuzzle : MonoBehaviour
 
     private void GrantAccess()
     {
-        onAccessGranted?.Invoke();
-        MissionManager.Instance.UpdateMission(mission, 1);
         StartCoroutine(ChangeColor(drawnPoints, accessGrantedColor));
         StartCoroutine(LightsOn());
     }
@@ -216,5 +214,22 @@ public class SigilPuzzle : MonoBehaviour
             yield return null;
         }
         board.GetComponent<Light>().intensity = 50;
+        onAccessGranted?.Invoke();
+        MissionManager.Instance.UpdateMission(mission, 1);
+        StartCoroutine(MoveUp());
+    }
+
+    IEnumerator MoveUp(float transitionTime = 5f)
+    {
+        float elapsedTime = 0f;
+        yield return new WaitForSeconds(0.44f);
+        while (elapsedTime < transitionTime)
+        {
+            float newHeight = Mathf.Lerp(transform.localPosition.y, 8, elapsedTime / transitionTime);
+            transform.localPosition = new Vector3(transform.localPosition.x, newHeight, transform.localPosition.z);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.localPosition = new Vector3(transform.localPosition.x, 8, transform.localPosition.z);
     }
 }
