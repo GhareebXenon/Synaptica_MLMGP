@@ -6,21 +6,14 @@ using UnityEngine.UI;
 public class NewBehaviourScript : MonoBehaviour
 {
     [SerializeField] private Image _noteImage;
-    // Start is called before the first frame update
-     void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            _noteImage.enabled = true;
-        }
-        
-    }
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            _noteImage.enabled = false;
-        }
+    private bool _isShowingNote = false;  
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.J)) 
+        {
+            _isShowingNote = !_isShowingNote;  
+            _noteImage.enabled = _isShowingNote;
+        }
     }
 }
