@@ -14,5 +14,6 @@ public class ElevatorOpening : MonoBehaviour
     public void Open()
     {
         animator.SetBool("IsOpen", true);
+        Debug.Log("Set bool IsOpen to " +  animator.GetBool("IsOpen"));
     }
 }
