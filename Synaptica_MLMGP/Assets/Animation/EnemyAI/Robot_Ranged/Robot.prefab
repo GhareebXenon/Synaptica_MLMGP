@@ -1950,8 +1950,8 @@ MonoBehaviour:
       coneAngle: 100
       sightRange: 15
     visionDuringAttackState:
-      coneAngle: 360
-      sightRange: 20
+      coneAngle: 111
+      sightRange: 21.75
       alwaysApply: 1
     head: {fileID: 0}
     showNormalVision: 1
@@ -2050,6 +2050,7 @@ MonoBehaviour:
   deathEvent:
     m_PersistentCalls:
       m_Calls: []
+  deathMission: 
   destroyOnDeath: 0
   timeBeforeDestroy: 5
   companionMode: 0
@@ -2455,7 +2456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76561e3a2cd30214c9d7e2539a62d65c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 20
 --- !u!114 &7638836994394963036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2469,9 +2470,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 4788661151330834344, guid: e549fc90d6c695f4f960351c910fa7d6, type: 3}
-  projectileSpeed: 50
+  projectileSpeed: 30
   firePoint: {fileID: 2711194421463426242}
-  bulletDamage: 10
+  bulletDamage: 5
 --- !u!1 &2082889749290442042
 GameObject:
   m_ObjectHideFlags: 0
