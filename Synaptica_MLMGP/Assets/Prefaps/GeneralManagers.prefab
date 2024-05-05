@@ -276,28 +276,7 @@ MonoBehaviour:
     OnCompleted:
       m_PersistentCalls:
         m_Calls: []
-    subMissions:
-    - title: Sub 1
-      target: 5
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
-    - title: Sub 2
-      target: 3
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
-    - title: Sub 3
-      target: 1
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
+    subMissions: []
   - title: Enter the cargo room
     target: 1
     achieved: 0
@@ -356,84 +335,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    subMissions:
-    - title: Sub 1
-      target: 5
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
-    - title: Sub 2
-      target: 3
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
-    - title: Sub 3
-      target: 1
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
+    subMissions: []
   - title: ' '
     target: 1
     achieved: 0
     OnCompleted:
       m_PersistentCalls:
         m_Calls: []
-    subMissions:
-    - title: Sub 1
-      target: 5
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
-    - title: Sub 2
-      target: 3
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
-    - title: Sub 3
-      target: 1
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
+    subMissions: []
   - title: Escape
     target: 1
     achieved: 0
     OnCompleted:
       m_PersistentCalls:
         m_Calls: []
-    subMissions:
-    - title: Sub 1
-      target: 5
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
-    - title: Sub 2
-      target: 3
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
-    - title: Sub 3
-      target: 1
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
+    subMissions: []
   - title: Calm Amidst Chaos
     target: 1
     achieved: 0
@@ -461,28 +377,7 @@ MonoBehaviour:
     OnCompleted:
       m_PersistentCalls:
         m_Calls: []
-    subMissions:
-    - title: Sub 1
-      target: 5
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
-    - title: Sub 2
-      target: 3
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
-    - title: Sub 3
-      target: 1
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
+    subMissions: []
   - title: Find out what to do with the laser
     target: 1
     achieved: 0
@@ -538,84 +433,21 @@ MonoBehaviour:
     OnCompleted:
       m_PersistentCalls:
         m_Calls: []
-    subMissions:
-    - title: Sub 1
-      target: 5
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
-    - title: Sub 2
-      target: 3
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
-    - title: Sub 3
-      target: 1
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
+    subMissions: []
   - title: Try to get in
     target: 1
     achieved: 0
     OnCompleted:
       m_PersistentCalls:
         m_Calls: []
-    subMissions:
-    - title: Sub 1
-      target: 5
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
-    - title: Sub 2
-      target: 3
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
-    - title: Sub 3
-      target: 1
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
+    subMissions: []
   - title: Defeat Azazel
     target: 1
     achieved: 0
     OnCompleted:
       m_PersistentCalls:
         m_Calls: []
-    subMissions:
-    - title: Sub 1
-      target: 5
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
-    - title: Sub 2
-      target: 3
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
-    - title: Sub 3
-      target: 1
-      achieved: 0
-      isActive: 1
-      OnCompleted:
-        m_PersistentCalls:
-          m_Calls: []
+    subMissions: []
   missionUI: {fileID: 0}
   missionPrefap: {fileID: 3498517480340146678, guid: 7b6f891e11ef7e740b3d9ce3bbceca13, type: 3}
 --- !u!82 &4270424468231686951
