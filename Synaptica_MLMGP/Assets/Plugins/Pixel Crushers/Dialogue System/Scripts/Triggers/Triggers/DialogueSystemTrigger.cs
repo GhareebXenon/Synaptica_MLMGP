@@ -411,7 +411,7 @@ namespace PixelCrushers.DialogueSystem
         #endregion
 
         #region Trigger Checks
-
+        public bool dialogueTriggered = false;
         public virtual void Awake()
         {
             sequencer = null;
@@ -581,12 +581,14 @@ namespace PixelCrushers.DialogueSystem
         {
             if (enabled && (trigger == DialogueSystemTriggerEvent.OnUse)) TryStart(null);
         }
-
         public void OnTriggerEnter(Collider other)
         {
-            if (enabled && (trigger == DialogueSystemTriggerEvent.OnTriggerEnter)) TryStart(other.transform);
+            if (enabled && !dialogueTriggered && trigger == DialogueSystemTriggerEvent.OnTriggerEnter)
+            {
+                dialogueTriggered = true; // Set flag to true after first trigger
+                TryStart(other.transform);
+            }
         }
-
         public void OnTriggerExit(Collider other)
         {
             CheckOnTriggerExit(other.transform);
