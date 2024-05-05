@@ -3849,10 +3849,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4270424468231686951, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5002186044841700589, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -3896,86 +3892,6 @@ PrefabInstance:
     - target: {fileID: 5557718541209803843, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missionUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].title
-      value: keypad 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].target
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].subMissions.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].subMissions.Array.data[0].title
-      value: Sub 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].subMissions.Array.data[1].title
-      value: Sub 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].subMissions.Array.data[2].title
-      value: Sub 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].subMissions.Array.data[0].target
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].subMissions.Array.data[1].target
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].subMissions.Array.data[2].target
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].subMissions.Array.data[0].isActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].subMissions.Array.data[1].isActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].subMissions.Array.data[2].isActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].OnCompleted.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Open
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SciFiDoor, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
-      propertyPath: missions.Array.data[2].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -235,14 +235,360 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missions:
-  - title: Get to the generator room and plant the explosives.
-    target: 4
+  - title: Enter the BIO-NEXUS building
+    target: 1
     achieved: 0
     OnCompleted:
       m_PersistentCalls:
         m_Calls: []
     subMissions: []
-  - title: Mission for testing.
+  - title: Get to the generator room
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions: []
+  - title: Silent Sabotage
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions:
+    - title: Plant explosives on the generators
+      target: 4
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Unlock the door
+      target: 1
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+  - title: Get past the guards
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions:
+    - title: Sub 1
+      target: 5
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Sub 2
+      target: 3
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Sub 3
+      target: 1
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+  - title: Enter the cargo room
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions: []
+  - title: Silent Sabotage II
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions:
+    - title: Plant explosives on the pillars
+      target: 3
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Exit the cargo room
+      target: 1
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+  - title: Solve the obelisks riddle to unlock the gate
+    target: 2
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: DoorAnimation, Assembly-CSharp
+          m_MethodName: UnLock
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: DoorAnimation, Assembly-CSharp
+          m_MethodName: Open
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    subMissions:
+    - title: Sub 1
+      target: 5
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Sub 2
+      target: 3
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Sub 3
+      target: 1
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+  - title: ' '
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions:
+    - title: Sub 1
+      target: 5
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Sub 2
+      target: 3
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Sub 3
+      target: 1
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+  - title: Escape
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions:
+    - title: Sub 1
+      target: 5
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Sub 2
+      target: 3
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Sub 3
+      target: 1
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+  - title: Calm Amidst Chaos
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions:
+    - title: Plant explosive
+      target: 4
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Solve the riddle
+      target: 1
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+  - title: Explore the area
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions:
+    - title: Sub 1
+      target: 5
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Sub 2
+      target: 3
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Sub 3
+      target: 1
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+  - title: Find out what to do with the laser
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions: []
+  - title: Go past the door
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions: []
+  - title: Destroy the mech
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions: []
+  - title: Take the note
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions: []
+  - title: Solve the obelisk riddle
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions: []
+  - title: Exit the area
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions: []
+  - title: Enter the elevator
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions: []
+  - title: Find a way out of the maze
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions:
+    - title: Sub 1
+      target: 5
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Sub 2
+      target: 3
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Sub 3
+      target: 1
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+  - title: Try to get in
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions:
+    - title: Sub 1
+      target: 5
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Sub 2
+      target: 3
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Sub 3
+      target: 1
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+  - title: Defeat Azazel
     target: 1
     achieved: 0
     OnCompleted:
