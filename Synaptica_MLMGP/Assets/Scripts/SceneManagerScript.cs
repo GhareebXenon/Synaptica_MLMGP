@@ -9,6 +9,12 @@ public class SceneManagerScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-            SceneManager.LoadScene(SceneName);
+            SceneSwitch();
+
+
+    }
+    public void SceneSwitch()
+    {
+        SceneManager.LoadScene(SceneName);
     }
 }
