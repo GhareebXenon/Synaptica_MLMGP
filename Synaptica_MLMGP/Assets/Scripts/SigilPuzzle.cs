@@ -22,6 +22,7 @@ public class SigilPuzzle : MonoBehaviour
     [SerializeField] private List<SigilLine> solvedLines = new();
     private Camera camera;
     private GameObject board;
+    private GameObject sigilPuzzleTrigger;
     private List<GameObject> drawnPoints = new();
     private List<GameObject> drawnPointsOld = new();
 
@@ -30,6 +31,7 @@ public class SigilPuzzle : MonoBehaviour
         camera = sigilPuzzleCamera.GetComponent<Camera>();
         board = transform.Find("Board").gameObject;
         board.GetComponent<Light>().enabled = false;
+        sigilPuzzleTrigger = transform.Find("SigilPuzzleTrigger").gameObject;
         foreach (var point in connectingPoints)
         {
             point.GetComponent<MeshRenderer>().material = unselectMaterial;
@@ -214,22 +216,29 @@ public class SigilPuzzle : MonoBehaviour
             yield return null;
         }
         board.GetComponent<Light>().intensity = 50;
-        onAccessGranted?.Invoke();
-        MissionManager.Instance.UpdateMission(mission, 1);
         StartCoroutine(MoveUp());
     }
 
-    IEnumerator MoveUp(float transitionTime = 5f)
+    IEnumerator MoveUp(float transitionTime = 1)
     {
         float elapsedTime = 0f;
         yield return new WaitForSeconds(0.5f);
         while (elapsedTime < transitionTime)
         {
-            float newHeight = Mathf.Lerp(transform.localPosition.y, 8, elapsedTime / transitionTime);
-            transform.localPosition = new Vector3(transform.localPosition.x, newHeight, transform.localPosition.z);
+            foreach (var point in connectingPoints)
+            {
+                float newPointHeight = Mathf.Lerp(point.transform.localPosition.y, -2.5f, elapsedTime / transitionTime);
+                point.transform.localPosition = new Vector3(point.transform.localPosition.x, newPointHeight, point.transform.localPosition.z);
+            }
+            float newBoardHeight = Mathf.Lerp(board.transform.localPosition.y, -2.5f, elapsedTime / transitionTime);
+            board.transform.localPosition = new Vector3(board.transform.localPosition.x, newBoardHeight, board.transform.localPosition.z);
+            float newTriggerHeight = Mathf.Lerp(sigilPuzzleTrigger.transform.localPosition.y, -3f, elapsedTime / transitionTime);
+            sigilPuzzleTrigger.transform.localPosition = new Vector3(sigilPuzzleTrigger.transform.localPosition.x, newTriggerHeight, sigilPuzzleTrigger.transform.localPosition.z);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        transform.localPosition = new Vector3(transform.localPosition.x, 8, transform.localPosition.z);
+        onAccessGranted?.Invoke();
+        MissionManager.Instance.UpdateMission(mission, 1);
+        Destroy(gameObject);
     }
 }

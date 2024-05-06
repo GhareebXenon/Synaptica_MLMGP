@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 namespace cowsins {
 /// <summary>
 /// Inheriting from Interactable, this means you can interact with the door
@@ -25,6 +26,8 @@ public class DoorInteractable : Interactable
     private float  speed;
 
     [SerializeField] private AudioClip openDoorSFX, closeDoorSFX, lockedDoorSFX;
+
+    [SerializeField] private UnityEvent onDoorOpen;
 
     private bool isOpened = false;
 
@@ -78,9 +81,14 @@ public class DoorInteractable : Interactable
         {
             if (isLocked) interactText = lockedInteractionText;
             // if we are trying to it, open it
-            if (isOpened) doorPivot.localRotation = Quaternion.Lerp(doorPivot.localRotation,
+            if (isOpened) 
+            {
+                doorPivot.localRotation = Quaternion.Lerp(doorPivot.localRotation,
                 Quaternion.Euler(new Vector3(doorPivot.localRotation.x, openedDoorRotation * side, doorPivot.localRotation.z)),
                     Time.deltaTime * speed);
+
+                onDoorOpen?.Invoke();
+            }
             // If we closed it, close it
             if (!isOpened) doorPivot.rotation = Quaternion.Lerp(doorPivot.rotation, closedRot, Time.deltaTime * speed);
         }
