@@ -1,14 +1,18 @@
 {
   "dependencies": {
+    "com.inworld.unity.core": "file:C:/GamesProject/GIT/Synaptica_MLMGP/Synaptica_MLMGP/Assets\\Inworld\\com.inworld.unity.core-3.3.1.tgz",
     "com.unity.ai.navigation": "1.1.5",
     "com.unity.animation.rigging": "1.2.1",
+    "com.unity.burst": "1.8.11",
     "com.unity.collab-proxy": "2.2.0",
+    "com.unity.device-simulator.devices": "1.0.0",
     "com.unity.ext.nunit": "1.0.6",
     "com.unity.ide.rider": "3.0.27",
     "com.unity.ide.visualstudio": "2.0.22",
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.inputsystem": "1.7.0",
     "com.unity.ml-agents": "2.0.1",
+    "com.unity.nuget.newtonsoft-json": "3.2.1",
     "com.unity.postprocessing": "3.4.0",
     "com.unity.probuilder": "5.2.2",
     "com.unity.render-pipelines.high-definition": "14.0.9",
