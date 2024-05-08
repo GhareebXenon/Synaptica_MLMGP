@@ -1815,7 +1815,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  mission: 
+  deathMission: 
   destroyOnDeath: 0
   timeBeforeDestroy: 5
   companionMode: 0
@@ -1843,7 +1843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f9d81f41de4ac4e944188683471a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  moveSpeed: 4
   turnSpeed: 6
   idleAnim:
   - Idle_mech

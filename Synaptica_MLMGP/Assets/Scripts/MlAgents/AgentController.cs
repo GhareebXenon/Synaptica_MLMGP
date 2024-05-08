@@ -56,32 +56,39 @@ public class AgentController : Agent
     }
     public override void CollectObservations(VectorSensor sensor)
     {
+        // Collect agent's position as an observation
         sensor.AddObservation(transform.localPosition);
 
-        //sensor.AddObservation(target.localRotation);
+        // Additional observations can be added here
+        // Example: sensor.AddObservation(target.localRotation);
     }
+
     public override void OnActionReceived(ActionBuffers actions)
     {
+        // Retrieve continuous actions for rotation and forward movement
         float moveRotate = actions.ContinuousActions[0];
         float moveForward = actions.ContinuousActions[1];
 
+        // Move the agent forward based on received continuous action for forward movement
         rb.MovePosition(transform.position + transform.forward * moveForward * moveSpeed * Time.deltaTime);
+
+        // Rotate the agent based on received continuous action for rotation
         transform.Rotate(0f, moveRotate * moveSpeed, 0f, Space.Self);
 
-        if (Mathf.RoundToInt(actions.ContinuousActions[2] ) >= 1)
+        // Check if the value of the continuous action for shooting is greater than or equal to 1
+        if (Mathf.RoundToInt(actions.ContinuousActions[2]) >= 1)
         {
+            // Execute shooting action
             Shoot();
         }
 
         /*
-        Vector3 velocity = new Vector3(moveX,0f,moveZ) ;
+        // Alternative approach for updating agent's position using velocity (commented out)
+        Vector3 velocity = new Vector3(moveX, 0f, moveZ);
         velocity = velocity.normalized * Time.deltaTime * moveSpeed;
         transform.localPosition += velocity;
         */
-
-
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
