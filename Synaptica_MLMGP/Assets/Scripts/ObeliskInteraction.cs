@@ -11,6 +11,7 @@ public class ObeliskInteraction : Interactable
     [SerializeField] private float rotationSpeed;
     private bool isRotating = false;
     private float targetAngle;
+    private AudioSource audioSource;
 
     public override void Interact()
     {
@@ -18,21 +19,35 @@ public class ObeliskInteraction : Interactable
         {
             targetAngle = cube.transform.eulerAngles.y + 90f;
             isRotating = true;
+            PlaySfx();
         }
     }
 
-    void Update()
+    private void Start()
+    {
+        audioSource = cube.GetComponent<AudioSource>();
+    }
+
+    private void Update()
     {
         if (isRotating)
         {
             cube.transform.rotation = Quaternion.RotateTowards(cube.transform.rotation, Quaternion.Euler(0, targetAngle, 0), rotationSpeed * Time.deltaTime);
 
-            if (Quaternion.Angle(cube.transform.rotation, Quaternion.Euler(0, targetAngle, 0)) < 0.1f)
+            if (Quaternion.Angle(cube.transform.rotation, Quaternion.Euler(0, targetAngle, 0)) < 0.15f)
             {
                 cube.transform.rotation = Quaternion.Euler(0, targetAngle, 0);
+                audioSource.Stop();
                 obeliskPuzzle.UpdateSelected();
                 isRotating = false;
             }
         }
+    }
+
+    private void PlaySfx()
+    {
+        audioSource.clip = obeliskPuzzle.rotationSfx[Random.Range(0, obeliskPuzzle.rotationSfx.Count)];
+        audioSource.pitch = Random.Range(0.85f, 1.05f);
+        audioSource.Play();
     }
 }

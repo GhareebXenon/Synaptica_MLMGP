@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class SigilPuzzle : MonoBehaviour
 {
     [SerializeField] private string mission;
+    [SerializeField] private AudioClip bloodSfx;
+    [SerializeField] private AudioClip bloodErasingSfx;
     [SerializeField] private GameObject mainCamera;
     [SerializeField] private GameObject sigilPuzzleCamera;
     [SerializeField] private GameObject playerUI;
@@ -25,6 +27,7 @@ public class SigilPuzzle : MonoBehaviour
     private GameObject sigilPuzzleTrigger;
     private List<GameObject> drawnPoints = new();
     private List<GameObject> drawnPointsOld = new();
+    private AudioSource audioSource;
 
     private void Start()
     {
@@ -36,6 +39,8 @@ public class SigilPuzzle : MonoBehaviour
         {
             point.GetComponent<MeshRenderer>().material = unselectMaterial;
         }
+        audioSource = board.GetComponent<AudioSource>();
+        audioSource.clip = bloodSfx;
 
         List<SigilLine> addedLines = new();
         for (int i = 0; i < solutionLines.Count; i++)
@@ -60,7 +65,7 @@ public class SigilPuzzle : MonoBehaviour
                 {
                     if (selectedPoint != null && selectedPoint != hit.collider.gameObject)
                     {
-                        SigilLine line = new SigilLine(selectedPoint, hit.collider.gameObject);
+                        SigilLine line = new(selectedPoint, hit.collider.gameObject);
                         DrawLine(line);
                         hit.collider.GetComponent<MeshRenderer>().material = selectMaterial;
                         hit.collider.gameObject.name += "*";
@@ -106,6 +111,8 @@ public class SigilPuzzle : MonoBehaviour
             drawnPoints.Add(newPoint);
         }
         solvedLines.Add(line);
+        audioSource.pitch = Random.Range(0.8f, 1.1f);
+        audioSource.PlayOneShot(bloodSfx);
     }
 
     private void CheckCompleted()
@@ -156,6 +163,8 @@ public class SigilPuzzle : MonoBehaviour
         onAccessDenied?.Invoke();
         ResetPoints();
         StartCoroutine(ChangeColor(drawnPointsOld, accessDeniedColor));
+        audioSource.pitch = Random.Range(0.85f, 1.15f);
+        audioSource.PlayOneShot(bloodErasingSfx);
     }
 
     private void GrantAccess()

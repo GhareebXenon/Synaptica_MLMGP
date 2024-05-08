@@ -7,6 +7,7 @@ using System.Reflection;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.ProBuilder.MeshOperations;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -431,17 +432,28 @@ public class MissionManager : MonoBehaviour
         }
     }
 
-    //private void ResetMissionsProgress()
-    //{
-    //    foreach (Mission mission in missions)
-    //    {
-    //        foreach (SubMission subMission in mission.subMissions)
-    //        {
-    //            subMission.achieved = 0;
-    //        }
-    //        mission.achieved = 0;
-    //    }
-    //}
+    public void AddMissionEvent(string title, UnityAction eventHandler)
+    {
+        Mission mission = missions.Find(mission => mission.title.Trim().ToLower() == title.Trim().ToLower());
+        SubMission subMission;
+        
+        if (mission != null)
+        {
+            mission.OnCompleted.AddListener(eventHandler);
+        }
+        else
+        {
+            foreach (Mission m in missions)
+            {
+                subMission = m.subMissions.Find(subMission => subMission.title.Trim().ToLower() == title.Trim().ToLower());
+                if (subMission != null)
+                {
+                    subMission.OnCompleted.AddListener(eventHandler);
+                    return;
+                }
+            }
+        }
+    }
 
     private IEnumerator DestroyActiveMission()
     {

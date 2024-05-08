@@ -11,6 +11,8 @@ public class OnDeathMission : MonoBehaviour
     public void UpdateMission()
     {
         MissionManager.Instance.UpdateMission(mission, 1);
-        if (musicAfterDeath != null) SoundManager.Instance.PlayMusicFadeIn(musicAfterDeath, 0.25f, 0.6f); 
+        if (musicAfterDeath != null) SoundManager.Instance.PlayMusicFadeIn(musicAfterDeath, 0.25f, 0.6f);
+        else Debug.LogWarning($"Cannot find mission '{mission}'");
+
     }
 }

@@ -11,6 +11,7 @@ public class ObeliskPuzzle : MonoBehaviour
     [SerializeField] private string mission;
     [SerializeField] private UnityEvent OnCompleted;
     [SerializeField] private bool completed = false;
+    public List<AudioClip> rotationSfx = new();
     [SerializeField] private Transform[] cubes;
     [SerializeField] private ObeliskRunes[] runes;
     [SerializeField] private ObeliskRunes operationRune;

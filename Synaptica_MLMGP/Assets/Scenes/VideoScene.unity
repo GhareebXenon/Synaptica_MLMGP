@@ -269,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c56cd84ccc1b8d348a4c7e8a5b9f5b60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 1877154861}
   SceneName: Exposition
 --- !u!1 &438109538
 GameObject:

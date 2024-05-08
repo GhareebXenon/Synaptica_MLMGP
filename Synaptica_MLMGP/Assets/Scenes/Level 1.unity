@@ -36460,6 +36460,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: missions.Array.data[6].OnCompleted.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: missions.Array.data[6].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1616921763}
@@ -36467,6 +36471,10 @@ PrefabInstance:
       propertyPath: missions.Array.data[6].OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1616921763}
+    - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: missions.Array.data[6].OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
     - target: {fileID: 8324836063925841454, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -60990,6 +60998,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4972167997025879799, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
   m_PrefabInstance: {fileID: 1574797490}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1574797492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2255235327405816117, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
+  m_PrefabInstance: {fileID: 1574797490}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616921763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad6b0a68cb501149b72a4d719c54185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1574797494 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 922504333745015095, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
@@ -75784,6 +75803,123 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+--- !u!1001 &735079588685874580
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6102742625279227044, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: m_Name
+      value: MissionEventHandler
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635098745193334484, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635098745193334484, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635098745193334484, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635098745193334484, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635098745193334484, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635098745193334484, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635098745193334484, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635098745193334484, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635098745193334484, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635098745193334484, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658570923876580948, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: missionEvents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658570923876580948, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: missionEvents.Array.data[0].missionTitle
+      value: Solve the obelisks riddle to unlock the gate
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658570923876580948, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: missionEvents.Array.data[0].missionEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658570923876580948, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: missionEvents.Array.data[0].missionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658570923876580948, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: missionEvents.Array.data[0].missionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658570923876580948, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: missionEvents.Array.data[0].missionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1574797492}
+    - target: {fileID: 7658570923876580948, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: missionEvents.Array.data[0].missionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1574797492}
+    - target: {fileID: 7658570923876580948, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: missionEvents.Array.data[0].missionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658570923876580948, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: missionEvents.Array.data[0].missionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658570923876580948, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: missionEvents.Array.data[0].missionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnLock
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658570923876580948, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: missionEvents.Array.data[0].missionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658570923876580948, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: missionEvents.Array.data[0].missionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658570923876580948, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: missionEvents.Array.data[0].missionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DoorAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658570923876580948, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: missionEvents.Array.data[0].missionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658570923876580948, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
+      propertyPath: missionEvents.Array.data[0].missionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fb585c094848db8469b98b823b52cdb9, type: 3}
 --- !u!1001 &2163932456756216093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76013,6 +76149,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 189891599}
   - {fileID: 1053788740}
+  - {fileID: 735079588685874580}
   - {fileID: 55596893}
   - {fileID: 1553195318}
   - {fileID: 1216316512}

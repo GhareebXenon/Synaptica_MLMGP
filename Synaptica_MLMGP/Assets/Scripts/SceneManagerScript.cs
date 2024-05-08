@@ -8,16 +8,15 @@ namespace cowsins
 {
     public class SceneManagerScript : MonoBehaviour
     {
-        private VideoPlayer player;
+        [SerializeField] private VideoPlayer videoPlayer;
         [SerializeField] string SceneName;
         private void Start()
         {
-            player = GameObject.Find("VideoPlayer").GetComponent<VideoPlayer>();
             StartCoroutine(SkipAfterVideo());
         }
         private void Update()
         {
-            if (player != null && player.isPlaying && InputManager.inputActions.GameControls.Pause.ReadValue<float>() > 0)
+            if (videoPlayer != null && videoPlayer.isPlaying && InputManager.inputActions.GameControls.Pause.ReadValue<float>() > 0)
             {
                 SceneSwitch();
             }
@@ -36,9 +35,9 @@ namespace cowsins
         private IEnumerator SkipAfterVideo()
         {
             yield return new WaitForSeconds(1);
-            if (player != null)
+            if (videoPlayer != null)
             {
-                while (player.isPlaying)
+                while (videoPlayer.isPlaying)
                 {
                     yield return null;
                 }

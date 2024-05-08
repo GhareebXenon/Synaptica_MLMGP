@@ -310,31 +310,7 @@ MonoBehaviour:
     achieved: 0
     OnCompleted:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: DoorAnimation, Assembly-CSharp
-          m_MethodName: UnLock
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: DoorAnimation, Assembly-CSharp
-          m_MethodName: Open
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
     subMissions: []
   - title: ' '
     target: 1
@@ -350,22 +326,43 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     subMissions: []
-  - title: Calm Amidst Chaos
+  - title: Calm amidst chaos
     target: 1
     achieved: 0
     OnCompleted:
       m_PersistentCalls:
         m_Calls: []
     subMissions:
-    - title: Plant explosive
+    - title: Exit the place
+      target: 1
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+  - title: This is too much!
+    target: 1
+    achieved: 0
+    OnCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    subMissions:
+    - title: Defeat the mech
+      target: 1
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
+    - title: Plant explosives
       target: 4
       achieved: 0
       isActive: 1
       OnCompleted:
         m_PersistentCalls:
           m_Calls: []
-    - title: Solve the riddle
-      target: 1
+    - title: Solve the riddle and unlock the gate
+      target: 2
       achieved: 0
       isActive: 1
       OnCompleted:
@@ -440,7 +437,14 @@ MonoBehaviour:
     OnCompleted:
       m_PersistentCalls:
         m_Calls: []
-    subMissions: []
+    subMissions:
+    - title: Solve the two obelisks riddle
+      target: 2
+      achieved: 0
+      isActive: 1
+      OnCompleted:
+        m_PersistentCalls:
+          m_Calls: []
   - title: Defeat Azazel
     target: 1
     achieved: 0
