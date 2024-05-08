@@ -37899,6 +37899,10 @@ PrefabInstance:
       propertyPath: musicOld
       value: 
       objectReference: {fileID: 8300000, guid: 1b9880c3d7d7f67488ba2756198283da, type: 3}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: transitionTime
+      value: 1.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38867,6 +38871,10 @@ PrefabInstance:
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: volumeAfter
       value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: transitionTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: transitionTimeAfter
@@ -62279,6 +62287,10 @@ PrefabInstance:
       value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: transitionTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: transitionTimeAfter
       value: 0
       objectReference: {fileID: 0}
@@ -68916,6 +68928,10 @@ PrefabInstance:
       value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: transitionTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: transitionTimeAfter
       value: 0
       objectReference: {fileID: 0}
@@ -71438,6 +71454,10 @@ PrefabInstance:
     - target: {fileID: 2755242337256457162, guid: 5e1e6f8b79d4f36489ecbbd43ff11265, type: 3}
       propertyPath: m_Name
       value: 'Agent Sarah '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755242337256457162, guid: 5e1e6f8b79d4f36489ecbbd43ff11265, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2755242337256457162, guid: 5e1e6f8b79d4f36489ecbbd43ff11265, type: 3}
       propertyPath: m_TagString
@@ -75793,6 +75813,10 @@ PrefabInstance:
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: volumeAfter
       value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
+      propertyPath: transitionTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: transitionTimeAfter
