@@ -46,10 +46,13 @@ namespace cowsins
             switch (scene.name)
             {
                 case "MainMenu 1":
-                    PlayMusicFadeIn(bgm[0], 0.5f, 0.4f);
+                    PlayMusicFadeIn(bgm[0], 0.5f, 0.1f);
+                    break;
+                case "VideoScene":
+                    PlayMusicFadeIn(bgm[2], 0.215f, 0.99f);
                     break;
                 case "Exposition":
-                    PlayMusicFadeIn(bgm[1], 1, 0.6f);
+                    PlayMusicFadeIn(bgm[1], 1.0f, 0.6f);
                     break;
                 case "Level 1":
                     PlayMusicFadeIn(bgm[2], 0.25f, 0.6f);
@@ -168,11 +171,12 @@ namespace cowsins
             AudioSource fadeOutSource = bgmSrcSec != null && bgmSrcSec.isPlaying ? bgmSrcSec : bgmSrc;
 
             float targetVolume = volume;
+            float fadeOutInitialVolume = fadeOutSource.volume;
             float elapsedTime = 0f;
 
             while (elapsedTime < fadeDuration)
             {
-                fadeOutSource.volume = Mathf.Lerp(volume, 0, elapsedTime / fadeDuration);
+                fadeOutSource.volume = Mathf.Lerp(fadeOutInitialVolume, 0, elapsedTime / fadeDuration);
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
