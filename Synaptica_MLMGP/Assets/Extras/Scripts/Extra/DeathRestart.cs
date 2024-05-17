@@ -5,7 +5,12 @@ public class DeathRestart : MonoBehaviour
 {
     private void Update()
     {
-        if (InputManager.reloading) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+        if (InputManager.reloading) RestartGame(); 
+    }
+
+    public void RestartGame()
+    {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
 }

@@ -3,7 +3,6 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using Unity.VisualScripting;
-using static UnityEditor.Rendering.CameraUI;
 using static Unity.VisualScripting.Member;
 namespace cowsins
 {
@@ -46,29 +45,32 @@ namespace cowsins
             switch (scene.name)
             {
                 case "MainMenu 1":
-                    PlayMusicFadeIn(bgm[0], 0.5f, 0.1f);
+                    PlayMusicFadeIn(bgm[0], 0.5f, 0.25f);
                     break;
                 case "VideoScene":
-                    PlayMusicFadeIn(bgm[2], 0.215f, 0.99f);
+                    PlayMusicFadeIn(bgm[5], 0.2f, 0.99f);
                     break;
                 case "Exposition":
-                    PlayMusicFadeIn(bgm[1], 1.0f, 0.6f);
+                    PlayMusicFadeIn(bgm[1], 1.0f, 0.99f);
                     break;
                 case "Level 1":
-                    PlayMusicFadeIn(bgm[2], 0.25f, 0.6f);
+                    PlayMusicFadeIn(bgm[2], 0.3f, 0.9f);
                     break;
                 case "Level 2":
-                    PlayMusicFadeIn(bgm[3], 0.25f, 0.5f);
+                    PlayMusicFadeIn(bgm[3], 0.2f, 0.5f);
                     break;
                 case "Level 3":
-                    PlayMusicFadeIn(bgm[2], 0.25f, 0.6f);
+                    PlayMusicFadeIn(bgm[2], 0.3f, 0.9f);
                     break;
                 case "Level 4":
                     PlayMusicFadeIn(bgm[4], 0.24f, 0.1f);
                     break;
-                default:
-                    PlayMusicFadeIn(bgm[2], 0.25f, 0.6f);
+                case "EndScene":
+                    PlayMusicFadeIn(bgm[5], 0.15f, 0.99f);
                     break;
+                default:
+                    PlayMusicFadeIn(bgm[2], 0.3f, 0.6f);
+                    break; 
             }
         }
 

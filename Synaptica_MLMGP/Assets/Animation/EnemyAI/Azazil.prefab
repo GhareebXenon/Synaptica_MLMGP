@@ -4329,6 +4329,7 @@ MonoBehaviour:
   deathEvent:
     m_PersistentCalls:
       m_Calls: []
+  deathMission: 
   destroyOnDeath: 0
   timeBeforeDestroy: 5
   companionMode: 0

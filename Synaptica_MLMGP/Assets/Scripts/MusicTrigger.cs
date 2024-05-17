@@ -1,4 +1,5 @@
 using cowsins;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,10 +26,10 @@ public class MusicTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            AudioClip musicCurr = SoundManager.Instance.GetMusicSource()?.clip; //Get current music playing in audio source
+            
             Debug.LogWarning("Player entered the music trigger.");
 
-            if (musicNew != null && musicNew != musicCurr) //Check if musicNew is not null and not playing
+            if (musicNew != null && CheckClip(musicNew)) //Check if musicNew is not null and not playing
             {
                 if (musicAfter == null) //if we didn't put a reference for musicAfter just play musicNew
                 {
@@ -56,6 +57,31 @@ public class MusicTrigger : MonoBehaviour
     //        }
     //    }
     //}
+
+    private bool CheckClip(AudioClip clip)
+    {
+        AudioClip currClip = SoundManager.Instance.GetMusicSource()?.clip; //Get current music playing in audio source
+        string s1 = clip.name;
+        string s2 = currClip.name;
+
+        if (s1 == s2) return false;
+        else if (s1.Contains("Tensions") || s2.Contains("Tensions")) return true;
+        else
+        {
+            int l1 = clip.name.Length;
+            int l2 = currClip.name.Length;
+            for (int i = l1; i > 2; i--)
+            {
+                if (i < l1) s1 = clip.name.Remove(i);
+                for (int j = l2; j > 2; j--)
+                {
+                    if (j < l2) s2 = currClip.name.Remove(j);
+                    if (s1 == s2) return false;
+                }
+            }
+            return true;
+        }
+    }
 
     IEnumerator PlayMusicAfter()
     {
