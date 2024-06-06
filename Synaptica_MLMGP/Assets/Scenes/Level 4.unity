@@ -22272,6 +22272,22 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1202461713528113318, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202461713528113318, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202461713528113318, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202461713528113318, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1204609481850818822, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -22420,6 +22436,10 @@ PrefabInstance:
       propertyPath: initialWeapons.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: a124665a74744f745941247b8b90640d, type: 2}
+    - target: {fileID: 2281924265083882639, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2308893226922847318, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0

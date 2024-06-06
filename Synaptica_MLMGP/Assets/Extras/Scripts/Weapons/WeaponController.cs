@@ -51,6 +51,8 @@ public class WeaponController : MonoBehaviour
 
     [Tooltip("Attach your weapon holder")] public Transform weaponHolder;
 
+    private ObjectPooler objectPooler;
+
     //Variables
 
     [Tooltip("max amount of weapons you can have")] public int inventorySize;
@@ -157,6 +159,7 @@ public class WeaponController : MonoBehaviour
     }
     private void Start()
     {   
+        objectPooler = ObjectPooler.Instance;
         InitialSettings(); 
         CreateInventoryUI();
         GetInitialWeapons();
@@ -287,7 +290,8 @@ public class WeaponController : MonoBehaviour
         {
             foreach (var p in firePoint)
             {
-                var bulletShell = Instantiate(weapon.bulletGraphics, p.position, mainCamera.transform.rotation);
+                //var bulletShell = Instantiate(weapon.bulletGraphics, p.position, mainCamera.transform.rotation);
+                var bulletShell = objectPooler.Spawn("Bullet", p.position, mainCamera.transform.rotation);
                 Rigidbody shellRigidbody = bulletShell.GetComponent<Rigidbody>();
                 float torque = Random.Range(-15f, 15f);
                 Vector3 shellForce = mainCamera.transform.right * 5 + mainCamera.transform.up * 5;

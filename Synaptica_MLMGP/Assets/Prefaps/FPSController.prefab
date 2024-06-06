@@ -7238,6 +7238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1bce7a4b1ea3741a53cec3be20570b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settingsMenu: {fileID: 7347948127333076294}
   fullScreen: 0
   res: 0
   maxFrameRate: 0
@@ -9637,6 +9638,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7347948127333076294 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 353207484561197557, guid: 8ca837ce82194e6469fbba359e43e08b, type: 3}
+  m_PrefabInstance: {fileID: 6998593485874447539}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7884841591995831275 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 897177397890897752, guid: 8ca837ce82194e6469fbba359e43e08b, type: 3}

@@ -36439,6 +36439,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2223319734497157752, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: initialWeapons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2223319734497157752, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: initialWeapons.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1cb39c6c8005c554e93289889a1892e1, type: 2}
     - target: {fileID: 2705673255436515047, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_Name
       value: FPSController
@@ -36459,6 +36467,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5155185799037846868, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6645567444246561170, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -36474,6 +36486,10 @@ PrefabInstance:
     - target: {fileID: 6645567444246561170, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671731757916648901, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7441394276020082113, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: missions.Array.data[6].OnCompleted.m_PersistentCalls.m_Calls.Array.size
@@ -37905,7 +37921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: volume
-      value: 0.3
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: musicNew
@@ -37917,7 +37933,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 1b9880c3d7d7f67488ba2756198283da, type: 3}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: volumeAfter
-      value: 0.3
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: transitionTime

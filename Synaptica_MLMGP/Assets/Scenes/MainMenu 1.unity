@@ -3918,6 +3918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1bce7a4b1ea3741a53cec3be20570b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settingsMenu: {fileID: 757710077}
   fullScreen: 0
   res: 0
   maxFrameRate: 0

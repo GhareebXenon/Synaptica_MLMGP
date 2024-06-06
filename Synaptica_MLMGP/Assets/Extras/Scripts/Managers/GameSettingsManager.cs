@@ -10,6 +10,9 @@ using System.Collections;
 namespace cowsins { 
 public class GameSettingsManager : MonoBehaviour
 {
+    
+    [SerializeField] private GameObject settingsMenu;
+
     [HideInInspector] public int fullScreen;
 
     [HideInInspector] public int res;
@@ -306,29 +309,32 @@ public class GameSettingsManager : MonoBehaviour
 
     private void Update()
     {
-        // Change the volume
-        masterMixer.SetFloat("masterVolume", Mathf.Log10(masterVolume) * 20);
-        masterMixer.SetFloat("vocalsVolume", Mathf.Log10(vocalsVolume) * 20);
-        masterMixer.SetFloat("sfxVolume", Mathf.Log10(sfxVolume) * 20);
-        masterMixer.SetFloat("musicVolume", Mathf.Log10(musicVolume) * 20);
+            if (settingsMenu.activeInHierarchy)
+            {
+                // Change the volume
+                masterMixer.SetFloat("masterVolume", Mathf.Log10(masterVolume) * 20);
+                masterMixer.SetFloat("vocalsVolume", Mathf.Log10(vocalsVolume) * 20);
+                masterMixer.SetFloat("sfxVolume", Mathf.Log10(sfxVolume) * 20);
+                masterMixer.SetFloat("musicVolume", Mathf.Log10(musicVolume) * 20);
 
-        // Change the bindings
-        movementForwardText.text = InputManager.inputActions.GameControls.Movement.bindings[1].ToDisplayString();
-        movementBackwardText.text = InputManager.inputActions.GameControls.Movement.bindings[2].ToDisplayString();
-        movementLeftText.text = InputManager.inputActions.GameControls.Movement.bindings[3].ToDisplayString();
-        movementRightText.text = InputManager.inputActions.GameControls.Movement.bindings[4].ToDisplayString();
-        sprintingText.text = InputManager.inputActions.GameControls.Sprinting.bindings[0].ToDisplayString();
-        crouchingText.text = InputManager.inputActions.GameControls.Crouching.bindings[0].ToDisplayString();
-        jumpingText.text = InputManager.inputActions.GameControls.Jumping.bindings[0].ToDisplayString();
-        interactingText.text = InputManager.inputActions.GameControls.Interacting.bindings[0].ToDisplayString();
-        firingText.text = InputManager.inputActions.GameControls.Firing.bindings[0].ToDisplayString();
-        aimingText.text = InputManager.inputActions.GameControls.Aiming.bindings[0].ToDisplayString();
-        meleeText.text = InputManager.inputActions.GameControls.Melee.bindings[0].ToDisplayString();
-        dropText.text = InputManager.inputActions.GameControls.Drop.bindings[0].ToDisplayString();
-    }
+                // Change the bindings
+                movementForwardText.text = InputManager.inputActions.GameControls.Movement.bindings[1].ToDisplayString();
+                movementBackwardText.text = InputManager.inputActions.GameControls.Movement.bindings[2].ToDisplayString();
+                movementLeftText.text = InputManager.inputActions.GameControls.Movement.bindings[3].ToDisplayString();
+                movementRightText.text = InputManager.inputActions.GameControls.Movement.bindings[4].ToDisplayString();
+                sprintingText.text = InputManager.inputActions.GameControls.Sprinting.bindings[0].ToDisplayString();
+                crouchingText.text = InputManager.inputActions.GameControls.Crouching.bindings[0].ToDisplayString();
+                jumpingText.text = InputManager.inputActions.GameControls.Jumping.bindings[0].ToDisplayString();
+                interactingText.text = InputManager.inputActions.GameControls.Interacting.bindings[0].ToDisplayString();
+                firingText.text = InputManager.inputActions.GameControls.Firing.bindings[0].ToDisplayString();
+                aimingText.text = InputManager.inputActions.GameControls.Aiming.bindings[0].ToDisplayString();
+                meleeText.text = InputManager.inputActions.GameControls.Melee.bindings[0].ToDisplayString();
+                dropText.text = InputManager.inputActions.GameControls.Drop.bindings[0].ToDisplayString();
+            }
+        }
 
     private void Start()
-    {
+    { 
         LoadSettings(); // Load our settings
     }
 

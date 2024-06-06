@@ -3,19 +3,19 @@
 /// </summary>
 using UnityEngine;
 namespace cowsins {
-public class DestroyMe : MonoBehaviour
+public class DestroyMe : MonoBehaviour, IPooledObject
 {
     public float timeToDestroy;
 
-    void Start()
+    public void OnObjectSpawn()
     {
-        Invoke("DestroyMeObj", timeToDestroy);
+        Invoke(nameof(DestroyMeObj), timeToDestroy);
     }
 
     // Update is called once per frame
     void DestroyMeObj()
     {
-        Destroy(this.gameObject);
+        this.gameObject.SetActive(false);
     }
 }
 }
