@@ -228,7 +228,7 @@ public class SigilPuzzle : MonoBehaviour
         StartCoroutine(MoveUp());
     }
 
-    IEnumerator MoveUp(float transitionTime = 1)
+    IEnumerator MoveUp(float transitionTime = 0.7f)
     {
         float elapsedTime = 0f;
         yield return new WaitForSeconds(0.5f);
@@ -236,12 +236,12 @@ public class SigilPuzzle : MonoBehaviour
         {
             foreach (var point in connectingPoints)
             {
-                float newPointHeight = Mathf.Lerp(point.transform.localPosition.y, -2.5f, elapsedTime / transitionTime);
+                float newPointHeight = Mathf.Lerp(point.transform.localPosition.y, -6.5f, elapsedTime / transitionTime);
                 point.transform.localPosition = new Vector3(point.transform.localPosition.x, newPointHeight, point.transform.localPosition.z);
             }
-            float newBoardHeight = Mathf.Lerp(board.transform.localPosition.y, -2.5f, elapsedTime / transitionTime);
+            float newBoardHeight = Mathf.Lerp(board.transform.localPosition.y, -6.5f, elapsedTime / transitionTime);
             board.transform.localPosition = new Vector3(board.transform.localPosition.x, newBoardHeight, board.transform.localPosition.z);
-            float newTriggerHeight = Mathf.Lerp(sigilPuzzleTrigger.transform.localPosition.y, -3f, elapsedTime / transitionTime);
+            float newTriggerHeight = Mathf.Lerp(sigilPuzzleTrigger.transform.localPosition.y, -8f, elapsedTime / transitionTime);
             sigilPuzzleTrigger.transform.localPosition = new Vector3(sigilPuzzleTrigger.transform.localPosition.x, newTriggerHeight, sigilPuzzleTrigger.transform.localPosition.z);
             elapsedTime += Time.deltaTime;
             yield return null;
