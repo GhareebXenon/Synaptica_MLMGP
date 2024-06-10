@@ -2,6 +2,7 @@ using cowsins;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObjectPooler : MonoBehaviour
 {
@@ -29,7 +30,21 @@ public class ObjectPooler : MonoBehaviour
         else Destroy(this.gameObject);
     }
 
-    private void Start()
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        CreatePoolDictionary();
+    }
+
+    public void CreatePoolDictionary()
     {
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
 
