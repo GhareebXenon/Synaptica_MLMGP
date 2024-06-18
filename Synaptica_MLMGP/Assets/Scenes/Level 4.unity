@@ -1414,6 +1414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 1492970336}
+  generalManagers: {fileID: 1638132281}
 --- !u!65 &83689127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38020,7 +38021,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 2063251707394765409, guid: 3dc5bcb72860b6345a662a8ccec7587f, type: 2}
   m_audioClip: {fileID: 8300000, guid: af55d6a7ea650714688a1ed25de3a06e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.14
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -40299,6 +40300,11 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!1 &1638132281 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 121229978763123422, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+  m_PrefabInstance: {fileID: 1053788740}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1673582436
 PrefabInstance:
   m_ObjectHideFlags: 0

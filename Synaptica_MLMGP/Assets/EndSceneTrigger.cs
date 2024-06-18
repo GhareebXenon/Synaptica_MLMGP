@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class EndSceneTrigger : MonoBehaviour
 {
     [SerializeField] private Animator doorAnimator;
+    [SerializeField] private GameObject generalManagers;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,7 +18,8 @@ public class EndSceneTrigger : MonoBehaviour
 
         IEnumerator countdown()
         {
-            yield return new WaitForSeconds(120);
+            yield return new WaitForSeconds(100);
+            Destroy(generalManagers);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             yield return null;
         }
