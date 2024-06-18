@@ -2114,9 +2114,25 @@ PrefabInstance:
       propertyPath: mission
       value: Plant explosives on the pillars
       objectReference: {fileID: 0}
+    - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12
+      value: 13.187
       objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2124,23 +2140,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -74
+      value: -70.651
       objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5
+      value: 0.6532815
       objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5
+      value: 0.6532815
       objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5
+      value: -0.27059805
       objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5
+      value: 0.27059805
       objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2148,7 +2164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -9589,6 +9605,14 @@ PrefabInstance:
       propertyPath: missionManager
       value: 
       objectReference: {fileID: 1834664863}
+    - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.05
+      objectReference: {fileID: 0}
     - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -20122,6 +20146,22 @@ PrefabInstance:
       propertyPath: mission
       value: Plant explosives on the pillars
       objectReference: {fileID: 0}
+    - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -20132,7 +20172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -45
+      value: -44.899
       objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalRotation.w
@@ -36726,6 +36766,14 @@ PrefabInstance:
       propertyPath: missionManager
       value: 
       objectReference: {fileID: 1834664863}
+    - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.05
+      objectReference: {fileID: 0}
     - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -62162,6 +62210,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1834664863}
     - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -73029,21 +73085,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive
       objectReference: {fileID: 0}
+    - target: {fileID: 783135711566290680, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3958597192275444896, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: mission
       value: Plant explosives on the pillars
       objectReference: {fileID: 0}
+    - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 34
+      value: 33.935
       objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.620154
+      value: 4.65
       objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20
+      value: -19.895
       objectReference: {fileID: 0}
     - target: {fileID: 8779064305102330205, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalRotation.w
@@ -73474,6 +73550,14 @@ PrefabInstance:
       propertyPath: missionManager
       value: 
       objectReference: {fileID: 1834664863}
+    - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.05
+      objectReference: {fileID: 0}
     - target: {fileID: 4871764541842213073, guid: 5c756762c4e883e4fa5ec374c9e9cf31, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
