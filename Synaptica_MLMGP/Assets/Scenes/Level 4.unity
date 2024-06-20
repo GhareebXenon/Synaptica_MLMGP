@@ -12036,6 +12036,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 243672840}
+    - target: {fileID: 1057763476716011624, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 0355571b65ec1194ab49185dd461b772, type: 3}
     - target: {fileID: 1182618541585524074, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -12056,6 +12060,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 5568879}
+    - target: {fileID: 2126830483112758313, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 852b5fc27a37bbb4c8f073fc3253e631, type: 3}
     - target: {fileID: 2474443530268812663, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -12064,14 +12072,26 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1759441829}
+    - target: {fileID: 2979238031156775028, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 8c333f0b54c9f9c4989bd76de6ba33ed, type: 3}
     - target: {fileID: 3313081067786080224, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1981899641}
+    - target: {fileID: 3668401723391070399, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 0355571b65ec1194ab49185dd461b772, type: 3}
     - target: {fileID: 4039887721724973306, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 243672840}
+    - target: {fileID: 4078490288472370949, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: d5415349784216148b293e5096794792, type: 3}
     - target: {fileID: 4181520417652649846, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -12080,10 +12100,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 968984434}
+    - target: {fileID: 4878510196239299123, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: e775d8a4e36c1df4e92b0fa09cb259bd, type: 3}
+    - target: {fileID: 5156949340522883759, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 276eb71b3cf92fa4fac0196a6a88dfcc, type: 3}
     - target: {fileID: 5365911365917440270, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 786799060}
+    - target: {fileID: 6221235246724099552, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: d5415349784216148b293e5096794792, type: 3}
     - target: {fileID: 6247915049188008627, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -12092,6 +12124,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obelisk (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7673359676478436971, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 8c333f0b54c9f9c4989bd76de6ba33ed, type: 3}
     - target: {fileID: 7879052245798290989, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: mission
       value: Solve the two obelisks riddle
@@ -14359,10 +14395,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2136614399}
+    - target: {fileID: 2979238031156775028, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: e775d8a4e36c1df4e92b0fa09cb259bd, type: 3}
+    - target: {fileID: 3067999328865200243, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 21bb98a468f79354ca672e616eaa32dd, type: 3}
     - target: {fileID: 3313081067786080224, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1955098373}
+    - target: {fileID: 3668401723391070399, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: db674e361e948304483446489a7fca11, type: 3}
     - target: {fileID: 4039887721724973306, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -14371,14 +14419,34 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 22914297}
+    - target: {fileID: 4479082012344809571, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 63aacd6e49a5ebd42b8ddb127c7d3f14, type: 3}
     - target: {fileID: 4591760916197600818, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1778251203}
+    - target: {fileID: 4878510196239299123, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: cf6bd4b4c05b297449b686966090df0b, type: 3}
+    - target: {fileID: 5022778075816573783, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 0355571b65ec1194ab49185dd461b772, type: 3}
+    - target: {fileID: 5156949340522883759, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: da67ce55059fce747b0079ec15148313, type: 3}
     - target: {fileID: 5365911365917440270, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1088152715}
+    - target: {fileID: 6221235246724099552, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 971f073ca83031c48b99323c9ee3e616, type: 3}
     - target: {fileID: 6247915049188008627, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -14387,6 +14455,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obelisk
       objectReference: {fileID: 0}
+    - target: {fileID: 7333903675195398258, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 8c333f0b54c9f9c4989bd76de6ba33ed, type: 3}
+    - target: {fileID: 7673359676478436971, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: cf6bd4b4c05b297449b686966090df0b, type: 3}
     - target: {fileID: 7879052245798290989, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: mission
       value: Solve the two obelisks riddle
