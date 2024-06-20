@@ -6553,6 +6553,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1992514698478742586}
     m_Modifications:
+    - target: {fileID: 21060792307320737, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: bgm.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 16d36ec49f9abee4da8a72ae22ea6263, type: 3}
     - target: {fileID: 3756996986451591745, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: m_Name
       value: GeneralManagers
@@ -6613,6 +6617,10 @@ PrefabInstance:
       propertyPath: missionUI
       value: 
       objectReference: {fileID: 3470991385982544944}
+    - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
+      propertyPath: missions.Array.data[7].title
+      value: 'Plant the explosive  '
+      objectReference: {fileID: 0}
     - target: {fileID: 5965051196529544542, guid: bfe7829645ffa5849a72f52758d10ddc, type: 3}
       propertyPath: missions.Array.data[1].subMissions.Array.data[0].title
       value: Plant explosives on the generators

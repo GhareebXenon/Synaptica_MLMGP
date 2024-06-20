@@ -7,9 +7,11 @@ public class ExplosiveInteractable : Interactable
 {
     [SerializeField] private AudioClip explosivePlantingSFX, explosionSFX;
     [SerializeField] private string mission;
+    public bool planted;
 
     private void Start()
     {
+        planted = false;
         transform.Find("Explosive").gameObject.SetActive(false);
     }
 
@@ -20,5 +22,6 @@ public class ExplosiveInteractable : Interactable
         MissionManager.Instance.UpdateMission(mission, 1);
         GetComponent<BoxCollider>().enabled = false;
         gameObject.layer = 11;
+        planted = true;
     }
 }

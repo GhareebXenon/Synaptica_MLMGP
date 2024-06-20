@@ -58,7 +58,7 @@ public class MissionManager : MonoBehaviour
                 SetInitialMission("Get to the generator room");
                 break;
             case "Level 2":
-                SetInitialMission(" ");
+                SetInitialMission("Plant the explosive  ");
                 break;
             case "Level 3":
                 SetInitialMission("Explore the area");

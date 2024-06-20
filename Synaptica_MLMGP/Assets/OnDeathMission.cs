@@ -5,14 +5,15 @@ using UnityEngine;
 
 public class OnDeathMission : MonoBehaviour
 {
-    [SerializeField] string mission;
-    [SerializeField] AudioClip musicAfterDeath;
+    [SerializeField] private string mission;
+    [SerializeField] private AudioClip musicAfterDeath;
+    [SerializeField] private float musicVolume = 1;
 
     public void UpdateMission()
     {
         MissionManager.Instance.UpdateMission(mission, 1);
-        if (musicAfterDeath != null) SoundManager.Instance.PlayMusicFadeIn(musicAfterDeath, 0.25f, 0.6f);
+        if (musicAfterDeath != null) SoundManager.Instance.PlayMusicFadeIn(musicAfterDeath, musicVolume, 0.6f);
         else Debug.LogWarning($"Cannot find mission '{mission}'");
-
+        Debug.LogWarning("Enemy is dead, Mission updated.");
     }
 }

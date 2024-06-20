@@ -43158,7 +43158,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2042058151045018627, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2053502032}
   m_SourcePrefab: {fileID: 100100000, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
 --- !u!43 &927974350
 Mesh:
@@ -47688,15 +47691,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5232887182982456895, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.9
+      value: 1.0999999
       objectReference: {fileID: 0}
     - target: {fileID: 5232887182982456895, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.91
+      value: 0.54999995
       objectReference: {fileID: 0}
     - target: {fileID: 5232887182982456895, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -118.7
+      value: 50.15
       objectReference: {fileID: 0}
     - target: {fileID: 6645567444246561170, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_AnchorMax.y
@@ -49156,7 +49159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: volume
-      value: 0.75
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: musicNew
@@ -49168,7 +49171,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 1b9880c3d7d7f67488ba2756198283da, type: 3}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: volumeAfter
-      value: 0.75
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: transitionTime
@@ -89789,6 +89792,26 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &2053502016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2042058151045018627, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
+  m_PrefabInstance: {fileID: 918624148}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2053502032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053502016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ccc51f8b047e3348aa4f5ab33494126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mission: 
+  musicAfterDeath: {fileID: 8300000, guid: 39e4c1d6f78f80d4d9c3f0559173a7dc, type: 3}
+  musicVolume: 0.6
 --- !u!1001 &2054612419
 PrefabInstance:
   m_ObjectHideFlags: 0
