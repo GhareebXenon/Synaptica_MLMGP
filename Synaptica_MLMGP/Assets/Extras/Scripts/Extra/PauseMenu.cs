@@ -33,8 +33,6 @@ namespace cowsins
             else Instance = this;
 
             isPaused = false;
-            menu.gameObject.SetActive(false);
-            menu.alpha = 0;
         }
 
         private void Start()
@@ -46,6 +44,8 @@ namespace cowsins
             controlsTab = settingsMenu.transform.Find("CONTROLS TAB").GetComponent<CanvasGroup>();
             resetButton = settingsMenu.transform.Find("TopTabButton | Reset").gameObject;
             applyButton = settingsMenu.transform.Find("TopTabButton | Apply").gameObject;
+            menu.gameObject.SetActive(false);
+            menu.alpha = 0;
         }
 
         private void Update()

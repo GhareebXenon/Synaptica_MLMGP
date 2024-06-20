@@ -12,7 +12,8 @@ namespace cowsins {
         private CanvasGroup from, to;
         private GameObject View;
 
-        [SerializeField]private CanvasGroup settingsMenu;
+        [SerializeField] private GameObject mainMenu;
+        [SerializeField] private CanvasGroup settingsMenu;
         private CanvasGroup videoTab;
         private CanvasGroup audioTab;
         private CanvasGroup controlsTab;
@@ -21,6 +22,7 @@ namespace cowsins {
 
         private void Start()
         {
+            mainMenu.SetActive(false);
             videoTab = settingsMenu.transform.Find("VIDEO TAB").GetComponent<CanvasGroup>();
             audioTab = settingsMenu.transform.Find("AUDIO TAB").GetComponent<CanvasGroup>();
             controlsTab = settingsMenu.transform.Find("CONTROLS TAB").GetComponent<CanvasGroup>();
