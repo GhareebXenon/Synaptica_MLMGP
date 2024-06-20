@@ -55963,6 +55963,10 @@ PrefabInstance:
       propertyPath: m_VideoClip
       value: 
       objectReference: {fileID: 32900000, guid: a9211e5260a38e94eabed0637d210515, type: 3}
+    - target: {fileID: 2356928666548553171, guid: 90b615c7b8c9abb42a50a9829023dd9d, type: 3}
+      propertyPath: m_TargetAudioSources.Array.data[0]
+      value: 
+      objectReference: {fileID: 2087640362}
     - target: {fileID: 6007682757805072849, guid: 90b615c7b8c9abb42a50a9829023dd9d, type: 3}
       propertyPath: m_Name
       value: ScreenLed
@@ -56012,6 +56016,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90b615c7b8c9abb42a50a9829023dd9d, type: 3}
+--- !u!82 &2087640362 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7530849855340366776, guid: 90b615c7b8c9abb42a50a9829023dd9d, type: 3}
+  m_PrefabInstance: {fileID: 2087640361}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2089658840
 PrefabInstance:
   m_ObjectHideFlags: 0
