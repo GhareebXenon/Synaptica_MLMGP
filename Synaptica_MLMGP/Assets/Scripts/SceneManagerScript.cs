@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
+using UnityEngine.UI;
 
 namespace cowsins
 {
@@ -10,13 +11,18 @@ namespace cowsins
     {
         [SerializeField] private VideoPlayer videoPlayer;
         [SerializeField] string SceneName;
+        [SerializeField] private Slider loadingSlider;
+        [SerializeField] private GameObject LoadingScreen;
+  
+      
         private void Start()
         {
             StartCoroutine(SkipAfterVideo());
         }
         private void Update()
         {
-            if (videoPlayer != null && videoPlayer.isPlaying && InputManager.inputActions.GameControls.Pause.ReadValue<float>() > 0)
+          
+            if (videoPlayer != null && videoPlayer.isPlaying && InputManager.inputActions.GameControls.Pause.ReadValue<float>() > 0.1)
             {
                 SceneSwitch();
             }
@@ -31,6 +37,9 @@ namespace cowsins
         public void SceneSwitch()
         {
             SceneManager.LoadScene(SceneName);
+
+            LoadingScreen.SetActive(true);
+            StartCoroutine(LoadAsynchronos());
         }
         private IEnumerator SkipAfterVideo()
         {
@@ -43,6 +52,18 @@ namespace cowsins
                 }
                 SceneSwitch();
             }
+        }
+        
+        private IEnumerator LoadAsynchronos()
+        {
+            AsyncOperation loadOpertaion = SceneManager.LoadSceneAsync(SceneName);
+            while(!loadOpertaion.isDone)
+            {
+                float progressValue = Mathf.Clamp01(loadOpertaion.progress / 0.9f);
+                loadingSlider.value = progressValue;
+                yield return null;
+            }
+            
         }
     }
 }

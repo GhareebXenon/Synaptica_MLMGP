@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEditor;
 
 namespace BlazeAISpace
@@ -103,3 +104,4 @@ namespace BlazeAISpace
         }
     }
 }
+#endif

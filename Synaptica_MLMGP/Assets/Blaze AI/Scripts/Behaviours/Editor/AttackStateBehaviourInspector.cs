@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 
@@ -499,3 +500,4 @@ namespace BlazeAISpace
         #endregion
     }
 }
+#endif

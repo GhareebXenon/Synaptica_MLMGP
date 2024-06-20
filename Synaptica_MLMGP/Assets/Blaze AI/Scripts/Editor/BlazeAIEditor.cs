@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+using UnityEngine;
 using UnityEditor;
 using BlazeAISpace;
 
@@ -1053,3 +1054,4 @@ public class BlazeAIEditor : Editor
 
     #endregion
 }
+#endif

@@ -1706,7 +1706,6 @@ GameObject:
   - component: {fileID: 7821217211423216199}
   - component: {fileID: 984827749633402233}
   - component: {fileID: 7869488655880807095}
-  - component: {fileID: 2499519926001438307}
   - component: {fileID: 8027954405583616767}
   - component: {fileID: 6585662301136377185}
   - component: {fileID: 5948094979448367218}
@@ -1715,6 +1714,7 @@ GameObject:
   - component: {fileID: 4819185662483336146}
   - component: {fileID: 5461045440758566654}
   - component: {fileID: 7638836994394963036}
+  - component: {fileID: 7125213447280880886}
   m_Layer: 7
   m_Name: Robot
   m_TagString: Enemy
@@ -2034,7 +2034,7 @@ MonoBehaviour:
   useHitCooldown: 0
   maxHitCount: 3
   hitCooldown: 5
-  hitStateBehaviour: {fileID: 2499519926001438307}
+  hitStateBehaviour: {fileID: 7125213447280880886}
   deathAnim: Robot_Death
   deathAnimT: 0.25
   playDeathAudio: 0
@@ -2066,44 +2066,6 @@ MonoBehaviour:
   enemyManager: {fileID: 0}
   audioManager: {fileID: 0}
   previousEnemy: {fileID: 0}
---- !u!114 &2499519926001438307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042058151045018627}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 397fc0712619be347835f00b7b271c52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitAnims: []
-  hitAnimT: 0.2
-  hitAnimGap: 0.3
-  knockOutDuration: 3
-  faceUpStandClipName: 
-  faceDownStandClipName: 
-  ragdollToStandSpeed: 0.3
-  hipBone: {fileID: 0}
-  useNaturalVelocity: 0
-  knockOutForce: {x: 0, y: 0, z: 0}
-  cancelAttackOnHit: 0
-  playAudio: 0
-  alwaysPlayAudio: 1
-  callOthersRadius: 5
-  agentLayersToCall:
-    serializedVersion: 2
-    m_Bits: 0
-  showCallRadius: 0
-  onStateEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  onStateExit:
-    m_PersistentCalls:
-      m_Calls: []
-  blaze: {fileID: 0}
-  ragdollState: 0
 --- !u!114 &8027954405583616767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2473,6 +2435,44 @@ MonoBehaviour:
   projectileSpeed: 30
   firePoint: {fileID: 2711194421463426242}
   bulletDamage: 5
+--- !u!114 &7125213447280880886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042058151045018627}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397fc0712619be347835f00b7b271c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitAnims: []
+  hitAnimT: 0
+  hitAnimGap: 0
+  knockOutDuration: 0.2
+  faceUpStandClipName: 
+  faceDownStandClipName: 
+  ragdollToStandSpeed: 0
+  hipBone: {fileID: 0}
+  useNaturalVelocity: 0
+  knockOutForce: {x: 0, y: 0, z: 0}
+  cancelAttackOnHit: 0
+  playAudio: 0
+  alwaysPlayAudio: 1
+  callOthersRadius: 20
+  agentLayersToCall:
+    serializedVersion: 2
+    m_Bits: 128
+  showCallRadius: 0
+  onStateEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onStateExit:
+    m_PersistentCalls:
+      m_Calls: []
+  blaze: {fileID: 0}
+  ragdollState: 0
 --- !u!1 &2082889749290442042
 GameObject:
   m_ObjectHideFlags: 0
