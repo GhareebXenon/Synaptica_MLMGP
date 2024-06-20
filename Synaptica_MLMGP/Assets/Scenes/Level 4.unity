@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -23234,7 +23234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2223319734497157752, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: inventorySize
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2223319734497157752, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: weapons.Array.size
@@ -23246,16 +23246,20 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: a124665a74744f745941247b8b90640d, type: 2}
     - target: {fileID: 2223319734497157752, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: initialWeapons.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2223319734497157752, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: initialWeapons.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 1cb39c6c8005c554e93289889a1892e1, type: 2}
+      objectReference: {fileID: 11400000, guid: a124665a74744f745941247b8b90640d, type: 2}
     - target: {fileID: 2223319734497157752, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: initialWeapons.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: a124665a74744f745941247b8b90640d, type: 2}
+      objectReference: {fileID: 11400000, guid: 11986c1487b69b24fa433a76cf966fb5, type: 2}
+    - target: {fileID: 2223319734497157752, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
+      propertyPath: initialWeapons.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1cb39c6c8005c554e93289889a1892e1, type: 2}
     - target: {fileID: 2281924265083882639, guid: ae0c88ebe8887c84ea964c24a331ddd3, type: 3}
       propertyPath: m_Enabled
       value: 1

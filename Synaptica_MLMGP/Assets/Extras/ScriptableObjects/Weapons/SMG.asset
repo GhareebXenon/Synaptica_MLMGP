@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponObject: {fileID: 4366474878721369578, guid: a6ee04fac3dc0dc4f811bbe66beeebc0, type: 3}
   _name: MP5
-  pickUpGraphics: {fileID: 2092819957812016947, guid: 415486020d4679a4d83f7c43c72e8b17, type: 3}
+  pickUpGraphics: {fileID: 919132149155446097, guid: 5efa901c0e3dcfe4bac41b6c5b35d44b, type: 3}
   icon: {fileID: 21300000, guid: 14158fe215dac96459e139c4c2d073ad, type: 3}
   shootStyle: 0
   shootMethod: 1

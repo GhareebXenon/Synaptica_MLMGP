@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 365248474568820437}
   - component: {fileID: 8695700088679634501}
   - component: {fileID: 6806559504290695270}
+  - component: {fileID: 8929841970174007709}
   m_Layer: 0
   m_Name: PlayerControllerInnequin
   m_TagString: MainCamera
@@ -377,6 +378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 445d631026be4dff9ea5c295e0e0cb9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiKey: 96
+  optionKey: 27
   skipKey: 0
   continueKey: 0
   m_PushToTalk: 0
@@ -391,6 +394,7 @@ MonoBehaviour:
   m_ChatCanvas: {fileID: 8964929325927956365}
   m_StatusCanvas: {fileID: 7407168045419547241}
   m_FeedbackCanvas: {fileID: 0}
+  m_OptionCanvas: {fileID: 0}
   m_BubblePanel: {fileID: 0}
 --- !u!114 &8695700088679634501
 MonoBehaviour:
@@ -423,6 +427,50 @@ MonoBehaviour:
   m_Indicator: {fileID: 1957878372463033090}
   m_Error: {fileID: 2311024790950539498}
   m_Subtitle: {fileID: 928350430333564137}
+--- !u!114 &8929841970174007709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2310237008755668363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &2486190843075938968
 GameObject:
   m_ObjectHideFlags: 0
