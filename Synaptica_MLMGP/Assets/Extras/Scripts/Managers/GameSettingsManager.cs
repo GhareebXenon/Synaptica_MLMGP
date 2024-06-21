@@ -33,15 +33,15 @@ public class GameSettingsManager : MonoBehaviour
 
     [HideInInspector] public float musicVolume;
         
-    public GameObject settingsMenu;
+    private GameObject settingsMenu;
 
-    public Transform videoTab;
+    private Transform videoTab;
 
     private Transform audioTab;
 
     private Transform controlsTab;
 
-    public TMP_Dropdown frameRateDropdown, resolutionRateDropdown, graphicsDropdown;
+    private TMP_Dropdown frameRateDropdown, resolutionRateDropdown, graphicsDropdown;
 
     private UnityEngine.UI.Toggle fullScreenToggle,vsyncToggle;
 
@@ -53,7 +53,7 @@ public class GameSettingsManager : MonoBehaviour
 
     private UnityEngine.UI.Slider musicVolumeSlider;
 
-    public GameObject rebindOverlay;
+    private GameObject rebindOverlay;
 
     private Button movementForwardButton;
     private Button movementBackwardButton;
