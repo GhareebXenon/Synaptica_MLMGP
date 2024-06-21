@@ -1843,8 +1843,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f9d81f41de4ac4e944188683471a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  turnSpeed: 6
+  moveSpeed: 6
+  turnSpeed: 8
   idleAnim:
   - Idle_mech
   moveAnim: Walk_mech
@@ -2197,9 +2197,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitAnims: []
-  hitAnimT: 0.2
-  hitAnimGap: 0.3
-  knockOutDuration: 0.25
+  hitAnimT: 0
+  hitAnimGap: 0
+  knockOutDuration: 0.1
   faceUpStandClipName: 
   faceDownStandClipName: 
   ragdollToStandSpeed: 0.3
