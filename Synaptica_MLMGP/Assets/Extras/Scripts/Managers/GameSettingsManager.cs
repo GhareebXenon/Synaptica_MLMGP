@@ -13,6 +13,8 @@ public class GameSettingsManager : MonoBehaviour
     
     [SerializeField] private AudioMixer masterMixer; 
 
+    [SerializeField] private GameObject mainMenu;
+
     [HideInInspector] public int fullScreen;
 
     [HideInInspector] public int res;
@@ -30,16 +32,16 @@ public class GameSettingsManager : MonoBehaviour
     [HideInInspector] public float sfxVolume;
 
     [HideInInspector] public float musicVolume;
-    
-    private GameObject settingsMenu;
+        
+    public GameObject settingsMenu;
 
-    private Transform videoTab;
+    public Transform videoTab;
 
     private Transform audioTab;
 
     private Transform controlsTab;
 
-    private TMP_Dropdown frameRateDropdown, resolutionRateDropdown, graphicsDropdown;
+    public TMP_Dropdown frameRateDropdown, resolutionRateDropdown, graphicsDropdown;
 
     private UnityEngine.UI.Toggle fullScreenToggle,vsyncToggle;
 
@@ -51,7 +53,7 @@ public class GameSettingsManager : MonoBehaviour
 
     private UnityEngine.UI.Slider musicVolumeSlider;
 
-    private GameObject rebindOverlay;
+    public GameObject rebindOverlay;
 
     private Button movementForwardButton;
     private Button movementBackwardButton;
@@ -99,6 +101,7 @@ public class GameSettingsManager : MonoBehaviour
         }
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
+            if (mainMenu != null) mainMenu.SetActive(true);
             settingsMenu = GameObject.FindGameObjectWithTag("SettingsMenu");
             videoTab = settingsMenu.transform.Find("VIDEO TAB");
             audioTab = settingsMenu.transform.Find("AUDIO TAB");
@@ -351,6 +354,7 @@ public class GameSettingsManager : MonoBehaviour
                 }).Start();
             });
 
+            if (mainMenu != null) mainMenu.SetActive(false);
             settingsMenu.SetActive(false);
             rebindOverlay.SetActive(false);
         }

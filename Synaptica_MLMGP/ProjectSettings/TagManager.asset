@@ -15,6 +15,7 @@ TagManager:
   - Wall
   - ConnectingPoint
   - SettingsMenu
+  - MainMenu
   layers:
   - Default
   - TransparentFX
