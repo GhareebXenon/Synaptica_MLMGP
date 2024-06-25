@@ -49416,7 +49416,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 1b9880c3d7d7f67488ba2756198283da, type: 3}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: volumeAfter
-      value: 0.6
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: transitionTime
@@ -90120,7 +90120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mission: 
   musicAfterDeath: {fileID: 8300000, guid: 39e4c1d6f78f80d4d9c3f0559173a7dc, type: 3}
-  musicVolume: 0.6
+  musicVolume: 0.69
 --- !u!1001 &2054612419
 PrefabInstance:
   m_ObjectHideFlags: 0

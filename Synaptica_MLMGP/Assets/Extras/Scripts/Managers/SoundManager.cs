@@ -54,13 +54,13 @@ namespace cowsins
                     PlayMusicFadeIn(bgm[1], 1.0f, 0.99f);
                     break;
                 case "Level 1":
-                    PlayMusicFadeIn(bgm[2], 0.6f, 0.9f);
+                    PlayMusicFadeIn(bgm[2], 0.69f, 0.9f);
                     break;
                 case "Level 2":
                     PlayMusicFadeIn(bgm[3], 0.2f, 0.5f);
                     break;
                 case "Level 3":
-                    PlayMusicFadeIn(bgm[2], 0.6f, 0.8f);
+                    PlayMusicFadeIn(bgm[2], 0.69f, 0.8f);
                     break;
                 case "Level 4":
                     PlayMusicFadeIn(bgm[4], 0.24f, 0.1f);

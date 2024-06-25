@@ -22259,7 +22259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mission: Defeat the mech
   musicAfterDeath: {fileID: 8300000, guid: 39e4c1d6f78f80d4d9c3f0559173a7dc, type: 3}
-  musicVolume: 0.6
+  musicVolume: 0.69
 --- !u!4 &784712705 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8944044644235449891, guid: 63da23ebdb872f44aa563407b248ca67, type: 3}
