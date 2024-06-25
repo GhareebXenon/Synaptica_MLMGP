@@ -17,13 +17,13 @@ namespace Inworld.Sample.RPM
         protected void Awake()
         {
             m_CameraController = GetComponent<InworldCameraController>();
-            m_FeedbackDlg = m_FeedbackCanvas.GetComponent<FeedbackCanvas>();
+            //m_FeedbackDlg = m_FeedbackCanvas.GetComponent<FeedbackCanvas>();
         }
         protected override void HandleCanvas()
         {
             bool anyCanvasOpen = m_ChatCanvas && m_ChatCanvas.activeSelf || 
                                  m_StatusCanvas && m_StatusCanvas.activeSelf || 
-                                 m_FeedbackCanvas && m_FeedbackCanvas.activeSelf ||
+                                 //m_FeedbackCanvas && m_FeedbackCanvas.activeSelf ||
                                  m_OptionCanvas && m_OptionCanvas.activeSelf;
             m_CameraController.enabled = !anyCanvasOpen;
         }
