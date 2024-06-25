@@ -15515,6 +15515,10 @@ PrefabInstance:
       propertyPath: weaponController
       value: 
       objectReference: {fileID: 172906928}
+    - target: {fileID: 952580538195524332, guid: d3b3571b95a6f9544b92058b7905a807, type: 3}
+      propertyPath: playerUIContainer
+      value: 
+      objectReference: {fileID: 1133065394}
     - target: {fileID: 3305508027228883918, guid: d3b3571b95a6f9544b92058b7905a807, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
