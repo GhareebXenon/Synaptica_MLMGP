@@ -415,26 +415,46 @@ public class GameSettingsManager : MonoBehaviour
         // Video
         if (PlayerPrefs.HasKey("res"))
             res = PlayerPrefs.GetInt("res");
+        else
+            PlayerPrefs.SetInt("res", res);
         if (PlayerPrefs.HasKey("fullScreen"))
             fullScreen = PlayerPrefs.GetInt("fullScreen");
+        else
+            PlayerPrefs.SetInt("fullScreen", fullScreen);
         if (PlayerPrefs.HasKey("maxFrameRate"))
             maxFrameRate = PlayerPrefs.GetInt("maxFrameRate");
+        else
+            PlayerPrefs.SetInt("maxFrameRate", maxFrameRate);
         if (PlayerPrefs.HasKey("vsync"))
             vsync = PlayerPrefs.GetInt("vsync");
+        else
+            PlayerPrefs.SetInt("vsync", vsync);
         if (PlayerPrefs.HasKey("graphicsQuality"))
             graphicsQuality = PlayerPrefs.GetInt("graphicsQuality");
+        else
+            PlayerPrefs.SetInt("graphicsQuality", graphicsQuality);
         // Audio
         if (PlayerPrefs.HasKey("masterVolume"))
             masterVolume = PlayerPrefs.GetFloat("masterVolume");
+        else
+            PlayerPrefs.SetFloat("masterVolume", masterVolume);
         if (PlayerPrefs.HasKey("vocalsVolume"))
             vocalsVolume = PlayerPrefs.GetFloat("vocalsVolume");
+        else
+            PlayerPrefs.SetFloat("vocalsVolume", vocalsVolume);
         if (PlayerPrefs.HasKey("sfxVolume"))
             sfxVolume = PlayerPrefs.GetFloat("sfxVolume");
+        else
+            PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
         if (PlayerPrefs.HasKey("musicVolume"))
             musicVolume = PlayerPrefs.GetFloat("musicVolume");
+        else
+            PlayerPrefs.SetFloat("musicVolume", musicVolume);
         // Controls
         if (PlayerPrefs.HasKey("playerInput")) 
             InputManager.inputActions.LoadBindingOverridesFromJson(PlayerPrefs.GetString("playerInput"));
+        else
+            PlayerPrefs.SetString("playerInput", InputManager.inputActions.SaveBindingOverridesAsJson());
         // Video
         switch (maxFrameRate)
         {
