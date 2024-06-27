@@ -420,11 +420,11 @@ public class GameSettingsManager : MonoBehaviour
         if (PlayerPrefs.HasKey("fullScreen"))
             fullScreen = PlayerPrefs.GetInt("fullScreen");
         else
-            PlayerPrefs.SetInt("fullScreen", fullScreen);
+            PlayerPrefs.SetInt("fullScreen", 1);
         if (PlayerPrefs.HasKey("maxFrameRate"))
             maxFrameRate = PlayerPrefs.GetInt("maxFrameRate");
         else
-            PlayerPrefs.SetInt("maxFrameRate", maxFrameRate);
+            PlayerPrefs.SetInt("maxFrameRate", 60);
         if (PlayerPrefs.HasKey("vsync"))
             vsync = PlayerPrefs.GetInt("vsync");
         else
@@ -437,19 +437,19 @@ public class GameSettingsManager : MonoBehaviour
         if (PlayerPrefs.HasKey("masterVolume"))
             masterVolume = PlayerPrefs.GetFloat("masterVolume");
         else
-            PlayerPrefs.SetFloat("masterVolume", masterVolume);
+            PlayerPrefs.SetFloat("masterVolume", 1);
         if (PlayerPrefs.HasKey("vocalsVolume"))
             vocalsVolume = PlayerPrefs.GetFloat("vocalsVolume");
         else
-            PlayerPrefs.SetFloat("vocalsVolume", vocalsVolume);
+            PlayerPrefs.SetFloat("vocalsVolume", 1);
         if (PlayerPrefs.HasKey("sfxVolume"))
             sfxVolume = PlayerPrefs.GetFloat("sfxVolume");
         else
-            PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
+            PlayerPrefs.SetFloat("sfxVolume", 1);
         if (PlayerPrefs.HasKey("musicVolume"))
             musicVolume = PlayerPrefs.GetFloat("musicVolume");
         else
-            PlayerPrefs.SetFloat("musicVolume", musicVolume);
+            PlayerPrefs.SetFloat("musicVolume", 1);
         // Controls
         if (PlayerPrefs.HasKey("playerInput")) 
             InputManager.inputActions.LoadBindingOverridesFromJson(PlayerPrefs.GetString("playerInput"));
