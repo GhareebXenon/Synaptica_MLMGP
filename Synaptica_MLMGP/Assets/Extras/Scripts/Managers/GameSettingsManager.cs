@@ -416,45 +416,75 @@ public class GameSettingsManager : MonoBehaviour
         if (PlayerPrefs.HasKey("res"))
             res = PlayerPrefs.GetInt("res");
         else
+        {
+            res = 0;
             PlayerPrefs.SetInt("res", res);
+        }
         if (PlayerPrefs.HasKey("fullScreen"))
             fullScreen = PlayerPrefs.GetInt("fullScreen");
         else
-            PlayerPrefs.SetInt("fullScreen", 1);
+        {
+            fullScreen = 1;
+            PlayerPrefs.SetInt("fullScreen", fullScreen);
+        }
         if (PlayerPrefs.HasKey("maxFrameRate"))
             maxFrameRate = PlayerPrefs.GetInt("maxFrameRate");
         else
-            PlayerPrefs.SetInt("maxFrameRate", 60);
+        {
+            maxFrameRate = 0;
+            PlayerPrefs.SetInt("maxFrameRate", maxFrameRate);
+        }
         if (PlayerPrefs.HasKey("vsync"))
             vsync = PlayerPrefs.GetInt("vsync");
         else
+        {
+            vsync = 1;
             PlayerPrefs.SetInt("vsync", vsync);
+        }
         if (PlayerPrefs.HasKey("graphicsQuality"))
             graphicsQuality = PlayerPrefs.GetInt("graphicsQuality");
         else
+        {
+            graphicsQuality = 1;
             PlayerPrefs.SetInt("graphicsQuality", graphicsQuality);
+        }
         // Audio
         if (PlayerPrefs.HasKey("masterVolume"))
             masterVolume = PlayerPrefs.GetFloat("masterVolume");
         else
-            PlayerPrefs.SetFloat("masterVolume", 1);
+        {
+            masterVolume = 1.0f;
+            PlayerPrefs.SetFloat("masterVolume", masterVolume);
+        }
         if (PlayerPrefs.HasKey("vocalsVolume"))
             vocalsVolume = PlayerPrefs.GetFloat("vocalsVolume");
         else
-            PlayerPrefs.SetFloat("vocalsVolume", 1);
+        {
+            vocalsVolume = 1.0f;
+            PlayerPrefs.SetFloat("vocalsVolume", vocalsVolume);
+        }
         if (PlayerPrefs.HasKey("sfxVolume"))
             sfxVolume = PlayerPrefs.GetFloat("sfxVolume");
         else
-            PlayerPrefs.SetFloat("sfxVolume", 1);
+        {
+            sfxVolume = 1.0f;
+            PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
+        }
         if (PlayerPrefs.HasKey("musicVolume"))
             musicVolume = PlayerPrefs.GetFloat("musicVolume");
         else
-            PlayerPrefs.SetFloat("musicVolume", 1);
+        {
+            musicVolume = 1.0f;
+            PlayerPrefs.SetFloat("musicVolume", musicVolume);
+        }
         // Controls
         if (PlayerPrefs.HasKey("playerInput")) 
             InputManager.inputActions.LoadBindingOverridesFromJson(PlayerPrefs.GetString("playerInput"));
         else
             PlayerPrefs.SetString("playerInput", InputManager.inputActions.SaveBindingOverridesAsJson());
+
+        PlayerPrefs.Save();
+
         // Video
         switch (maxFrameRate)
         {
@@ -462,7 +492,8 @@ public class GameSettingsManager : MonoBehaviour
             case 1: Application.targetFrameRate = 120; break;
             case 2: Application.targetFrameRate = 230; break;
             case 3: Application.targetFrameRate = 300; break;
-        }
+            default: Application.targetFrameRate = 60; break;
+            }
         
         switch (res)
         {
@@ -471,35 +502,68 @@ public class GameSettingsManager : MonoBehaviour
                 height = 1080; 
                 break;
             case 1:
-                width = 1920;
-                height = 720;
-
+                width = 1600;
+                height = 900;
                 break;
             case 2:
-                width = 854;
-                height = 480;
+                width = 1366;
+                height = 768;
+                break;
+            case 3:
+                width = 1280;
+                height = 720;
+                break;
+            default:
+                width = 1920;
+                height = 1080; 
                 break;
         }
-        Screen.SetResolution(width, height, fullScreen == 1 ? true : false);
+        Screen.SetResolution(width, height, fullScreen == 1);
         QualitySettings.vSyncCount = vsync;
         QualitySettings.SetQualityLevel(graphicsQuality);
         // Video UI
         frameRateDropdown.value = maxFrameRate;
         resolutionRateDropdown.value = res;
         graphicsDropdown.value = graphicsQuality;
-        fullScreenToggle.isOn = fullScreen == 1 ? true : false; 
-        vsyncToggle.isOn = vsync == 1 ? true : false;
-        masterVolumeSlider.value = masterVolume; 
-    }
+        fullScreenToggle.isOn = fullScreen == 1; 
+        vsyncToggle.isOn = vsync == 1;
+        // Audio UI
+        masterVolumeSlider.value = masterVolume;
+        vocalsVolumeSlider.value = vocalsVolume;
+        sfxVolumeSlider.value = sfxVolume;
+        musicVolumeSlider.value = musicVolume;
+        // Controls UI
+        movementForwardText.text = InputManager.inputActions.GameControls.Movement.bindings[1].ToDisplayString();
+        movementBackwardText.text = InputManager.inputActions.GameControls.Movement.bindings[2].ToDisplayString();
+        movementLeftText.text = InputManager.inputActions.GameControls.Movement.bindings[3].ToDisplayString();
+        movementRightText.text = InputManager.inputActions.GameControls.Movement.bindings[4].ToDisplayString();
+        sprintingText.text = InputManager.inputActions.GameControls.Sprinting.bindings[0].ToDisplayString();
+        crouchingText.text = InputManager.inputActions.GameControls.Crouching.bindings[0].ToDisplayString();
+        jumpingText.text = InputManager.inputActions.GameControls.Jumping.bindings[0].ToDisplayString();
+        interactingText.text = InputManager.inputActions.GameControls.Interacting.bindings[0].ToDisplayString();
+        firingText.text = InputManager.inputActions.GameControls.Firing.bindings[0].ToDisplayString();
+        aimingText.text = InputManager.inputActions.GameControls.Aiming.bindings[0].ToDisplayString();
+        meleeText.text = InputManager.inputActions.GameControls.Melee.bindings[0].ToDisplayString();
+        dropText.text = InputManager.inputActions.GameControls.Drop.bindings[0].ToDisplayString();
+
+        // Change the volume
+        masterMixer.SetFloat("masterVolume", Mathf.Log10(masterVolume) * 20);
+        masterMixer.SetFloat("vocalsVolume", Mathf.Log10(vocalsVolume) * 20);
+        masterMixer.SetFloat("sfxVolume", Mathf.Log10(sfxVolume) * 20);
+        masterMixer.SetFloat("musicVolume", Mathf.Log10(musicVolume) * 20);
+        }
 
     public void ResetSettings()
     {
         res = 0; 
         fullScreen = 1;
-        maxFrameRate = frameRateDropdown.options.Count - 1;  
-        vsync = 0;
-        graphicsQuality = 2;
-        masterVolume = 1; 
+        maxFrameRate = 0;  
+        vsync = 1;
+        graphicsQuality = 1;
+        masterVolume = 1.0f; 
+        vocalsVolume = 1.0f;
+        sfxVolume = 1.0f;
+        musicVolume = 1.0f;
         SaveSettings();
         LoadSettings(); 
     }

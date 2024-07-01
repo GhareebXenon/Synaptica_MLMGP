@@ -1974,9 +1974,11 @@ MonoBehaviour:
     m_Options:
     - m_Text: 1920x1080
       m_Image: {fileID: 0}
-    - m_Text: 1920x720
+    - m_Text: 1600x900
       m_Image: {fileID: 0}
-    - m_Text: 854x480
+    - m_Text: 1366x768
+      m_Image: {fileID: 0}
+    - m_Text: 1280x720
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
