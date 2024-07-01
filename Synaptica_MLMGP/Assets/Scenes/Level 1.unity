@@ -31857,7 +31857,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 2}
+  m_Size: {x: 4, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &797824770 stripped
 Transform:
@@ -87583,7 +87583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7199352180053282366, guid: 5e1e6f8b79d4f36489ecbbd43ff11265, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -57.758
+      value: -58
       objectReference: {fileID: 0}
     - target: {fileID: 7199352180053282366, guid: 5e1e6f8b79d4f36489ecbbd43ff11265, type: 3}
       propertyPath: m_LocalPosition.y
@@ -87591,7 +87591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7199352180053282366, guid: 5e1e6f8b79d4f36489ecbbd43ff11265, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30.369
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 7199352180053282366, guid: 5e1e6f8b79d4f36489ecbbd43ff11265, type: 3}
       propertyPath: m_LocalRotation.w
