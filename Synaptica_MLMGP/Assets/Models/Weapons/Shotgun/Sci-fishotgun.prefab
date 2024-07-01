@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: cb58df7de5948e14684a22724dde2856, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 308.02866
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb58df7de5948e14684a22724dde2856, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.1362295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb58df7de5948e14684a22724dde2856, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 508.72427
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb58df7de5948e14684a22724dde2856, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e0c188337d4ed0949b2e2f96df2e36c1, type: 2}
     - target: {fileID: 919132149155446097, guid: cb58df7de5948e14684a22724dde2856, type: 3}
       propertyPath: m_Name
-      value: shotgun1
+      value: Sci-fishotgun
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

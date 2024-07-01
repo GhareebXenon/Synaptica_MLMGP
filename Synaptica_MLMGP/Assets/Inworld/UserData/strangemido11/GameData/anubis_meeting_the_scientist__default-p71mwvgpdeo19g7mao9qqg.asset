@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: anubis_meeting_the_scientist__default-p71mwvgpdeo19g7mao9qqg
   m_EditorClassIdentifier: 
   sceneFullName: workspaces/default-p71mwvgpdeo19g7mao9qqg/scenes/anubis_meeting_the_scientist_
-  apiKey: WBUGZMamW8OYdVYCZPDNX07VQ66tr96t
-  apiSecret: Z9IbijmUuArrHlzjOmDAjJ4sXECV2bvclEEeunz0xGM4IPH4ywp5omGoBvEjzsqn
+  apiKey: 4j65yXQJzU9kUwa1q3dW0iu8HmKfOaiL
+  apiSecret: xrTzcQ5uW5zIH7czOUyIaabkqSdESaAj4KG7dtYwaLpyFcLGVgj6AYo54z0JH4j6
   characters:
   - agentId: 
     brainName: workspaces/default-p71mwvgpdeo19g7mao9qqg/characters/scientist

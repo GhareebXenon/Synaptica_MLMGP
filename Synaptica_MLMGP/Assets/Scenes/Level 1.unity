@@ -15810,7 +15810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 968128681090416333, guid: 9fd3a3fdd9936a0478585a24cfbd6384, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -161
+      value: -165.64
       objectReference: {fileID: 0}
     - target: {fileID: 968128681090416333, guid: 9fd3a3fdd9936a0478585a24cfbd6384, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18426,15 +18426,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.8
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.8
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.8
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27868,6 +27868,18 @@ PrefabInstance:
     - target: {fileID: 7326690240077864364, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.4821714
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869488655880807095, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
+      propertyPath: vision.visionDuringAlertState.sightRange
+      value: 29.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869488655880807095, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
+      propertyPath: vision.visionDuringAttackState.sightRange
+      value: 41.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869488655880807095, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
+      propertyPath: vision.visionDuringNormalState.sightRange
+      value: 23.84
       objectReference: {fileID: 0}
     - target: {fileID: 7934153410105355870, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41535,15 +41547,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.8
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.8
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.8
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -53737,15 +53749,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.8
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.8
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.8
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61392,15 +61404,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.8
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.8
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.8
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -76258,6 +76270,18 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.4821714
       objectReference: {fileID: 0}
+    - target: {fileID: 7869488655880807095, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
+      propertyPath: vision.visionDuringAlertState.sightRange
+      value: 29.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869488655880807095, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
+      propertyPath: vision.visionDuringAttackState.sightRange
+      value: 41.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869488655880807095, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
+      propertyPath: vision.visionDuringNormalState.sightRange
+      value: 23.84
+      objectReference: {fileID: 0}
     - target: {fileID: 7934153410105355870, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.050616015
@@ -81216,6 +81240,18 @@ PrefabInstance:
     - target: {fileID: 7326690240077864364, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.4821714
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869488655880807095, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
+      propertyPath: vision.visionDuringAlertState.sightRange
+      value: 29.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869488655880807095, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
+      propertyPath: vision.visionDuringAttackState.sightRange
+      value: 41.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869488655880807095, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
+      propertyPath: vision.visionDuringNormalState.sightRange
+      value: 23.84
       objectReference: {fileID: 0}
     - target: {fileID: 7934153410105355870, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -87054,15 +87090,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.8
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.8
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.8
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be268ae009b2ef3489a4d588a90cd0d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -92568,6 +92604,18 @@ PrefabInstance:
     - target: {fileID: 7326690240077864364, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.4821714
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869488655880807095, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
+      propertyPath: vision.visionDuringAlertState.sightRange
+      value: 29.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869488655880807095, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
+      propertyPath: vision.visionDuringAttackState.sightRange
+      value: 41.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869488655880807095, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
+      propertyPath: vision.visionDuringNormalState.sightRange
+      value: 23.84
       objectReference: {fileID: 0}
     - target: {fileID: 7934153410105355870, guid: 4ec9266f8df97744ea8de33e2da1eff0, type: 3}
       propertyPath: m_LocalPosition.x
