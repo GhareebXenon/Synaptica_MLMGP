@@ -49570,7 +49570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: volume
-      value: 0.6
+      value: 0.699
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: musicNew
@@ -49582,7 +49582,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 1b9880c3d7d7f67488ba2756198283da, type: 3}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: volumeAfter
-      value: 0.69
+      value: 0.699
       objectReference: {fileID: 0}
     - target: {fileID: 6857499176888854656, guid: 45b6b21987a3e45409f0752008c08eea, type: 3}
       propertyPath: transitionTime
@@ -73232,17 +73232,9 @@ MonoBehaviour:
   m_Mesh: {fileID: 1691295345}
   m_VersionIndex: 24448
   m_IsSelectable: 1
-  m_SelectedFaces: a7000000
-  m_SelectedEdges:
-  - a: 703
-    b: 704
-  - a: 705
-    b: 703
-  - a: 704
-    b: 706
-  - a: 706
-    b: 705
-  m_SelectedVertices: bf020000c0020000c1020000c2020000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!4 &1555702840
 Transform:
   m_ObjectHideFlags: 0
@@ -90292,7 +90284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mission: 
   musicAfterDeath: {fileID: 8300000, guid: 39e4c1d6f78f80d4d9c3f0559173a7dc, type: 3}
-  musicVolume: 0.69
+  musicVolume: 0.699
 --- !u!1001 &2054612419
 PrefabInstance:
   m_ObjectHideFlags: 0
