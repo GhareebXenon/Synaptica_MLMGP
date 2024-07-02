@@ -27,7 +27,7 @@ public class EndSceneTrigger : MonoBehaviour
     IEnumerator Countdown()
     {
         Debug.Log("Countdown Started!");
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(90);
         Debug.Log("Countdown Ended!");
         Destroy(generalManagers);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
