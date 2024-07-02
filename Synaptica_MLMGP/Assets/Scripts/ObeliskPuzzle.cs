@@ -17,13 +17,14 @@ public class ObeliskPuzzle : MonoBehaviour
     [SerializeField] private ObeliskRunes operationRune;
     [SerializeField] private ObeliskRunes solutionRune;
     public List<int> runesNumbers;
-    [SerializeField] private int[] runesSelected;
-    [SerializeField] private int solution;
+    [SerializeField] private float[] runesSelected;
+    [SerializeField] private float solution;
     [SerializeField] private string operation;
+    [SerializeField] private ObeliskInteraction[] interactions;
 
     private void Start()
     {
-        runesSelected = new int[3];
+        runesSelected = new float[3];
 
         foreach (ObeliskRunes rune in runes)
         {
@@ -39,7 +40,7 @@ public class ObeliskPuzzle : MonoBehaviour
         operation = operationRune.runeSprite.name;
 
         solutionRune.gameObject.GetComponent<MeshRenderer>().material.mainTexture = solutionRune.runeSprite;
-        int.TryParse(solutionRune.runeSprite.name.Trim(), out solution);
+        float.TryParse(solutionRune.runeSprite.name.Trim(), out solution);
 
         UpdateSelected();
     }
@@ -74,13 +75,17 @@ public class ObeliskPuzzle : MonoBehaviour
 
     public void CheckComplete()
     {
-        int result;
+        float result;
         if (operation == "+")
         {
             result = runesSelected[0] + runesSelected[1] + runesSelected[2];
             if (result == solution)
             {
                 completed = true;
+                foreach (ObeliskInteraction i in interactions)
+                {
+                    i.canRotate = false;
+                }
             }
             else
             {
@@ -94,6 +99,10 @@ public class ObeliskPuzzle : MonoBehaviour
             if (result == solution)
             {
                 completed = true;
+                foreach (ObeliskInteraction i in interactions)
+                {
+                    i.canRotate = false;
+                }
             }
             else
             {
@@ -107,6 +116,10 @@ public class ObeliskPuzzle : MonoBehaviour
             if (result == solution)
             {
                 completed = true;
+                foreach (ObeliskInteraction i in interactions)
+                {
+                    i.canRotate = false;
+                }
             }
             else
             {
@@ -120,6 +133,10 @@ public class ObeliskPuzzle : MonoBehaviour
             if (result == solution)
             {
                 completed = true;
+                foreach (ObeliskInteraction i in interactions)
+                {
+                    i.canRotate = false;
+                }
             }
             else
             {

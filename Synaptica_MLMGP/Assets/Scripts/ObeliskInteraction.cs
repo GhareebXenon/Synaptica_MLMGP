@@ -13,9 +13,11 @@ public class ObeliskInteraction : Interactable
     private float targetAngle;
     private AudioSource audioSource;
 
+    public bool canRotate = true;
+
     public override void Interact()
     {
-        if (!isRotating)
+        if (!isRotating && canRotate)
         {
             targetAngle = cube.transform.eulerAngles.y + 90f;
             isRotating = true;

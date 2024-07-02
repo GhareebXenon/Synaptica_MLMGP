@@ -12337,6 +12337,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 380216620}
+    - target: {fileID: 4078490288472370949, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: runeSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 8c333f0b54c9f9c4989bd76de6ba33ed, type: 3}
     - target: {fileID: 4181520417652649846, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -12378,6 +12382,22 @@ PrefabInstance:
       value: Solve the riddle and unlock the gate
       objectReference: {fileID: 0}
     - target: {fileID: 7879052245798290989, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: interactions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7879052245798290989, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: interactions.Array.data[0]
+      value: 
+      objectReference: {fileID: 484470697}
+    - target: {fileID: 7879052245798290989, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: interactions.Array.data[1]
+      value: 
+      objectReference: {fileID: 484470696}
+    - target: {fileID: 7879052245798290989, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: interactions.Array.data[2]
+      value: 
+      objectReference: {fileID: 484470695}
+    - target: {fileID: 7879052245798290989, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -12392,12 +12412,45 @@ PrefabInstance:
     - target: {fileID: 8798769661438979821, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: runeSprite
       value: 
-      objectReference: {fileID: 2800000, guid: 8c333f0b54c9f9c4989bd76de6ba33ed, type: 3}
+      objectReference: {fileID: 2800000, guid: 15f3c87217698004ea1e4eaa74bc60a6, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+--- !u!114 &484470695 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3570880476816400369, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+  m_PrefabInstance: {fileID: 484470694}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3399d04dd615240852eef8ce39a94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &484470696 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 797640487967444481, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+  m_PrefabInstance: {fileID: 484470694}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3399d04dd615240852eef8ce39a94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &484470697 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4880048395613393217, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+  m_PrefabInstance: {fileID: 484470694}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3399d04dd615240852eef8ce39a94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &491183975
 Mesh:
   m_ObjectHideFlags: 0
@@ -55639,6 +55692,22 @@ PrefabInstance:
       value: Solve the riddle and unlock the gate
       objectReference: {fileID: 0}
     - target: {fileID: 7879052245798290989, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: interactions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7879052245798290989, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: interactions.Array.data[0]
+      value: 
+      objectReference: {fileID: 1926315818}
+    - target: {fileID: 7879052245798290989, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: interactions.Array.data[1]
+      value: 
+      objectReference: {fileID: 1926315817}
+    - target: {fileID: 7879052245798290989, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+      propertyPath: interactions.Array.data[2]
+      value: 
+      objectReference: {fileID: 1926315816}
+    - target: {fileID: 7879052245798290989, guid: 46b1904c1000c754a990484ee1215056, type: 3}
       propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -55655,6 +55724,39 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+--- !u!114 &1926315816 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3570880476816400369, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+  m_PrefabInstance: {fileID: 1926315815}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3399d04dd615240852eef8ce39a94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1926315817 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 797640487967444481, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+  m_PrefabInstance: {fileID: 1926315815}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3399d04dd615240852eef8ce39a94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1926315818 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4880048395613393217, guid: 46b1904c1000c754a990484ee1215056, type: 3}
+  m_PrefabInstance: {fileID: 1926315815}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3399d04dd615240852eef8ce39a94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1929575987 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8459865452897350800, guid: b01e687598c5f0945b7b4f56bf034bee, type: 3}
