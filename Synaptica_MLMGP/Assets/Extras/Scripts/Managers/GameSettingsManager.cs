@@ -350,7 +350,7 @@ public class GameSettingsManager : MonoBehaviour
                 {
                     rebindOverlay.SetActive(false);
                     InputManager.inputActions.GameControls.Enable();
-                    meleeButton.interactable = true;
+                    dropButton.interactable = true;
                 }).Start();
             });
 
@@ -564,6 +564,9 @@ public class GameSettingsManager : MonoBehaviour
         vocalsVolume = 1.0f;
         sfxVolume = 1.0f;
         musicVolume = 1.0f;
+
+        InputManager.inputActions.LoadBindingOverridesFromJson("{\"bindings\":[{\"action\":\"GameControls/Jumping\",\"id\":\"6ca9fd82-4f86-4626-8b19-7e947547f36f\",\"path\":\"<Keyboard>/space\",\"interactions\":\"null\",\"processors\":\"null\"},{\"action\":\"GameControls/Melee\",\"id\":\"2bc79522-d599-40e6-a752-266e72890de1\",\"path\":\"<Keyboard>/f\",\"interactions\":\"null\",\"processors\":\"null\"},{\"action\":\"GameControls/Crouching\",\"id\":\"1c69fce5-dcf1-4b50-ae6b-d3372c606109\",\"path\":\"<Keyboard>/leftCtrl\",\"interactions\":\"null\",\"processors\":\"null\"},{\"action\":\"GameControls/Sprinting\",\"id\":\"f0aec971-65d3-4af7-9274-83fcebda8b42\",\"path\":\"<Keyboard>/leftShift\",\"interactions\":\"null\",\"processors\":\"null\"},{\"action\":\"GameControls/Firing\",\"id\":\"8a3ed417-20b0-42b2-9957-f17849f64fca\",\"path\":\"<Mouse>/leftButton\",\"interactions\":\"null\",\"processors\":\"null\"},{\"action\":\"GameControls/Aiming\",\"id\":\"5c8f736a-9941-41e1-8593-180e5f2a7d79\",\"path\":\"<Mouse>/rightButton\",\"interactions\":\"null\",\"processors\":\"null\"},{\"action\":\"GameControls/Interacting\",\"id\":\"c32d236f-19be-444f-b7bd-ef99a5ff25c8\",\"path\":\"<Keyboard>/e\",\"interactions\":\"null\",\"processors\":\"null\"},{\"action\":\"GameControls/Drop\",\"id\":\"9471ab10-b588-410c-b42e-6a5989debe69\",\"path\":\"<Keyboard>/g\",\"interactions\":\"null\",\"processors\":\"null\"},{\"action\":\"GameControls/Movement\",\"id\":\"14ed430d-34e6-4cdc-92a9-22b7a2cfdd49\",\"path\":\"<Keyboard>/w\",\"interactions\":\"null\",\"processors\":\"null\"},{\"action\":\"GameControls/Movement\",\"id\":\"895fa7db-67a3-4c55-af09-32200049e759\",\"path\":\"<Keyboard>/s\",\"interactions\":\"null\",\"processors\":\"null\"},{\"action\":\"GameControls/Movement\",\"id\":\"e0dcd9b8-d553-4a58-a260-30f783734231\",\"path\":\"<Keyboard>/a\",\"interactions\":\"null\",\"processors\":\"null\"},{\"action\":\"GameControls/Movement\",\"id\":\"0ce5bb8f-a06a-40f6-80dd-95b552238022\",\"path\":\"<Keyboard>/d\",\"interactions\":\"null\",\"processors\":\"null\"}]}");
+
         SaveSettings();
         LoadSettings(); 
     }
