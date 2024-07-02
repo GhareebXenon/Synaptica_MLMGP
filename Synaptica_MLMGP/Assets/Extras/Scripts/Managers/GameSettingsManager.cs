@@ -160,7 +160,7 @@ public class GameSettingsManager : MonoBehaviour
             {
                 fullScreen = OnDropDownChanged(fullScreenToggle);
             });
-            fullScreenToggle.onValueChanged.AddListener(delegate
+            vsyncToggle.onValueChanged.AddListener(delegate
             {
                 vsync = OnDropDownChanged(vsyncToggle);
             });
