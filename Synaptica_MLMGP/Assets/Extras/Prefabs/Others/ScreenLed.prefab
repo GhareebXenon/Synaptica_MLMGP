@@ -46,8 +46,8 @@ GameObject:
   - component: {fileID: 4455429830064566115}
   - component: {fileID: 7599719567855263544}
   - component: {fileID: 7530849855340366776}
-  - component: {fileID: 700436177103340254}
-  m_Layer: 0
+  - component: {fileID: 5480873206358925597}
+  m_Layer: 11
   m_Name: VideoPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,8 +251,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!64 &700436177103340254
-MeshCollider:
+--- !u!65 &5480873206358925597
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -269,10 +269,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 3
+  m_Size: {x: 1.0000004, y: 1.0000001, z: 6.123235e-17}
+  m_Center: {x: -0.00000023841858, y: 0, z: 0}
 --- !u!1001 &3524770281413758484
 PrefabInstance:
   m_ObjectHideFlags: 0

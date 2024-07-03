@@ -198,6 +198,15 @@ public class PlayerMovement : MonoBehaviour
 
         private Transform target;
 
+        //Look at target
+        [Tooltip("Should the player look at a target."), SerializeField]
+        private bool isLookingAtTarget;
+
+        [Tooltip("The target to look at."), SerializeField]
+        private Transform lookTarget;
+
+        [Tooltip("The speed the player looks at."), SerializeField]
+        private float lookSpeed;
 
         //Stamina
         [Tooltip("You will lose stamina on performing actions when true.")]
@@ -720,6 +729,18 @@ public class PlayerMovement : MonoBehaviour
         playerCam.transform.localRotation = Quaternion.Euler(xRotation, desiredX, wallRunRotation); // the camera parent
         orientation.transform.localRotation = Quaternion.Euler(0, desiredX, 0); // the orientation
 
+        if (isLookingAtTarget)
+        {
+            Vector3 currentEulerAngles = playerCam.transform.localEulerAngles;
+            Vector3 lookDirection = (lookTarget.position - transform.position).normalized;
+            Quaternion lookTargetRotation = Quaternion.LookRotation(lookDirection, Vector3.up);
+
+            float newY = Mathf.LerpAngle(currentEulerAngles.y, lookTargetRotation.eulerAngles.y, Time.deltaTime * lookSpeed);
+
+            playerCam.transform.localEulerAngles = new Vector3(currentEulerAngles.x, newY, currentEulerAngles.z);
+    
+        }
+
         // Decide wether to use aim assist or not
         if (AimAssistHit() == null || !applyAimAssist || target == null || Vector3.Distance(target.position, transform.position) > maximumDistanceToAssistAim) return;
         // Get the direction to look at
@@ -727,13 +748,23 @@ public class PlayerMovement : MonoBehaviour
         Quaternion targetRotation = transform.rotation * Quaternion.FromToRotation(transform.forward, direction);
         // Smoothly override our current camera rotation towards the selected enemy
         playerCam.transform.localRotation = Quaternion.Lerp(playerCam.transform.localRotation, targetRotation, Time.deltaTime * aimAssistSpeed);
+        
     }
 
-    /// <summary>
-    /// Add friction force to the player when it´s not airborne
-    /// Please note that it counters movement, since it goes in the opposite direction to velocity
-    /// </summary>
-    private void FrictionForce(float x, float y, Vector2 mag)
+    public void LookAt(Transform target, float speed = 1.0f)
+    {
+        lookTarget = target;
+        lookSpeed = speed;
+        isLookingAtTarget = true;
+    }
+    public void StopLookingAt() => isLookingAtTarget = false;
+
+
+        /// <summary>
+        /// Add friction force to the player when it´s not airborne
+        /// Please note that it counters movement, since it goes in the opposite direction to velocity
+        /// </summary>
+        private void FrictionForce(float x, float y, Vector2 mag)
     {
         // Prevent from adding friction on an airborne body
         if (!grounded || InputManager.jumping || hasJumped) return;

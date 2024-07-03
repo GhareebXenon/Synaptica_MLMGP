@@ -14,47 +14,68 @@ public class GeneralSceneTrigger : MonoBehaviour
     [SerializeField] private AudioClip firstClip;
     [SerializeField] private AudioClip secondClip;
     [Header("References")]
-    [SerializeField] private VideoPlayer videoPlayer;
+    [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private PlayerStats playerStats;
+    [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private List<GameObject> robots;
     [SerializeField] private ExplosiveInteractable explosive;
-    private PlayableDirector scenePlayer;
+    private BoxCollider[] colliders;
     private List<BlazeAI> blazeAIs = new();
     private bool played;
+    private bool entered;
 
     private void Start()
     {
         played = false;
-        scenePlayer = GetComponent<PlayableDirector>();
+        entered = false;
+        BoxCollider[] allColliders = GetComponents<BoxCollider>();
+        colliders = new BoxCollider[allColliders.Length - 1];
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            colliders[i] = GetComponents<BoxCollider>()[i + 1];
+        }
         foreach (GameObject robot in robots)
         {
             blazeAIs.Add(robot.GetComponent<BlazeAI>());
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if (other.CompareTag("Player"))
+        if (!entered || played) return;
+
+        if (explosive == null)
         {
-            if (explosive == null && !played) 
-            {
-                StartCoroutine(Timer());
-                played = true;
-            }
-            else if (explosive.planted && !played)
-            {
-                StartCoroutine(Timer());
-                played = true;
-            }
+            StartCoroutine(Begin());
+            played = true;
+        }
+        else if (explosive.planted)
+        {
+            StartCoroutine(Begin());
+            played = true;
         }
     }
 
-    private IEnumerator Timer()
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player")) entered = true;
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player")) entered = false;
+    }
+
+    private void ToggleColliders()
+    {
+        foreach (BoxCollider collider in colliders) collider.enabled = !collider.enabled;
+    }
+
+    private IEnumerator Begin()
     {
         AudioSource source = SoundManager.Instance.GetMusicSource();
-        playerStats.LoseControl();
+        ToggleColliders();
         videoPlayer?.Play();
-        scenePlayer?.Play();
+        playerMovement?.LookAt(videoPlayer.transform, 1.4f);
 
         yield return new WaitForSeconds(1);
 
@@ -72,11 +93,13 @@ public class GeneralSceneTrigger : MonoBehaviour
             yield return null;
         }
 
+        playerMovement?.StopLookingAt();
         playerStats.CheckIfCanGrantControl();
         foreach (BlazeAI ai in blazeAIs)
         {
             ai.enabled = true;
         }
+        ToggleColliders();
         yield return null;
     }
 }
