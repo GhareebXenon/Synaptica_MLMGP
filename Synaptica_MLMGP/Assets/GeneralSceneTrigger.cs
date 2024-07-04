@@ -75,18 +75,18 @@ public class GeneralSceneTrigger : MonoBehaviour
         AudioSource source = SoundManager.Instance.GetMusicSource();
         ToggleColliders();
         videoPlayer?.Play();
-        playerMovement?.LookAt(videoPlayer.transform, 1.4f);
+        playerMovement?.LookAt(videoPlayer.transform, 1.5f);
 
         yield return new WaitForSeconds(1);
 
-        if (firstClip != null && secondClip != null)
+        if (firstClip != null)
         {
             SoundManager.Instance.PlayMusicFadeIn(firstClip, 0.2f, 0.2f, false);
             while (source.isPlaying)
             {
                 yield return null;
             }
-            SoundManager.Instance.PlayMusicFadeIn(secondClip, 0.2f, 0, true);
+            if (secondClip != null) SoundManager.Instance.PlayMusicFadeIn(secondClip, 0.2f, 0, true);
         }
         while (videoPlayer.isPlaying)
         {

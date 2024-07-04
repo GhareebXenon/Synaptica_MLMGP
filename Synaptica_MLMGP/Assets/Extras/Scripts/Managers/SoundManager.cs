@@ -9,7 +9,7 @@ namespace cowsins
     public class SoundManager : MonoBehaviour
     {
         public static SoundManager Instance;
-        [SerializeField] private AudioClip[] bgm;
+        public AudioClip[] bgm;
         [SerializeField] private AudioMixer audioMixer;
 
         private AudioSource src;
@@ -66,7 +66,9 @@ namespace cowsins
                     PlayMusicFadeIn(bgm[4], 0.24f, 0.1f);
                     break;
                 case "EndScene":
-                    PlayMusicFadeIn(bgm[5], 0.15f, 0.99f);
+                    PlayMusicFadeIn(bgm[5], 0.48f, 0.99f);
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = false;
                     break;
                 default:
                     PlayMusicFadeIn(bgm[2], 0.699f, 0.6f);
@@ -88,6 +90,11 @@ namespace cowsins
         public void PlayMusicFadeIn(AudioClip clip, float volume = 1, float fadeDuration = 1.5f, bool loopable = true)
         {
             StartCoroutine(PlayMFadeIn(clip, volume, fadeDuration, loopable));
+        }
+
+        public void FadeOutMusic(float fadeDuration = 1.5f)
+        {
+            StartCoroutine(FadeOut(fadeDuration));
         }
 
         public AudioSource GetMusicSource()
@@ -196,6 +203,27 @@ namespace cowsins
                 yield return null;
             }
             fadeInSource.volume = targetVolume;
+        }
+
+        private IEnumerator FadeOut(float fadeDuration)
+        {
+            if (fadeDuration < 0 || (bgmSrc == null && bgmSrcSec == null))
+            {
+                Debug.LogError("Invalid parameters for PlayMFadeIn coroutine.");
+                yield break;
+            }
+
+            AudioSource fadeOutSource = bgmSrc != null && bgmSrc.isPlaying ? bgmSrc : bgmSrcSec;
+            float fadeOutInitialVolume = fadeOutSource.volume;
+            float elapsedTime = 0f;
+
+            while (elapsedTime < fadeDuration)
+            {
+                fadeOutSource.volume = Mathf.Lerp(fadeOutInitialVolume, 0, elapsedTime / fadeDuration);
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+            fadeOutSource.volume = 0;
         }
 
     }

@@ -14,6 +14,9 @@ public class LaserReflector : MonoBehaviour
     Vector3 direction;
     LineRenderer lr;
     public bool isOpen;
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private WeaponController weaponController;
+    [SerializeField] private float dragDistanceThreshold = 6f;
     [SerializeField] private string mission;
     [SerializeField] private UnityEvent OnCompleted;
 
@@ -96,22 +99,28 @@ public class LaserReflector : MonoBehaviour
     }
     // mouse rotation
     void OnMouseDown()
-    { // calc intailzation mouse for dragging
-        screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);    
-        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, screenPoint.z));
-    
+    {
+        if (gameObject.tag == "CenterReflector") return;
+
+        weaponController.canShoot = false;
+
+        // calculate initialization mouse for dragging
+        screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
     }
- // update position based on mouse movement
+
+    // update position based on mouse movement
     void OnMouseDrag()
     {
-        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);  
+        if (gameObject.tag == "CenterReflector" || Vector3.Distance(playerTransform.position, transform.position) > dragDistanceThreshold) return;
+
+        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
         Vector3 newPosition = new Vector3(curPosition.x, transform.position.y, curPosition.z);
         transform.position = newPosition;
 
-        //rotate cube
+        // rotate cube
         float XaxisRotation = Input.GetAxis("Mouse X") * rotationSpeed;
-        /*float YaxisRotation = Input.GetAxis("Mouse Y") * rotationSpeed;*/
         if (Input.GetKey(KeyCode.E))
         {
             transform.Rotate(Vector3.up, rotationSpeed);
@@ -120,9 +129,17 @@ public class LaserReflector : MonoBehaviour
         {
             transform.Rotate(Vector3.down, rotationSpeed);
         }
-        /*transform.RotateAround(Vector3.right, YaxisRotation);*/
-
+    }
+    void OnMouseUp()
+    {
+        if (gameObject.tag == "CenterReflector") return;
+        StartCoroutine(EnableShooting());
+    }
+    private IEnumerator EnableShooting()
+    {
+        yield return new WaitForEndOfFrame();
+        weaponController.canShoot = true;
+        yield return null;
     }
 
-    
 }

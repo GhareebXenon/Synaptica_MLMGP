@@ -41,6 +41,10 @@ namespace cowsins
             LoadingScreen.SetActive(true);
             StartCoroutine(LoadAsynchronos());
         }
+        public void EndSceneSwitch()
+        {
+            StartCoroutine(EndSceneSwitchCoroutine());
+        }
         private IEnumerator SkipAfterVideo()
         {
             yield return new WaitForSeconds(1);
@@ -64,6 +68,16 @@ namespace cowsins
                 yield return null;
             }
             
+        }
+
+        private IEnumerator EndSceneSwitchCoroutine()
+        {
+            SoundManager.Instance.FadeOutMusic(6);
+            yield return new WaitForSeconds(6.5f);
+            Destroy(SoundManager.Instance.gameObject);
+            SceneManager.LoadScene(SceneName);
+            StartCoroutine(LoadAsynchronos());
+            yield return null;
         }
     }
 }

@@ -138,7 +138,9 @@ public class InteractManager : MonoBehaviour
     {
         if (lookingAt != null)
         {
-            lookingAt.GetComponent<Interactable>().interactable = false;
+            Interactable interactableScript = lookingAt.GetComponent<Interactable>();
+            if (interactableScript != null) interactableScript.interactable = false;
+            else Debug.LogWarning($"Interactable {lookingAt.name} doesn't inherit from Interactable script!");
             lookingAt = null;
         }
     }
