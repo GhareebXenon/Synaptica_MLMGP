@@ -69,11 +69,19 @@ public class GeneralSceneTrigger : MonoBehaviour
     {
         foreach (BoxCollider collider in colliders) collider.enabled = !collider.enabled;
     }
+    private void DisableColliders()
+    {
+        foreach (BoxCollider collider in colliders) collider.enabled = false;
+    }
+    private void EnableColliders()
+    {
+        foreach (BoxCollider collider in colliders) collider.enabled = true;
+    }
 
     private IEnumerator Begin()
     {
         AudioSource source = SoundManager.Instance.GetMusicSource();
-        ToggleColliders();
+        EnableColliders();
         videoPlayer?.Play();
         playerMovement?.LookAt(videoPlayer.transform, 1.5f);
 
@@ -99,7 +107,7 @@ public class GeneralSceneTrigger : MonoBehaviour
         {
             ai.enabled = true;
         }
-        ToggleColliders();
+        DisableColliders();
         yield return null;
     }
 }

@@ -10,7 +10,6 @@ public class DeathExplosion : MonoBehaviour
     {
        
         Instantiate(explosionVFX, transform.position, Quaternion.identity);
-        Destroy(explosionVFX, 3f);
     }
     
 }

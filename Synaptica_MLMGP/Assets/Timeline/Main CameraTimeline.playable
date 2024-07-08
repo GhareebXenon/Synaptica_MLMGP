@@ -6029,10 +6029,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 90.33333333333333
+    m_Start: 90.36666666666666
     m_ClipIn: 0
     m_Asset: {fileID: -3754930888159731366}
-    m_Duration: 7.833333333333343
+    m_Duration: 7.800000000000011
     m_TimeScale: 1
     m_ParentTrack: {fileID: 2794067973407226930}
     m_EaseInDuration: 0

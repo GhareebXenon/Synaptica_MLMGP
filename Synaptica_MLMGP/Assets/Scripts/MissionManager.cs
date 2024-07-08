@@ -464,7 +464,8 @@ public class MissionManager : MonoBehaviour
             {
                 Destroy(missionUI?.transform.Find(subMission.title).gameObject);
             }
-            Destroy(missionUI?.transform.Find(activeMission.title).gameObject);
+            GameObject m = missionUI?.transform.Find(activeMission.title).gameObject;
+            if (m != null) Destroy(missionUI?.transform.Find(activeMission.title).gameObject);
         }
     }
 

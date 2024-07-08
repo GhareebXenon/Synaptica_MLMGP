@@ -78,6 +78,8 @@ namespace cowsins {
         {
             WeaponController inv = player.GetComponent<WeaponController>();
 
+            if (inv == null) return false;
+
             for (int i = 0; i < inv.inventorySize; i++)
             {
                 if (inv.inventory[i] == null) // Inventory is, indeed, not full, so there is room for a new weapon.

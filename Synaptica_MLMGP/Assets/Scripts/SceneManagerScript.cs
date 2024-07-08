@@ -13,6 +13,7 @@ namespace cowsins
         [SerializeField] string SceneName;
         [SerializeField] private Slider loadingSlider;
         [SerializeField] private GameObject LoadingScreen;
+        [SerializeField] private GameObject PlayerUI;
   
       
         private void Start()
@@ -38,7 +39,8 @@ namespace cowsins
         {
             SceneManager.LoadScene(SceneName);
 
-            LoadingScreen.SetActive(true);
+            LoadingScreen?.SetActive(true);
+            PlayerUI?.SetActive(false);
             StartCoroutine(LoadAsynchronos());
         }
         public void EndSceneSwitch()

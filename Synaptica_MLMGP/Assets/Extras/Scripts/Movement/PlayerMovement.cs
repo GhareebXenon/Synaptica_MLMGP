@@ -65,6 +65,9 @@ public class PlayerMovement : MonoBehaviour
 
     private float desiredX;
 
+    public float xRotationMin = -89.7f;
+    public float xRotationMax = 89.7f;
+
 
     //Movements
     [Tooltip("If true: Speed while running backwards = runSpeed." +
@@ -722,7 +725,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Rotate, and also make sure we dont over- or under-rotate.
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -89.7f, 89.7f); // The reason why the value is 89.7 instead of 90 is to prevent errors with the wallrun
+        xRotation = Mathf.Clamp(xRotation, xRotationMin, xRotationMax); // The reason why the value is 89.7 instead of 90 is to prevent errors with the wallrun
         if (wallRunning && canWallRun) wallRunRotation = wallLeft ? Mathf.Lerp(wallRunRotation, -wallrunCameraTiltAmount, Time.deltaTime * cameraTiltTransationSpeed) : Mathf.Lerp(wallRunRotation, wallrunCameraTiltAmount, Time.deltaTime * cameraTiltTransationSpeed);
         else wallRunRotation = Mathf.Lerp(wallRunRotation, 0, Time.deltaTime * cameraTiltTransationSpeed);
         //Perform the rotations on: 

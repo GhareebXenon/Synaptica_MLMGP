@@ -101,6 +101,7 @@ public class GameSettingsManager : MonoBehaviour
         }
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
+            mainMenu = GameObject.FindGameObjectWithTag("MainMenu");
             if (mainMenu != null) mainMenu.SetActive(true);
             settingsMenu = GameObject.FindGameObjectWithTag("SettingsMenu");
             videoTab = settingsMenu.transform.Find("VIDEO TAB");
@@ -520,7 +521,7 @@ public class GameSettingsManager : MonoBehaviour
         }
         Screen.SetResolution(width, height, fullScreen == 1);
         QualitySettings.vSyncCount = vsync;
-        QualitySettings.SetQualityLevel(graphicsQuality);
+        QualitySettings.SetQualityLevel(graphicsQuality + 1);
         // Video UI
         frameRateDropdown.value = maxFrameRate;
         resolutionRateDropdown.value = res;

@@ -52,6 +52,7 @@ MonoBehaviour:
   explosivePlantingSFX: {fileID: 8300000, guid: 2ba9327c845c615408279ba556a2462b, type: 3}
   explosionSFX: {fileID: 0}
   mission: 
+  planted: 0
 --- !u!65 &7740655684225604628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -241,7 +242,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d9aeb8b645216e744840ab0f94153708, type: 2}
+  - {fileID: 2100000, guid: ed167fb38a6c70345b8f7a80a1b2051b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

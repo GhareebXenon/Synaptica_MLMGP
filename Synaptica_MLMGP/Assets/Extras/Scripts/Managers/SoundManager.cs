@@ -51,7 +51,7 @@ namespace cowsins
                     PlayMusicFadeIn(bgm[5], 0.22f, 0.99f);
                     break;
                 case "Exposition":
-                    PlayMusicFadeIn(bgm[1], 1.0f, 0.99f);
+                    PlayMusicFadeIn(bgm[1], 1.0f, 0.5f);
                     break;
                 case "Level 1":
                     PlayMusicFadeIn(bgm[2], 0.699f, 0.9f);

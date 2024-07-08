@@ -36,6 +36,8 @@ public class IntroTrigger : MonoBehaviour
     private IEnumerator Begin()
     {
         weaponController.canShoot = false;
+        playerMovement.xRotationMin = -15f;
+        playerMovement.xRotationMax = 5f;
         playerMovement.LookAt(boss, 1.6f);
         introTimeline.Play();
         while (introTimeline.state == PlayState.Playing)
@@ -43,6 +45,8 @@ public class IntroTrigger : MonoBehaviour
             yield return null;
         }
         playerMovement.StopLookingAt();
+        playerMovement.xRotationMin = -89.7f;
+        playerMovement.xRotationMax = 89.7f;
         weaponController.canShoot = true;
         yield return null;
     }
